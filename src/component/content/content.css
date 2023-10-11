@@ -1,12 +1,16 @@
+.slideshow {
+  background-color: #2e64aa;
+}
+
 .carousel {
+  height: 100vh;
   padding: 3rem;
-  margin-top: 3rem;
+  justify-content: center;
 }
 
 .carousel img {
   width: 100%;
   height: auto;
-  text-shadow: 5px 5px 10px black;
 }
 
 .imgslide {
@@ -15,13 +19,12 @@
 
 .carousel-caption {
   padding-top: 4rem;
-  padding-left: 3rem;
-  padding-right: 14rem;
   position: inherit;
-  text-align: justify;
+  text-align: left;
+  word-break: break-word;
 }
 
-h3,
+h1,
 p {
   text-shadow: 5px 5px 10px black;
 }
