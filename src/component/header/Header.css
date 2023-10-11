@@ -1,0 +1,14 @@
+.bg-body-tertiary {
+  background-color: #2e64aa !important;
+}
+
+.nav-link {
+  color: #fff;
+}
+
+.nav-link:hover {
+}
+
+.basic-navbar-nav {
+  justify-content: flex-end !important;
+}

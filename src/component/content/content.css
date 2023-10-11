@@ -1,0 +1,27 @@
+.carousel {
+  padding: 3rem;
+  margin-top: 3rem;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+  text-shadow: 5px 5px 10px black;
+}
+
+.imgslide {
+  text-align: right !important;
+}
+
+.carousel-caption {
+  padding-top: 4rem;
+  padding-left: 3rem;
+  padding-right: 14rem;
+  position: inherit;
+  text-align: justify;
+}
+
+h3,
+p {
+  text-shadow: 5px 5px 10px black;
+}
