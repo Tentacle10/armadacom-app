@@ -28,3 +28,25 @@ h1,
 p {
   text-shadow: 5px 5px 10px black;
 }
+
+.card {
+  padding: 22% 18% 27% 18%;
+  border: none;
+  border-radius: 25px 25px 25px 25px;
+  box-shadow: 0px 20px 80px 0px rgba(192.99999999999997, 199, 212, 0.25098039215686274);
+}
+
+.tag {
+  color: #70707e;
+}
+
+div.card-title.h5 {
+  font-size: 22px;
+  font-weight: 900;
+}
+
+p.card-text {
+  text-shadow: none;
+  color: #70707e;
+  font-size: 12px;
+}
