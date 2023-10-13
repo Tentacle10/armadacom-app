@@ -16,8 +16,10 @@ const SecondContent = () => {
             <Col>
               <Col>
                 <Col className="tag">ARMADACOM.ID</Col>
-                <Col>Melayani segala kebutuhan IT</Col>
-                <Col>Armada Computer atau yang sekarang lebih dikenal dengan Armadacom.id merupakan toko komputer terlengkap di Wonosobo yang menyediakan berbagai peripheral komputer dan jaringan. Berikut layanan yang kami sediakan</Col>
+                <Col className="title fw-bolder">Melayani segala kebutuhan IT</Col>
+                <Col className="text">
+                  Armada Computer atau yang sekarang lebih dikenal dengan Armadacom.id merupakan toko komputer terlengkap di Wonosobo yang menyediakan berbagai peripheral komputer dan jaringan. Berikut layanan yang kami sediakan
+                </Col>
               </Col>
             </Col>
           </Col>
@@ -29,7 +31,6 @@ const SecondContent = () => {
                     <div sm={6} className="icon text-center">
                       <StoreRoundedIcon sx={{ fontSize: 50 }} />
                     </div>
-
                     <Card.Body>
                       <Card.Title>Store</Card.Title>
                       <Card.Text>Penjualan Perangkat Hardware dan Software</Card.Text>
