@@ -45,7 +45,7 @@ const Header = () => {
               <Nav.Link href="#pricelist">PRICELIST</Nav.Link>
               <Nav.Link href="#testimonial">TESTIMONIAL</Nav.Link>
             </Nav>
-            <Button className="ms-4 me-2" variant="outline-light">
+            <Button className="ms-4 me-2 w-button" variant="outline-light">
               GET APP
             </Button>
           </Navbar.Collapse>

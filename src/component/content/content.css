@@ -3,8 +3,7 @@
 }
 
 .carousel {
-  height: 100vh;
-  padding: 3rem;
+  height: 100%;
   justify-content: center;
 }
 
@@ -18,7 +17,7 @@
 }
 
 .carousel-caption {
-  padding-top: 4rem;
+  padding-top: 6rem;
   position: inherit;
   text-align: left;
   word-break: break-word;
@@ -30,7 +29,7 @@ p {
 }
 
 .card {
-  padding: 22% 18% 27% 18%;
+  padding: 10% 10% 10% 10%;
   border: none;
   border-radius: 25px 25px 25px 25px;
   box-shadow: 0px 20px 80px 0px rgba(192.99999999999997, 199, 212, 0.25098039215686274);
@@ -43,6 +42,7 @@ p {
 div.card-title.h5 {
   font-size: 22px;
   font-weight: 900;
+  margin: 0px;
 }
 
 p.card-text {

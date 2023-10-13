@@ -10,8 +10,8 @@ import CPUBlack from '../../assets/img/cpublack.png';
 const FirstContent = () => {
   return (
     <>
-      <Container className="slideshow" fluid>
-        <Carousel className="carousel pt-5" controls={false} indicators={true} fade>
+      <Container className="slideshow py-3 px-5" fluid>
+        <Carousel className="carousel" controls={false} indicators={true} fade>
           <Carousel.Item>
             <Row>
               <Col sm={8} className="imgslide">
@@ -54,7 +54,7 @@ const FirstContent = () => {
                   <h1>Ngapain Berhari hari, Kalo Sehari Jadi</h1>
                   <p>Bikin aplikasi berbasis web ataupun Android di Wonosobo ya ke armadacom.id. Sebagai penunjang aktifitas bisnis kalian</p>
                 </Carousel.Caption>
-                <Button className="mt-2" variant="outline-light">
+                <Button className="mt-2 w-button" variant="outline-light">
                   CHAT US
                 </Button>
               </Col>

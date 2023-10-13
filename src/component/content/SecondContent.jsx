@@ -1,43 +1,38 @@
-import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import Card from "react-bootstrap/Card";
-import StoreRoundedIcon from "@mui/icons-material/StoreRounded";
-import HandymanRoundedIcon from "@mui/icons-material/HandymanRounded";
-import TerminalRoundedIcon from "@mui/icons-material/TerminalRounded";
-import SupportAgentRoundedIcon from "@mui/icons-material/SupportAgentRounded";
+import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import Card from 'react-bootstrap/Card';
+import StoreRoundedIcon from '@mui/icons-material/StoreRounded';
+import HandymanRoundedIcon from '@mui/icons-material/HandymanRounded';
+import TerminalRoundedIcon from '@mui/icons-material/TerminalRounded';
+import SupportAgentRoundedIcon from '@mui/icons-material/SupportAgentRounded';
+import { faAlignJustify } from '@fortawesome/free-solid-svg-icons';
 
 const SecondContent = () => {
   return (
     <>
       <Container fluid>
-        <Row className="justify-content-md-center mt-5 ms-3">
-          <Col md={4} className="p-5">
-            <div style={{ width: "100%", height: "100%" }}>
-              <div>
-                <div className="tag">ARMADACOM.ID</div>
-                <div>Melayani segala kebutuhan IT</div>
-                <p>
-                  Armada Computer atau yang sekarang lebih dikenal dengan
-                  Armadacom.id merupakan toko komputer terlengkap di Wonosobo
-                  yang menyediakan berbagai peripheral komputer dan jaringan.
-                  Berikut layanan yang kami sediakan
-                </p>
-              </div>
-            </div>
+        <Row className="mx-3 my-5">
+          <Col md={6} className="p-5 d-flex">
+            <Col>
+              <Col>
+                <Col className="tag">ARMADACOM.ID</Col>
+                <Col>Melayani segala kebutuhan IT</Col>
+                <Col>Armada Computer atau yang sekarang lebih dikenal dengan Armadacom.id merupakan toko komputer terlengkap di Wonosobo yang menyediakan berbagai peripheral komputer dan jaringan. Berikut layanan yang kami sediakan</Col>
+              </Col>
+            </Col>
           </Col>
-          <Col md={8}>
+          <Col md={6}>
             <Row className="rows-cols-2">
               <Row>
                 <Col md={6}>
                   <Card style={{}}>
-                    <div className="text-center">
+                    <div sm={6} className="icon text-center">
                       <StoreRoundedIcon sx={{ fontSize: 50 }} />
                     </div>
+
                     <Card.Body>
                       <Card.Title>Store</Card.Title>
-                      <Card.Text>
-                        Penjualan Perangkat Hardware dan Software
-                      </Card.Text>
+                      <Card.Text>Penjualan Perangkat Hardware dan Software</Card.Text>
                     </Card.Body>
                   </Card>
                 </Col>
@@ -48,9 +43,7 @@ const SecondContent = () => {
                     </div>
                     <Card.Body>
                       <Card.Title>Service Center</Card.Title>
-                      <Card.Text>
-                        Service perangkat Laptop, Komputer, Printer, dll.
-                      </Card.Text>
+                      <Card.Text>Service perangkat Laptop, Komputer, Printer, dll.</Card.Text>
                     </Card.Body>
                   </Card>
                 </Col>
@@ -63,9 +56,7 @@ const SecondContent = () => {
                     </div>
                     <Card.Body>
                       <Card.Title>Software Dev</Card.Title>
-                      <Card.Text>
-                        Pengembangan software berbasis Web dan Android.
-                      </Card.Text>
+                      <Card.Text>Pengembangan software berbasis Web dan Android.</Card.Text>
                     </Card.Body>
                   </Card>
                 </Col>
@@ -76,9 +67,7 @@ const SecondContent = () => {
                     </div>
                     <Card.Body>
                       <Card.Title>IT Consultant</Card.Title>
-                      <Card.Text>
-                        Konsultasi terkait kebutuhan dab produk IT.
-                      </Card.Text>
+                      <Card.Text>Konsultasi terkait kebutuhan dab produk IT.</Card.Text>
                     </Card.Body>
                   </Card>
                 </Col>
