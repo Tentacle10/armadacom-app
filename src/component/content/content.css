@@ -1,3 +1,5 @@
+/* FirstContent */
+
 .slideshow {
   background-color: #2e64aa;
 }
@@ -17,16 +19,22 @@
 }
 
 .carousel-caption {
-  padding-top: 6rem;
   position: inherit;
   text-align: left;
   word-break: break-word;
 }
 
+/* FirstContent */
+
+.text-abu {
+  color: #70707e;
+}
 h1,
 p {
   text-shadow: 5px 5px 10px black;
 }
+
+/* SecondContent */
 
 .card {
   padding: 10% 10% 10% 10%;
@@ -52,14 +60,19 @@ div.card-title.h5 {
 
 p.card-text {
   text-shadow: none;
-  color: #70707e;
-  font-size: 12px;
+  /* font-size: 12px; */
 }
 
-.thirdcontent{
+/* SecondContent */
+
+/* ThirdContent */
+
+.thirdcontent {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .iPhone {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
+
+/* ThirdContent */

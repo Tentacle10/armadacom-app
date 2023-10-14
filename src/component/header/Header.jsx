@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+// import React, { useEffect } from 'react';
 import './Header.css';
 
 import Container from 'react-bootstrap/Container';
@@ -10,25 +10,27 @@ import Button from 'react-bootstrap/Button';
 import ArmadaIcon from '../../assets/logo/Logo_white.png';
 
 const Header = () => {
-  useEffect(() => {
-    const navbar = document.querySelector('.navbar');
+  // useEffect(() => {
+  //   const navbar = document.querySelector('.navbar');
 
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 0) {
-        navbar.classList.add('sticky-navbar');
-      } else {
-        navbar.classList.remove('sticky-navbar');
-      }
-    });
-  }, []);
+  //   window.addEventListener('scroll', () => {
+  //     if (window.scrollY > 0) {
+  //       navbar.classList.add('sticky-navbar');
+  //     } else {
+  //       navbar.classList.remove('sticky-navbar');
+  //     }
+  //   });
+  // }, []);
   return (
     <>
-      <Navbar expand="md" className="navbar">
+      <Navbar expand="md" className="navbar sticky-navbar">
         <Container fluid>
           <Navbar>
             <Container>
               <Navbar.Brand href="#home">
-                <img src={ArmadaIcon} width="90" height="30" className="d-inline-block align-top" alt="Logo_Armada" />
+                <div>
+                  <img src={ArmadaIcon} className="logo-blue d-inline-block align-top" alt="Logo_Armada" />
+                </div>
               </Navbar.Brand>
             </Container>
           </Navbar>
