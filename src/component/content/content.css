@@ -3,12 +3,12 @@
 }
 
 .carousel {
-  height: 100%;
+  height: 100vh;
   justify-content: center;
 }
 
 .carousel img {
-  width: 100%;
+  width: 100vh;
   height: auto;
 }
 
@@ -54,4 +54,12 @@ p.card-text {
   text-shadow: none;
   color: #70707e;
   font-size: 12px;
+}
+
+.thirdcontent{
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.iPhone {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
