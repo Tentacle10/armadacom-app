@@ -19,8 +19,8 @@ const FirstContent = () => {
               </Col>
               <Col sm={4} className="ms-5">
                 <Carousel.Caption>
-                  <h1>Ga Cuma Servis dan Jualan, Bikin Aplikasi juga.</h1>
-                  <p>Bikin aplikasi berbasis web ataupun Android di Wonosobo ya ke armadacom.id. Sebagai penunjang aktifitas bisnis kalian</p>
+                  <h1>Ga Cuma Servis dan Jualan Bikin Aplikasi juga</h1>
+                  <p>Bikin aplikasi berbasis web ataupun Android di Wonosobo ya ke Armadacom. Sebagai penunjang aktifitas bisnis kalian</p>
                 </Carousel.Caption>
                 <Button className="mt-2 w-button" variant="outline-light">
                   CHAT US
@@ -35,8 +35,8 @@ const FirstContent = () => {
               </Col>
               <Col sm={4} className="ms-5 justify-content-center align-items-center">
                 <Carousel.Caption className="justify-content-center align-items-center">
-                  <h1>Udah muter muter, ujungnya ke Armadacom.id</h1>
-                  <p>Armadacom.id adalah Toko komputer terlengkap di Wonosobo, menyediakan berbagai perangkat komputer dan perangkat jaringan</p>
+                  <h1>Udah muter muter ujungnya ke Armadacom</h1>
+                  <p>Armadacom adalah Toko komputer terlengkap di Wonosobo, menyediakan berbagai perangkat komputer dan perangkat jaringan</p>
                 </Carousel.Caption>
                 <Button className="mt-2 w-button" variant="outline-light">
                   CHAT US
@@ -51,8 +51,8 @@ const FirstContent = () => {
               </Col>
               <Col sm={4} className="ms-5 justify-content-center align-items-center">
                 <Carousel.Caption className="justify-content-center align-items-center">
-                  <h1>Ngapain Berhari hari, Kalo Sehari Jadi</h1>
-                  <p>Bikin aplikasi berbasis web ataupun Android di Wonosobo ya ke armadacom.id. Sebagai penunjang aktifitas bisnis kalian</p>
+                  <h1>Ngapain Berhari hari Kalo Sehari Jadi</h1>
+                  <p>Armadacom.id melayani service komputer, Laptop, Printer maupun Jaringan dan CCTV di wonosobo dengan kualitas pelayanan terbaik.</p>
                 </Carousel.Caption>
                 <Button className="mt-2 w-button" variant="outline-light">
                   CHAT US
