@@ -1,4 +1,10 @@
 .footer {
   margin-top: 3rem;
   width: 100vw;
+  background-color: #fff;
+  padding: 10% 10% 10% 10%;
+  margin-bottom: 3rem;
+  border: none;
+  border-radius: 25px 25px 0px 0px;
+  box-shadow: 0px 20px 80px 0px rgba(192.99999999999997, 199, 212, 0.25098039215686274);
 }

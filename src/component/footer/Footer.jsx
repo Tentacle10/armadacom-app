@@ -5,8 +5,8 @@ import './footer.css';
 const Footer = () => {
   return (
     <div>
-      <Container className="footer">
-        <Row className="justify-content-between">
+      <Container className='footer' fluid>
+        <Row className='justify-content-between'>
           <Col lg={4}>
             <div>About US</div>
             <div>Follow US</div>
@@ -28,7 +28,7 @@ const Footer = () => {
             </Row>
           </Col>
         </Row>
-        <Row className="justify-content-center text-center">
+        <Row className='justify-content-center text-center'>
           <Col md={8}>Copyright</Col>
         </Row>
       </Container>
