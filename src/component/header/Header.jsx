@@ -1,13 +1,13 @@
 // import React, { useEffect } from 'react';
-import './Header.css';
+import "./Header.css";
 
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Button from 'react-bootstrap/Button';
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import Button from "react-bootstrap/Button";
 
-import ArmadaIcon from '../../assets/logo/Logo_white.png';
+import ArmadaIcon from "../../assets/logo/Logo_white.png";
 
 const Header = () => {
   // useEffect(() => {
@@ -29,7 +29,11 @@ const Header = () => {
             <Container>
               <Navbar.Brand href="#home">
                 <div>
-                  <img src={ArmadaIcon} className="logo-blue d-inline-block align-top" alt="Logo_Armada" />
+                  <img
+                    src={ArmadaIcon}
+                    className="logo-blue d-inline-block align-top"
+                    alt="Logo_Armada"
+                  />
                 </div>
               </Navbar.Brand>
             </Container>

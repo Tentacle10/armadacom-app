@@ -1,8 +1,47 @@
-/* FirstContent */
-
 .slideshow {
   background-color: #2e64aa;
 }
+
+.carousel {
+  height: 90vh;
+  justify-content: center;
+}
+
+.carousel-item{
+  margin-top: 3rem;
+}
+
+.row-carousel{
+  height: auto;
+}
+
+.carousel img {
+  /* width: 100vw; */
+  height: 40vh;
+  justify-content: center;
+}
+
+.caption {
+  width: 100vw;
+  margin-top: 3rem;
+  color: #fff;
+}
+
+.text-abu {
+  color: #70707e;
+  text-align: justify;
+}
+
+.box {
+  margin-top: 1rem;
+}
+
+.card {
+  padding: 1rem 1rem 1rem 1rem;
+}
+
+@media (min-width: 992px){
+/* FirstContent */
 
 .carousel {
   height: 100vh;
@@ -26,9 +65,6 @@
 
 /* FirstContent */
 
-.text-abu {
-  color: #70707e;
-}
 h1,
 p {
   text-shadow: 5px 5px 10px black;
@@ -76,3 +112,4 @@ p.card-text {
 }
 
 /* ThirdContent */
+}

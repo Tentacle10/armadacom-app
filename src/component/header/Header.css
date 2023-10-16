@@ -2,17 +2,26 @@
   background-color: #2e64aa;
   /* background-color: #2e64aa00; */
   font-family: 'Quattrocento Sans', sans-serif;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
 }
 
+
 .logo-blue {
-  width: 113px;
+  width: 105px;
   height: 30px;
+}
+
+.basic-navbar-nav{
+  color: #fff;
 }
 
 .nav-link {
   color: #e4e4e4;
+}
+
+.nav-link:hover {
+  color: #fff;
 }
 
 .nav-link:hover {
@@ -40,6 +49,17 @@ a.dropdown-item {
 .nav-link:focus,
 .nav-link:hover {
   color: #fff;
+}
+
+@media (min-width: 992px){
+.navbar {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.logo-blue {
+  width: 113px;
+  height: 30px;
 }
 
 .sticky-navbar {
@@ -73,3 +93,5 @@ a.dropdown-item {
   position: fixed;
   top: 0;
 } */
+
+}

@@ -1,10 +1,29 @@
 .footer {
   margin-top: 3rem;
   width: 100vw;
-  background-color: #fff;
-  padding: 10% 10% 10% 10%;
+  background-color: #2e64aa;
+  padding: 3% 10% 0% 10%;
   margin-bottom: 3rem;
   border: none;
   border-radius: 25px 25px 0px 0px;
   box-shadow: 0px 20px 80px 0px rgba(192.99999999999997, 199, 212, 0.25098039215686274);
+}
+
+.first-foot p {
+  font-size: 14px;
+  margin: 0px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.second-foot {
+  /* width: 100%; */
+}
+
+.iMedsos {
+ margin: 0 5px 0 5px;
+}
+
+.copyright {
+  font-size: 12px;
 }
