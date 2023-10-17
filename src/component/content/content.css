@@ -7,11 +7,11 @@
   justify-content: center;
 }
 
-.carousel-item{
+.carousel-item {
   margin-top: 1rem;
 }
 
-.row-carousel{
+.row-carousel {
   height: auto;
 }
 
@@ -40,7 +40,7 @@
   padding: 1rem 1rem 1rem 1rem;
 }
 
-.card-title{
+.card-title {
   font-weight: 600;
 }
 
@@ -53,7 +53,7 @@
   padding-left: 0px;
 }
 
-.third{
+.third {
   margin-top: 1.5rem;
   background-color: #2e64aa;
   padding-left: 1.5rem;
@@ -80,79 +80,80 @@
   margin-bottom: -4rem;
 }
 
-
-
-
-@media (min-width: 992px){
-/* FirstContent */
-
-.carousel {
-  height: 100vh;
-  justify-content: center;
+.dev-img {
+  border-radius: 1rem 1rem 1rem 1rem;
 }
 
-.carousel img {
-  width: 100vh;
-  height: auto;
-}
+@media (min-width: 992px) {
+  /* FirstContent */
 
-.imgslide {
-  text-align: right !important;
-}
+  .carousel {
+    height: 100vh;
+    justify-content: center;
+  }
 
-.carousel-caption {
-  position: inherit;
-  text-align: left;
-  word-break: break-word;
-}
+  .carousel img {
+    width: 100vh;
+    height: auto;
+  }
 
-/* FirstContent */
+  .imgslide {
+    text-align: right !important;
+  }
 
-h1,
-p {
-  text-shadow: 5px 5px 10px black;
-}
+  .carousel-caption {
+    position: inherit;
+    text-align: left;
+    word-break: break-word;
+  }
 
-/* SecondContent */
+  /* FirstContent */
 
-.card {
-  padding: 10% 10% 10% 10%;
-  border: none;
-  border-radius: 25px 25px 25px 25px;
-  box-shadow: 0px 20px 80px 0px rgba(192.99999999999997, 199, 212, 0.25098039215686274);
-}
+  h1,
+  p {
+    text-shadow: 5px 5px 10px black;
+  }
 
-.tag {
-  color: #70707e;
-}
+  /* SecondContent */
 
-.title {
-  font-size: 20px;
-  font-weight: 900;
-}
+  .card {
+    padding: 10% 10% 10% 10%;
+    border: none;
+    border-radius: 25px 25px 25px 25px;
+    box-shadow: 0px 20px 80px 0px rgba(192.99999999999997, 199, 212, 0.25098039215686274);
+  }
 
-div.card-title.h5 {
-  font-size: 22px;
-  font-weight: 900;
-  margin: 0px;
-}
+  .tag {
+    color: #70707e;
+  }
 
-p.card-text {
-  text-shadow: none;
-  /* font-size: 12px; */
-}
+  .title {
+    font-size: 20px;
+    font-weight: 900;
+  }
 
-/* SecondContent */
+  div.card-title.h5 {
+    font-size: 22px;
+    font-weight: 900;
+    margin: 0px;
+  }
 
-/* ThirdContent */
+  p.card-text {
+    text-shadow: none;
+    /* font-size: 12px; */
+  }
 
-.thirdcontent {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+  /* SecondContent */
 
-.iPhone {
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+  /* ThirdContent */
 
-/* ThirdContent */
+  .thirdcontent {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .iPhone {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* ThirdContent */
 }
