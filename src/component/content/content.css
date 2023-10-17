@@ -8,7 +8,7 @@
 }
 
 .carousel-item{
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 .row-carousel{
@@ -18,7 +18,7 @@
 .carousel img {
   /* width: 100vw; */
   height: 40vh;
-  justify-content: center;
+  /* justify-content: ; */
 }
 
 .caption {
@@ -29,7 +29,7 @@
 
 .text-abu {
   color: #70707e;
-  text-align: justify;
+  /* text-align: justify; */
 }
 
 .box {
@@ -39,6 +39,47 @@
 .card {
   padding: 1rem 1rem 1rem 1rem;
 }
+
+.card-title{
+  font-weight: 600;
+}
+
+.card-icon {
+  color: #70707e;
+  font-size: 50px !important;
+}
+
+.card-body {
+  padding-left: 0px;
+}
+
+.third{
+  margin-top: 1.5rem;
+  background-color: #2e64aa;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  /* width: 100vw;
+  height: 100vh;
+  margin-top: 3rem;
+  border-radius: 20px;
+  margin-left: 1rem; */
+}
+
+.third-content {
+  /* background-color: #fff; */
+  /* height: 100vh;
+  border-radius: 20px;
+  justify-content: center; */
+}
+
+.iPhone img {
+  /* background-color: #fff; */
+  border-radius: 0.375rem;
+  width: 95%;
+  margin-top: -3rem;
+  margin-bottom: -4rem;
+}
+
 
 @media (min-width: 992px){
 /* FirstContent */
