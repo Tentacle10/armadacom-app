@@ -17,7 +17,14 @@ body {
   background-color: #fcfcfc;
   height: 2000px;
   /* font-family: 'Montserrat Alternates', sans-serif; */
-  font-family: 'Play', sans-serif;
+  /* font-family: 'Play', sans-serif; */
   /* font-family: 'Urbanist', sans-serif; */
   /* font-family: 'Varela Round', sans-serif; */
+  /* font-family: 'Quattrocento Sans', sans-serif; */
+  font-family: 'Lato', sans-serif;
+}
+
+.main-blue {
+  color: #fff;
+  background-color: #2e64aa;
 }
