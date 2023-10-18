@@ -1,5 +1,6 @@
 .slideshow {
   background-color: #2e64aa;
+  padding-top: 4.5rem;
 }
 
 .carousel {
@@ -16,9 +17,7 @@
 }
 
 .carousel img {
-  /* width: 100vw; */
   height: 40vh;
-  /* justify-content: ; */
 }
 
 .caption {
@@ -29,7 +28,6 @@
 
 .text-abu {
   color: #70707e;
-  /* text-align: justify; */
 }
 
 .box {
@@ -58,22 +56,9 @@
   background-color: #2e64aa;
   padding-left: 1rem;
   padding-right: 1rem;
-  /* width: 100vw;
-  height: 100vh;
-  margin-top: 3rem;
-  border-radius: 20px;
-  margin-left: 1rem; */
-}
-
-.third-content {
-  /* background-color: #fff; */
-  /* height: 100vh;
-  border-radius: 20px;
-  justify-content: center; */
 }
 
 .iPhone img {
-  /* background-color: #fff; */
   border-radius: 0.375rem;
   width: 95%;
   margin-top: -3rem;
@@ -98,7 +83,6 @@
 .fitur p {
   color: #70707e;
   font-size: 14px;
-  /* color: #43a4d1; */
   font-weight: 600;
 }
 
@@ -109,20 +93,18 @@
 
 .rotate-icon {
   transform: rotate(180deg);
-  transition: transform 0.3s ease; /* Add a smooth transition for the rotation effect */
+  transition: transform 0.3s ease;
 }
 
 .trapesium {
-  width: 150px; 
-  height: 0; 
-  border-bottom: 15px solid #2e64aa; 
-  border-left: 20px solid transparent; 
+  width: 150px;
+  height: 0;
+  border-bottom: 15px solid #2e64aa;
+  border-left: 20px solid transparent;
   border-right: 20px solid transparent;
 }
 
 @media (min-width: 992px) {
-  /* FirstContent */
-
   .carousel {
     height: 100vh;
     justify-content: center;
@@ -143,14 +125,10 @@
     word-break: break-word;
   }
 
-  /* FirstContent */
-
   h1,
   p {
     text-shadow: 5px 5px 10px black;
   }
-
-  /* SecondContent */
 
   .card {
     padding: 10% 10% 10% 10%;
@@ -176,12 +154,7 @@
 
   p.card-text {
     text-shadow: none;
-    /* font-size: 12px; */
   }
-
-  /* SecondContent */
-
-  /* ThirdContent */
 
   .thirdcontent {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -190,6 +163,4 @@
   .iPhone {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
-
-  /* ThirdContent */
 }
