@@ -1,62 +1,71 @@
-// import { useState } from 'react';
-import './Header.css';
-
-import { Container } from 'react-bootstrap';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import Button from 'react-bootstrap/Button';
-import Offcanvas from 'react-bootstrap/Offcanvas';
-
-import ArmadaIcon from '../../assets/logo/Logo_white.png';
-
-// import { HouseFill, FileEarmarkPersonFill } from 'react-bootstrap-icons';
+import "./Header.css";
+import {
+  Container,
+  Row,
+  Col,
+  Nav,
+  Navbar,
+  NavDropdown,
+  Button,
+  Offcanvas,
+} from "react-bootstrap";
+import ArmadaIcon from "../../assets/logo/Logo_white.png";
+import { Tiktok, Facebook, Instagram } from "react-bootstrap-icons";
 
 const Header = () => {
-  // const [show, setShow] = useState(false);
-
-  // const handleClose = () => setShow(false);
-  // const handleShow = () => setShow(true);
-
-  // useEffect(() => {
-  //   const navbar = document.querySelector('.navbar');
-
-  //   window.addEventListener('scroll', () => {
-  //     if (window.scrollY > 0) {
-  //       navbar.classList.add('sticky-navbar');
-  //     } else {
-  //       navbar.classList.remove('sticky-navbar');
-  //     }
-  //   });
-  // }, []);
-
   return (
     <>
-      <Navbar key='md' expand='md' data-bs-theme='dark' Navbar fixed='top'>
+      <Navbar key="md" expand="md" data-bs-theme="dark" Navbar fixed="top">
         <Container fluid>
-          <Navbar.Brand href='#'>
-            <img src={ArmadaIcon} className='logo-blue d-inline-block align-top' alt='Logo_Armada' />
+          <Navbar.Brand href="#">
+            <img
+              src={ArmadaIcon}
+              className="logo-blue d-inline-block align-top"
+              alt="Logo_Armada"
+            />
           </Navbar.Brand>
-          <Navbar.Toggle aria-controls='offcanvasNavbar-expand-md' className='text-light' />
-          <Navbar.Offcanvas id='offcanvasNavbar-expand-md' aria-labelledby='offcanvasNavbarLabel-expand-md' placement='end' data-bs-theme='dark'>
+          <Navbar.Toggle
+            aria-controls="offcanvasNavbar-expand-md"
+            className=""
+          />
+          <Navbar.Offcanvas
+            id="offcanvasNavbar-expand-md"
+            aria-labelledby="offcanvasNavbarLabel-expand-md"
+            placement="end"
+            data-bs-theme="light"
+          >
             <Offcanvas.Header closeButton>
-              <Offcanvas.Title id='offcanvasNavbarLabel-expand-md'>Offcanvas</Offcanvas.Title>
+              <Offcanvas.Title id="offcanvasNavbarLabel-expand-md"></Offcanvas.Title>
             </Offcanvas.Header>
-            <Offcanvas.Body>
-              <Nav className='justify-content-end flex-grow-1 pe-3'>
-                <Nav.Link href='#action1'>HOME</Nav.Link>
-                <Nav.Link href='#action2'>ABOUT US</Nav.Link>
-                <NavDropdown title='LAYANAN' id='offcanvasNavbarDropdown-expand-md'>
-                  <NavDropdown.Item href='#action3'>STORE</NavDropdown.Item>
-                  <NavDropdown.Item href='#action4'>SERVICE</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href='#action5'>SOFTWARE</NavDropdown.Item>
+            <Offcanvas.Body className="px-5">
+              <Nav className="justify-content-end flex-grow-1 pe-3">
+                <Nav.Link href="#action1">Home</Nav.Link>
+                <Nav.Link href="#action2">About Us</Nav.Link>
+                <NavDropdown
+                  title="Layanan"
+                  id="offcanvasNavbarDropdown-expand-md"
+                >
+                  <NavDropdown.Item href="#action3">Store</NavDropdown.Item>
+                  <NavDropdown.Item href="#action4">Service</NavDropdown.Item>
+                  <NavDropdown.Item href="#action5">Software</NavDropdown.Item>
                 </NavDropdown>
-                <Nav.Link href='#action6'>PRICELIST</Nav.Link>
-                <Nav.Link href='#action7'>TESTIMONIAL</Nav.Link>
+                <Nav.Link href="#action7">Testimonial</Nav.Link>
               </Nav>
-              <Button variant='outline-success'>Search</Button>
+              <Button className="btn-blue w-100">Pricelist</Button>
             </Offcanvas.Body>
+            <Row className="canvas-footer text-center">
+              <Col className="text-center">
+                <Button href="#" variant="link" className="btn-sos">
+                  <Facebook className="iMedsos" />
+                </Button>
+                <Button href="#" variant="link" className="btn-sos">
+                  <Instagram className="iMedsos-c" />
+                </Button>
+                <Button href="#" variant="link" className="btn-sos">
+                  <Tiktok className="iMedsos" />
+                </Button>
+              </Col>
+            </Row>
           </Navbar.Offcanvas>
         </Container>
       </Navbar>

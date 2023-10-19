@@ -3,7 +3,6 @@
   width: 100vw;
   background-color: #2e64aa;
   padding: 3% 5% 0% 5%;
-  margin-bottom: 3rem;
   border: none;
   /* border-radius: 25px 25px 0px 0px; */
   box-shadow: 0px 20px 80px 0px rgba(192.99999999999997, 199, 212, 0.25098039215686274);
@@ -22,11 +21,6 @@
 .second-foot h5 {
   font-weight: 500;
   letter-spacing: 0.1rem;
-}
-
-.iMedsos {
-  font-size: 25px;
- margin: 0 5px 0 5px;
 }
 
 .copyright {

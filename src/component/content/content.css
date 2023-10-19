@@ -104,6 +104,50 @@
   border-right: 20px solid transparent;
 }
 
+.contact-float {
+  font-size: 22px;
+  background-color: #fff;
+  color: #2e64aa;
+  /* border: 2px solid #2e64aa; */
+  border-radius: 50%;
+  box-shadow: 0px 5px 11px 1px rgba(0, 0, 0, 0.25);
+  border: none;
+}
+
+.contact-float:hover {
+  background-color: #2e64aa;
+  color: #fff;
+}
+
+.contact-fade {
+  font-size: 14px;
+  background-color: #2e64aa;
+  color: #fff;
+  /* border: 2px solid #2e64aa; */
+  padding: 8px 12px 8px 12px !important;
+  border-radius: 50% !important;
+  box-shadow: 0px 5px 11px 1px rgba(0, 0, 0, 0.25);
+  margin-top: 0.4rem !important;
+  border: none;
+}
+
+.contact-fade:hover {
+  background-color: #fff;
+  color: #2e64aa;
+}
+
+.btn-group-vertical {
+  align-items: center;
+}
+
+.icontact {
+  margin-top: -4px;
+}
+
+.dropdown-toggle {
+  white-space: 0;
+}
+
 @media (min-width: 992px) {
   .carousel {
     height: 100vh;

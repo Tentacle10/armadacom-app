@@ -7,7 +7,6 @@ import PlaceIcon from "@mui/icons-material/Place";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import PhoneInTalkIcon from "@mui/icons-material/PhoneInTalk";
 import EmailIcon from "@mui/icons-material/Email";
-import { Tiktok, Facebook, Instagram } from "react-bootstrap-icons";
 
 const Footer = () => {
   return (
@@ -49,14 +48,6 @@ const Footer = () => {
                 <EmailIcon className="me-2" />
                 armadacom.wsb@gmail.com
               </p>
-            </div>
-          </Col>
-          <Col md={6} className="second-foot text-center">
-            <div>
-              <h5>Follow US</h5>
-              <Instagram className="iMedsos" />
-              <Facebook className="iMedsos mx-2" />
-              <Tiktok className="iMedsos" />
             </div>
           </Col>
         </Row>
