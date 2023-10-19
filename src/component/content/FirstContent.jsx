@@ -16,20 +16,6 @@ const FirstContent = () => {
           <Carousel.Item className='carousel-item d-flex justify-content-center align-items-start'>
             <Row className='row-carousel d-flex justify-content-center align-items-center'>
               <Col sm={4} className='imgslide d-flex justify-content-center'>
-                <img src={CrossPlatform} alt='slide' />
-              </Col>
-              <Col sm={4} className='caption px-3'>
-                <h1>Ga Cuma Servis dan Jualan Bikin Aplikasi juga</h1>
-                <p>Bikin aplikasi berbasis web ataupun Android di Wonosobo ya ke Armadacom. Sebagai penunjang aktifitas bisnis kalian</p>
-                <Button className='mt-2 w-button' variant='outline-light'>
-                  CHAT US
-                </Button>
-              </Col>
-            </Row>
-          </Carousel.Item>
-          <Carousel.Item className='carousel-item d-flex justify-content-center align-items-start'>
-            <Row className='row-carousel d-flex justify-content-center align-items-center'>
-              <Col sm={4} className='imgslide d-flex justify-content-center'>
                 <img src={HPElite} alt='slide' />
               </Col>
               <Col sm={4} className='caption px-3'>
@@ -63,6 +49,20 @@ const FirstContent = () => {
               <Col sm={4} className='caption px-3'>
                 <h1>Anda Sibuk? Tidak bisa ke Toko Offline?</h1>
                 <p>DAMKAR anda membeli kami antar</p>
+                <Button className='mt-2 w-button' variant='outline-light'>
+                  CHAT US
+                </Button>
+              </Col>
+            </Row>
+          </Carousel.Item>
+          <Carousel.Item className='carousel-item d-flex justify-content-center align-items-start'>
+            <Row className='row-carousel d-flex justify-content-center align-items-center'>
+              <Col sm={4} className='imgslide d-flex justify-content-center'>
+                <img src={CrossPlatform} alt='slide' />
+              </Col>
+              <Col sm={4} className='caption px-3'>
+                <h1>Ga Cuma Servis dan Jualan Bikin Aplikasi juga</h1>
+                <p>Bikin aplikasi berbasis web ataupun Android di Wonosobo ya ke Armadacom. Sebagai penunjang aktifitas bisnis kalian</p>
                 <Button className='mt-2 w-button' variant='outline-light'>
                   CHAT US
                 </Button>

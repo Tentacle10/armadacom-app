@@ -20,18 +20,14 @@
   color: #555;
 }
 
-.navbar-nav .nav-link.active,
-.navbar-nav .nav-link.show {
+.nav-link.active,
+.nav-link.show {
   color: #555;
 }
 
 .nav-link:focus,
 .nav-link:hover {
   color: #555;
-}
-
-.dropdown-toggle::after {
-
 }
 
 a.dropdown-item {
@@ -41,15 +37,9 @@ a.dropdown-item {
   color: #555;
 }
 
-.navbar-nav .dropdown-menu {
+.dropdown-menu {
   padding: 0;
 }
-
-/* .dropdown-item:focus,
-.dropdown-item:hover {
-  color: #fff;
-  background-color: #2e64aa;
-} */
 
 .dropdown-menu {
   border: none;
@@ -68,8 +58,6 @@ a.dropdown-item {
 
 .offcanvas {
   max-width: 65%;
-  /* color: #fff; */
-  /* background-color: #2e64aa; */
 }
 
 .canvas-footer {
@@ -84,13 +72,13 @@ a.dropdown-item {
 }
 
 .iMedsos {
-  color: #555 ;
+  color: #555;
   font-size: 17px;
   margin: 0;
 }
 
 .iMedsos-c {
-  color: #555 ;
+  color: #555;
   font-size: 17px;
   margin-left: 2.3rem;
   margin-right: 2.3rem;
