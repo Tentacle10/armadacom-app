@@ -172,7 +172,21 @@
 }
 /* animasi */
 
+.react-multiple-carousel__arrow {
+  background-color: #2e64aa !important;
+  opacity: 0.8 !important;
+}
+
+.react-multiple-carousel__arrow--right {
+  margin-right: 0.2rem;
+}
+
+.react-multiple-carousel__arrow--left {
+  margin-left: 0.2rem;
+}
+
 @media (min-width: 992px) {
+
   .carousel {
     height: 100vh;
     justify-content: center;

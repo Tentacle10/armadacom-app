@@ -15,7 +15,7 @@ const FifthContent = () => {
             <img src={Devimg} alt="dev" className="dev-img w-100" />
           </Col>
           <Col sm={6}>
-            <div className="fs-4 fw-bolder">Software House</div>
+            <div className="fs-4 fw-bolder text-abu">Software House</div>
             <div className="fs-2 fw-bolder">
               PALUGADA - Apa yang lu mau, Gue ada!
             </div>
