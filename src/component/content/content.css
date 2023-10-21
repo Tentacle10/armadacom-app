@@ -197,6 +197,14 @@
     height: auto;
   }
 
+  .caption {
+    /* background-color: #ffffff6c; */
+    width: 30vw;
+    padding: 3rem 0rem 3rem 10rem !important;
+    margin-top: 0;
+    border-radius: 15%;
+  }
+
   .imgslide {
     text-align: right !important;
   }

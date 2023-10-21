@@ -16,7 +16,7 @@ const Header = () => {
   return (
     <>
       <Navbar key="md" expand="md" data-bs-theme="dark" fixed="top">
-        <Container fluid>
+        <Container className="con-nav" fluid>
           <Navbar.Brand href="#">
             <img
               src={ArmadaIcon}
@@ -44,6 +44,7 @@ const Header = () => {
                 <NavDropdown
                   title="Layanan"
                   id="offcanvasNavbarDropdown-expand-md"
+                  className="dropdown"
                 >
                   <NavDropdown.Item href="#action3">Store</NavDropdown.Item>
                   <NavDropdown.Item href="#action4">Service</NavDropdown.Item>
