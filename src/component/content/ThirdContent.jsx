@@ -6,7 +6,11 @@ import PlayStore from "../../assets/icon/playstore-svgrepo-com.svg";
 const ThirdContent = () => {
   return (
     <>
-      <Container className="third d-flex justify-content-center" fluid>
+      <Container
+        id="service"
+        className="third d-flex justify-content-center"
+        fluid
+      >
         <Row className="third-content d-flex justify-content-center">
           <Col className="text-light d-flex justify-content-center align-items-center flex-column text-center px-5 pt-5">
             <div className="fw-bold fs-3">Fitur Tracking Service</div>
@@ -32,7 +36,11 @@ const ThirdContent = () => {
               Download sekarang di playstore untuk menikmati fitur tracking dan
               live update harga.
             </div>
-            <Button className="w-button mt-4 px-3 py-2" variant="outline-light">
+            <Button
+              className="w-button mt-4 px-3 py-2"
+              variant="light"
+              href="https://play.google.com/store/apps/details?id=com.wingbuk.armadacom"
+            >
               <img
                 src={PlayStore}
                 alt="PlayStore"

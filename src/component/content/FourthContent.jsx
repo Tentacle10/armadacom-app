@@ -16,7 +16,7 @@ const FourthContent = () => {
         <Row>
           <Col md={6} className="d-flex">
             <Col className="d-flex justify-content-center align-items-center">
-              <Col className="py-4 px-1 text-center">
+              <Col className="py-4 px-1">
                 <Col className="text-abu fs-6">SERVICE CENTER</Col>
                 <Col className="title fw-bolder fs-5">
                   SATSET - Cepat Rapi Berkualitas

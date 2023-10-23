@@ -52,7 +52,7 @@ const SixthContent = () => {
   ];
   return (
     <>
-      <Container>
+      <Container id="testimonials">
         <Row className="pt-3 mb-3 mt-3">
           <Col className="text-center text-abu">
             <h3>Testimonials</h3>

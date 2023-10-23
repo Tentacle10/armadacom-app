@@ -11,6 +11,7 @@ import Damkar from "../../assets/img/damkar.png";
 const FirstContent = () => {
   return (
     <>
+      <Container id="home"></Container>
       <Container className="slideshow" fluid>
         <Carousel className="" controls={false} indicators={true} fade>
           <Carousel.Item className="carousel-item d-flex justify-content-center align-items-start">
@@ -26,7 +27,11 @@ const FirstContent = () => {
                   Armadacom adalah Toko komputer terlengkap di Wonosobo,
                   menyediakan berbagai perangkat komputer dan perangkat jaringan
                 </p>
-                <Button className="mt-2 w-button" variant="outline-light">
+                <Button
+                  className="mt-2 w-button"
+                  variant="light"
+                  href="https://api.whatsapp.com/send/?phone=6282322006005&text=Hallo+Admin+Service+%2AArmada+Computer%2C%2A++&type=phone_number&app_absent=0"
+                >
                   CHAT US
                 </Button>
               </Col>
@@ -46,7 +51,11 @@ const FirstContent = () => {
                   Jaringan dan CCTV di wonosobo dengan kualitas pelayanan
                   terbaik.
                 </p>
-                <Button className="mt-2 w-button" variant="outline-light">
+                <Button
+                  className="mt-2 w-button"
+                  variant="light"
+                  href="https://api.whatsapp.com/send/?phone=6282322006005&text=Hallo+Admin+Service+%2AArmada+Computer%2C%2A++&type=phone_number&app_absent=0"
+                >
                   CHAT US
                 </Button>
               </Col>
@@ -62,7 +71,11 @@ const FirstContent = () => {
                   Anda Sibuk? Tidak bisa ke Toko Offline?
                 </h1>
                 <p>DAMKAR anda membeli kami antar</p>
-                <Button className="mt-2 w-button" variant="outline-light">
+                <Button
+                  className="mt-2 w-button"
+                  variant="light"
+                  href="https://api.whatsapp.com/send/?phone=6282322006005&text=Hallo+Admin+Service+%2AArmada+Computer%2C%2A++&type=phone_number&app_absent=0"
+                >
                   CHAT US
                 </Button>
               </Col>
@@ -74,12 +87,18 @@ const FirstContent = () => {
                 <img src={CrossPlatform} alt="slide" />
               </Col>
               <Col sm={4} className="caption px-3">
-                <h1>Ga Cuma Servis dan Jualan Bikin Aplikasi juga</h1>
+                <h1 className="text-uppercase fs-3">
+                  Ga Cuma Servis dan Jualan Bikin Aplikasi juga
+                </h1>
                 <p>
                   Bikin aplikasi berbasis web ataupun Android di Wonosobo ya ke
                   Armadacom. Sebagai penunjang aktifitas bisnis kalian
                 </p>
-                <Button className="mt-2 w-button" variant="outline-light">
+                <Button
+                  className="mt-2 w-button"
+                  variant="light"
+                  href="https://api.whatsapp.com/send/?phone=6282322006005&text=Hallo+Admin+Service+%2AArmada+Computer%2C%2A++&type=phone_number&app_absent=0"
+                >
                   CHAT US
                 </Button>
               </Col>
