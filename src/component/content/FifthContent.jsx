@@ -11,11 +11,15 @@ const FifthContent = () => {
     <>
       <Container id="software" className="mt-4">
         <Row>
-          <Col sm={6} className="mb-3">
+          <Col className="px-3">
+            <div className="fs-6 judul mt-5 mb-2">SOFTWARE DEV</div>
+          </Col>
+        </Row>
+        <Row>
+          <Col sm={6} className="mb-3 mt-3">
             <img src={Devimg} alt="dev" className="dev-img w-100" />
           </Col>
           <Col sm={6}>
-            <div className="fs-6 fw-bolder text-abu">Software House</div>
             <div className="fs-5 fw-bolder">
               PALUGADA - Apa yang lu mau, Gue ada!
             </div>

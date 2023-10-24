@@ -26,6 +26,8 @@ const Header = () => {
           </Navbar.Brand>
           <Navbar.Toggle
             aria-controls="offcanvasNavbar-expand-md"
+            type="button"
+            aria-label="Toggle navigation"
             className=""
           />
           <Navbar.Offcanvas
@@ -39,18 +41,24 @@ const Header = () => {
             </Offcanvas.Header>
             <Offcanvas.Body className="px-5">
               <Nav className="d-flex justify-content-end flex-grow-1 pe-3">
-                <Nav.Link href="#home">Home</Nav.Link>
-                <Nav.Link href="#about">About Us</Nav.Link>
+                <Nav.Link href="#home" className="px-2 mx-2">
+                  Home
+                </Nav.Link>
+                <Nav.Link href="#about" className="px-2 mx-1">
+                  About Us
+                </Nav.Link>
                 <NavDropdown
                   title="Layanan"
                   id="offcanvasNavbarDropdown-expand-md"
-                  className="dropdown"
+                  className="dropdown px-2 mx-1"
                 >
                   <NavDropdown.Item href="#">Store</NavDropdown.Item>
                   <NavDropdown.Item href="#service">Service</NavDropdown.Item>
                   <NavDropdown.Item href="#software">Software</NavDropdown.Item>
                 </NavDropdown>
-                <Nav.Link href="#testimonials">Testimonial</Nav.Link>
+                <Nav.Link href="#testimonials" className="px-2 mx-1">
+                  Testimonial
+                </Nav.Link>
               </Nav>
               <Button className="btn-blue w-100">Pricelist</Button>
             </Offcanvas.Body>

@@ -6,12 +6,13 @@ import PlayStore from "../../assets/icon/playstore-svgrepo-com.svg";
 const ThirdContent = () => {
   return (
     <>
-      <Container
-        id="service"
-        className="third d-flex justify-content-center"
-        fluid
-      >
-        <Row className="third-content d-flex justify-content-center">
+      <Container>
+        <Row className="mt-5 pt-3 mx-1">
+          <Col className="judul fs-6">SERVICE CENTER</Col>
+        </Row>
+      </Container>
+      <Container id="service" className="d-flex justify-content-center" fluid>
+        <Row className="third mt-3 d-flex justify-content-center">
           <Col className="text-light d-flex justify-content-center align-items-center flex-column text-center px-5 pt-5">
             <div className="fw-bold fs-3">Fitur Tracking Service</div>
             <div className="fw-lighter fs-6 text-light text-opacity-75">

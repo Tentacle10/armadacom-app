@@ -8,6 +8,7 @@ import FourthContent from "./component/content/FourthContent.jsx";
 import FifthContent from "./component/content/FifthContent.jsx";
 import ContactBtn from "./component/content/ContactBtn.jsx";
 import SixthContent from "./component/content/SixthContent.jsx";
+import DamkarContent from "./component/content/DamkarContent.jsx";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       <SecondContent />
       <ThirdContent />
       <FourthContent />
+      <DamkarContent />
       <FifthContent />
       <SixthContent />
       <Footer />

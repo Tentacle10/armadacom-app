@@ -24,7 +24,20 @@
   height: 40vh;
 }
 
+.caption-100 {
+  margin: 0 !important;
+}
+
+.triangle-right {
+	width: 0;
+	height: 0;
+	border-top: 25px solid transparent;
+	border-left: 50px solid #a01414;
+	border-bottom: 25px solid transparent;
+}
+
 .caption {
+  /* background-color: #ffffff7a;  */
   width: 100vw;
   margin-top: 3rem;
   color: #fff;
@@ -42,6 +55,36 @@
 
 .text-abu {
   color: #70707e;
+}
+
+.judul {
+  margin: 1px auto;
+  text-align: center;
+  color: #70707e;
+  max-width: 600px;
+  position: relative;
+}
+
+.judul::before {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #70707e3f;
+  left: 0;
+  top: 40%;
+  position: absolute;
+}
+
+.judul::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background: #70707e3f;
+  right: 0;
+  top: 40%;
+  position: absolute;
 }
 
 .box {
@@ -134,6 +177,16 @@
   color: #fff;
 }
 
+.damkar {
+  background-color: #2e64aa;
+  text-align: center;
+  width: 100vw;
+}
+
+.damkar img {
+  height: 40vh;
+}
+
 .contact-fade {
   width: auto !important;
   font-size: 14px;
@@ -202,8 +255,9 @@
 @media (min-width: 992px) {
 
   .carousel {
-    height: 100vh;
+    height: 87vh;
     justify-content: center;
+    padding-top: 2rem;
   }
 
   .carousel img {
@@ -212,10 +266,12 @@
   }
 
   .caption {
-    /* background-color: #ffffff6c; */
-    width: 30vw;
-    padding: 3rem 0rem 3rem 10rem !important;
-    border-radius: 15%;
+    background-color: #ffffff21;
+    width: 100vh;
+    padding: 2rem 2rem 2rem 2rem !important;
+    margin-top: 0 !important;
+    box-shadow: 0px 0px 80px 0px rgba(0, 0, 0, 0.251);
+    text-align: end;
   }
 
   .imgslide {
@@ -226,11 +282,6 @@
     position: inherit;
     text-align: left;
     word-break: break-word;
-  }
-
-  h1,
-  p {
-    text-shadow: 5px 5px 10px black;
   }
 
   .card {

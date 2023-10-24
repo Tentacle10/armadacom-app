@@ -27,13 +27,16 @@ const FirstContent = () => {
                   Armadacom adalah Toko komputer terlengkap di Wonosobo,
                   menyediakan berbagai perangkat komputer dan perangkat jaringan
                 </p>
-                <Button
-                  className="mt-2 w-button"
-                  variant="light"
-                  href="https://api.whatsapp.com/send/?phone=6282322006005&text=Hallo+Admin+Service+%2AArmada+Computer%2C%2A++&type=phone_number&app_absent=0"
-                >
-                  CHAT US
-                </Button>
+                <Col className="text-center">
+                  <Button
+                    className="mt-2 w-button"
+                    variant="light"
+                    // href="https://api.whatsapp.com/send/?phone=6282322006005&text=Hallo+Admin+Service+%2AArmada+Computer%2C%2A++&type=phone_number&app_absent=0"
+                    href="#about"
+                  >
+                    CHECK
+                  </Button>
+                </Col>
               </Col>
             </Row>
           </Carousel.Item>
@@ -51,13 +54,16 @@ const FirstContent = () => {
                   Jaringan dan CCTV di wonosobo dengan kualitas pelayanan
                   terbaik.
                 </p>
-                <Button
-                  className="mt-2 w-button"
-                  variant="light"
-                  href="https://api.whatsapp.com/send/?phone=6282322006005&text=Hallo+Admin+Service+%2AArmada+Computer%2C%2A++&type=phone_number&app_absent=0"
-                >
-                  CHAT US
-                </Button>
+                <Col className="text-center">
+                  <Button
+                    className="mt-2 w-button"
+                    variant="light"
+                    // href="https://api.whatsapp.com/send/?phone=6282322006005&text=Hallo+Admin+Service+%2AArmada+Computer%2C%2A++&type=phone_number&app_absent=0"
+                    href="#service"
+                  >
+                    CHECK
+                  </Button>
+                </Col>
               </Col>
             </Row>
           </Carousel.Item>
@@ -70,19 +76,26 @@ const FirstContent = () => {
                 <h1 className="text-uppercase fs-3">
                   Anda Sibuk? Tidak bisa ke Toko Offline?
                 </h1>
-                <p>DAMKAR anda membeli kami antar</p>
-                <Button
-                  className="mt-2 w-button"
-                  variant="light"
-                  href="https://api.whatsapp.com/send/?phone=6282322006005&text=Hallo+Admin+Service+%2AArmada+Computer%2C%2A++&type=phone_number&app_absent=0"
-                >
-                  CHAT US
-                </Button>
+                <p>
+                  Selain jualan dan servis, ARMADA juga punya layanan antar
+                  jemput Lo.. di DAMKARin aja, Kapan lagi bisa servis/beli tanpa
+                  keluar rumah
+                </p>
+                <Col className="text-center">
+                  <Button
+                    className="mt-2 w-button"
+                    variant="light"
+                    // href="https://api.whatsapp.com/send/?phone=6282322006005&text=Hallo+Admin+Service+%2AArmada+Computer%2C%2A++&type=phone_number&app_absent=0"
+                    href="#damkar"
+                  >
+                    CHECK
+                  </Button>
+                </Col>
               </Col>
             </Row>
           </Carousel.Item>
           <Carousel.Item className="carousel-item d-flex justify-content-center align-items-start">
-            <Row className="row-carousel d-flex justify-content-center align-items-center">
+            <Row className="row-carousel d-flex justify-content-center align-items-center justify-content-md-around">
               <Col sm={4} className="imgslide d-flex justify-content-center">
                 <img src={CrossPlatform} alt="slide" />
               </Col>
@@ -94,13 +107,16 @@ const FirstContent = () => {
                   Bikin aplikasi berbasis web ataupun Android di Wonosobo ya ke
                   Armadacom. Sebagai penunjang aktifitas bisnis kalian
                 </p>
-                <Button
-                  className="mt-2 w-button"
-                  variant="light"
-                  href="https://api.whatsapp.com/send/?phone=6282322006005&text=Hallo+Admin+Service+%2AArmada+Computer%2C%2A++&type=phone_number&app_absent=0"
-                >
-                  CHAT US
-                </Button>
+                <Col className="text-center">
+                  <Button
+                    className="mt-2 w-button"
+                    variant="light"
+                    // href="https://api.whatsapp.com/send/?phone=6282322006005&text=Hallo+Admin+Service+%2AArmada+Computer%2C%2A++&type=phone_number&app_absent=0"
+                    href="#software"
+                  >
+                    CHECK
+                  </Button>
+                </Col>
               </Col>
             </Row>
           </Carousel.Item>

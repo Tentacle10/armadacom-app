@@ -54,8 +54,8 @@ const SixthContent = () => {
     <>
       <Container id="testimonials">
         <Row className="pt-3 mb-3 mt-3">
-          <Col className="text-center text-abu">
-            <h3>Testimonials</h3>
+          <Col className="text-center text-abu mt-5">
+            <div className="judul fs-6">TESTIMONIALS</div>
           </Col>
         </Row>
       </Container>
