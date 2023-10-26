@@ -1,6 +1,6 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
-import NavbarTest from './component/header/NavbarTest';
-// import Header from './component/header/Header.jsx';
+import "bootstrap/dist/css/bootstrap.min.css";
+import NavbarTest from "./component/header/NavbarTest";
+// import Header from "./component/header/Header.jsx";
 // import Footer from "./component/footer/Footer.jsx";
 // import FirstContent from "./component/content/FirstContent.jsx";
 // import SecondContent from "./component/content/SecondContent.jsx";
@@ -10,14 +10,13 @@ import NavbarTest from './component/header/NavbarTest';
 // import ContactBtn from "./component/content/ContactBtn.jsx";
 // import SixthContent from "./component/content/SixthContent.jsx";
 // import DamkarContent from "./component/content/DamkarContent.jsx";
-// import HeaderTest from './component/header/HeaderTest.jsx';
 
 function App() {
   return (
     <>
       <NavbarTest />
-      {/* <HeaderTest /> */}
-      {/* <FirstContent />
+      {/* <Header />
+      <FirstContent />
       <SecondContent />
       <ThirdContent />
       <FourthContent />
