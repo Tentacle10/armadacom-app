@@ -69,7 +69,7 @@ const NavbarTest = () => {
                 <Nav.Link className="nav-item">Home</Nav.Link>
                 <Nav.Link className="nav-item">About Us</Nav.Link>
                 <NavDropdown
-                  className="nav-item pl-4 pl-md-0 ml-0 ml-md-4"
+                  className="pl-4 pl-md-0 ml-0 ml-md-4"
                   title="Layanan"
                   id="offcanvasNavbarDropdown-expand-md"
                   show={showDropdown}
