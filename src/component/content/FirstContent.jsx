@@ -27,17 +27,16 @@ const FirstContent = () => {
                   Armadacom adalah Toko komputer terlengkap di Wonosobo,
                   menyediakan berbagai perangkat komputer dan perangkat jaringan
                 </p>
-                <Col className="text-center">
-                  <Button
-                    className="mt-2 w-button"
-                    variant="light"
-                    // href="https://api.whatsapp.com/send/?phone=6282322006005&text=Hallo+Admin+Service+%2AArmada+Computer%2C%2A++&type=phone_number&app_absent=0"
-                    href="#about"
-                  >
-                    CHECK
-                  </Button>
-                </Col>
               </Col>
+
+              <Button
+                className="mt-2 w-button"
+                variant="light"
+                // href="https://api.whatsapp.com/send/?phone=6282322006005&text=Hallo+Admin+Service+%2AArmada+Computer%2C%2A++&type=phone_number&app_absent=0"
+                href="#about"
+              >
+                CHECK
+              </Button>
             </Row>
           </Carousel.Item>
           <Carousel.Item className="carousel-item d-flex justify-content-center align-items-start">
