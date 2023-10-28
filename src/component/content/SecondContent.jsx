@@ -5,11 +5,16 @@ import { Shop, Tools, Terminal, Headset } from "react-bootstrap-icons";
 const SecondContent = () => {
   return (
     <>
-      <Container id="about" fluid>
+      <Container id="about">
+        <Row>
+          <Col className="batas-atas"></Col>
+        </Row>
+      </Container>
+      <Container fluid>
         <Row>
           <Col md={6} className="d-flex">
             <Col className="d-flex justify-content-center align-items-center">
-              <Col className="py-4 px-3 mt-5">
+              <Col className="py-4 px-3">
                 <Col className="judul fs-6">ARMADACOM.ID</Col>
                 <Col className="title fw-bolder fs-5 mb-2">
                   Melayani segala kebutuhan IT

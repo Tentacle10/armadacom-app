@@ -38,8 +38,14 @@
 
 .caption {
   /* background-color: #ffffff7a;  */
+  padding-top: 2rem;
   width: 100vw;
   color: #fff;
+  letter-spacing: 1px;
+}
+
+.caption p {
+  padding-top: 0.5rem;
 }
 
 .w-button {
@@ -54,6 +60,10 @@
 
 .text-abu {
   color: #70707e;
+}
+
+.batas-atas {
+  height: 50px;
 }
 
 .judul {

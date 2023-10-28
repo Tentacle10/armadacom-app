@@ -66,8 +66,12 @@ const NavbarTest = () => {
             </Offcanvas.Header>
             <Offcanvas.Body className="justify-content-md-end px-5">
               <Nav className="navbar-nav py-4 py-md-0">
-                <Nav.Link className="nav-item">Home</Nav.Link>
-                <Nav.Link className="nav-item">About Us</Nav.Link>
+                <Nav.Link href="#home" className="nav-item">
+                  Home
+                </Nav.Link>
+                <Nav.Link href="#about" className="nav-item">
+                  About Us
+                </Nav.Link>
                 <NavDropdown
                   className="pl-4 pl-md-0 ml-0 ml-md-4"
                   title="Layanan"
@@ -79,14 +83,23 @@ const NavbarTest = () => {
                   }}
                   onMouseLeave={() => {
                     // console.log(showDropdown);
-                    setShowDropdown(false);
+                    setShowDropdown(true);
                   }}
                 >
                   <NavDropdown.Item href="#">Store</NavDropdown.Item>
-                  <NavDropdown.Item href="#">Service</NavDropdown.Item>
-                  <NavDropdown.Item href="#">Software</NavDropdown.Item>
+                  <NavDropdown.Item href="#service">Service</NavDropdown.Item>
+                  <NavDropdown.Item
+                    href="#damkar"
+                    className="border border-primary-subtle f-damkar"
+                  >
+                    Damkar Express
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="#software">Software</NavDropdown.Item>
                 </NavDropdown>
-                <Nav.Link className="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                <Nav.Link
+                  href="#testimonials"
+                  className="nav-item pl-4 pl-md-0 ml-0 ml-md-4"
+                >
                   Testimonial
                 </Nav.Link>
                 <Button variant="light" className="btn-blue w-sm-100 ms-md-5">

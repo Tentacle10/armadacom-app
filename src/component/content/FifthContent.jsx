@@ -9,14 +9,19 @@ import custom from "../../assets/img/dev/custom.png";
 const FifthContent = () => {
   return (
     <>
-      <Container id="software" className="mt-4">
+      <Container id="software">
+        <Row>
+          <Col className="batas-atas"></Col>
+        </Row>
+      </Container>
+      <Container className="">
         <Row>
           <Col className="px-3">
-            <div className="fs-6 judul mt-5 mb-2">SOFTWARE DEV</div>
+            <div className="fs-6 judul mt-3">SOFTWARE DEV</div>
           </Col>
         </Row>
         <Row>
-          <Col sm={6} className="mb-3 mt-3">
+          <Col sm={6} className="mb-3 mt-2">
             <img src={Devimg} alt="dev" className="dev-img w-100" />
           </Col>
           <Col sm={6}>

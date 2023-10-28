@@ -1,4 +1,3 @@
-import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import Damkar from "../../assets/img/damkar.png";
 
@@ -6,8 +5,13 @@ const DamkarContent = () => {
   return (
     <>
       <Container id="damkar">
+        <Row>
+          <Col className="batas-atas"></Col>
+        </Row>
+      </Container>
+      <Container>
         <Row className=" px-3">
-          <Col className="judul mt-5 mb-3">DAMKAR EXPRESS</Col>
+          <Col className="judul mt-3 mb-3">DAMKAR EXPRESS</Col>
         </Row>
         <Row className="damkar text-light d-flex justify-content-center align-items-center flex-column text-center px-5 pb-5">
           <Col sm={6} className=" mb-3 mt-3 d-flex justify-content-center">

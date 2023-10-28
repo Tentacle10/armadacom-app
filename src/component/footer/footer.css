@@ -8,6 +8,12 @@
   box-shadow: 0px 20px 80px 0px rgba(192.99999999999997, 199, 212, 0.25098039215686274);
 }
 
+.footer img {
+  width: 50%;
+  padding-top: 1rem;
+  padding-bottom: 0.5rem;
+}
+
 .first-foot{
   margin-bottom: 1rem;
 }
