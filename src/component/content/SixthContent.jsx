@@ -25,28 +25,48 @@ const SixthContent = () => {
 
   const testimonials = [
     {
-      name: "Anna Deynah",
-      role: "UX Designer",
+      name: "Dani Fahim",
+      role: "Local Guide",
       quote:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod eos id officiis hic tenetur quae quaerat ad velit ab hic tenetur.",
+        "best place in town for computer and peripheral needs. friendly service, highly recommended...",
       rating: 5,
-      image: "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp",
+      image:
+        "https://lh3.googleusercontent.com/a-/ALV-UjX1KvibetBQGiaqMdahXfZ3WdEwIIwjLfsma-hDpQEMPoM=w60-h60-p-rp-mo-ba2-br100",
     },
     {
-      name: "John Doe",
-      role: "Web Developer",
+      name: "Tri Aji Purnomo",
+      role: "Local Guide",
       quote:
-        "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid commodi.",
-      rating: 4.5,
-      image: "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(32).webp",
+        "karyawannya ramah ramah.. sering ada diskon🤭 recomend pokoknya bagi yang mau beli laptop maupun accesoris✨.",
+      rating: 5,
+      image:
+        "https://lh3.googleusercontent.com/a-/ALV-UjXzeWldPBasJlgF1j34tijzXd-kFPxEVt30j767NXtp7L4=w60-h60-p-rp-mo-ba3-br100",
     },
     {
-      name: "Maria Kate",
+      name: "Odhian wisnu P",
       role: "Photographer",
       quote:
-        "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti.",
+        "Tempat terbaik dalam hal mencari dan memperbaiki peralatan elektronik seperti laptop, dll.",
+      rating: 5,
+      image:
+        "https://lh3.googleusercontent.com/a-/ALV-UjVwd82XGRCZBJEcbGv1QCI3th8bl7zasZGTpgAMHgWfiTw=w60-h60-p-rp-mo-br100",
+    },
+    {
+      name: "Aldina Rahma",
+      role: "Local Guide",
+      quote:
+        "Mas dan Mbaknya ramah, biaya perbaikan terjangkau. Pernah bersihin printer dan benerin keyboard laptop di sini..",
       rating: 4,
-      image: "https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(10).webp",
+      image:
+        "https://lh3.googleusercontent.com/a-/ALV-UjVxLZ99LrX6UDmDJXP-sZUeq1TE7RoqmmRIi4lGWofsJAc=w60-h60-p-rp-mo-ba4-br100",
+    },
+    {
+      name: "Yuliati Gonosantoso",
+      role: "Local Guide",
+      quote: "t4 strategis, pelayanan ramah, harga terjangkau.",
+      rating: 4,
+      image:
+        "https://lh3.googleusercontent.com/a/ACg8ocKVevpRoJA01H4Tc_50ZzBOJpG-eqkw-aQ57oqZsNc4=w60-h60-p-rp-mo-br100",
     },
     // Tambahkan testimonial lainnya di sini
   ];
@@ -77,7 +97,7 @@ const SixthContent = () => {
                     className="rounded-circle shadow-1-strong mb-4"
                     src={testimonial.image}
                     alt="avatar"
-                    style={{ width: "150px", height: "150px" }}
+                    style={{ width: "70px", height: "70px" }}
                   />
                   <h5 className="mb-2">{testimonial.name}</h5>
                   <p className="text-abu mb-0">{testimonial.role}</p>

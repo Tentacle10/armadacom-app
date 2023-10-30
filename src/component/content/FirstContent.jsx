@@ -21,7 +21,7 @@ const FirstContent = () => {
                 <h2 className="text-uppercase fs-3">
                   Udah muter muter ujungnya ke Armada
                 </h2>
-                <p>
+                <p className="desc">
                   Armadacom adalah Toko komputer terlengkap di Wonosobo,
                   menyediakan berbagai perangkat komputer dan perangkat jaringan
                 </p>
@@ -47,7 +47,7 @@ const FirstContent = () => {
                 <h2 className="text-uppercase fs-3">
                   Ngapain Berhari hari Kalo Sehari Jadi
                 </h2>
-                <p>
+                <p className="desc">
                   Armadacom.id melayani service komputer, Laptop, Printer maupun
                   Jaringan dan CCTV di wonosobo dengan kualitas pelayanan
                   terbaik.
@@ -74,7 +74,7 @@ const FirstContent = () => {
                 <h2 className="text-uppercase fs-3">
                   Anda Sibuk? Tidak bisa ke Toko Offline?
                 </h2>
-                <p>
+                <p className="desc">
                   Selain jualan dan servis, ARMADA juga punya layanan antar
                   jemput Lo.. di DAMKARin aja, Kapan lagi bisa servis/beli tanpa
                   keluar rumah
@@ -101,7 +101,7 @@ const FirstContent = () => {
                 <h2 className="text-uppercase fs-3">
                   Bikin Aplikasi Juga Bisa Tentunya
                 </h2>
-                <p>
+                <p className="desc">
                   Bikin aplikasi berbasis web ataupun Android di Wonosobo ya ke
                   Armadacom.id Sebagai penunjang aktifitas bisnis kalian
                 </p>

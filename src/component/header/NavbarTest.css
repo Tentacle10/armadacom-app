@@ -27,8 +27,8 @@
   padding: 10px 0;
   position: fixed;
   width: 100%;
-  top: -1px;
-  left: 0;
+  /* top: -1px; */
+  /* left: 0; */
   z-index: 1000;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
@@ -253,6 +253,9 @@
   .nav-link:focus,
   .nav-link:hover {
     color: #555;
+  }
+  .nav-item{
+    margin-top: 0.7rem;
   }
   .nav-item:after {
     display: none;

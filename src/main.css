@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=devanagari,latin-ext');
 
-:root {
+/* :root {
   line-height: 1.5;
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -9,11 +9,11 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
-}
+} */
 
 body {
   background-color: #fcfcfc;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Poppins', sans-serif !important;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
@@ -26,17 +26,17 @@ body {
   overflow-x: hidden;
   transition: all 200ms linear;
   font-family: 'Lato', sans-serif;
-  height: 5000px;
+  /* height: 5000px; */
 }
 
-/* ::selection {
+::selection {
   color: #fff;
   background-color: #8167a9;
 }
 ::-moz-selection {
   color: #fff;
   background-color: #8167a9;
-} */
+}
 
 .main-blue {
   color: #fff;

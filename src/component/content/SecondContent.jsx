@@ -1,6 +1,7 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import { Shop, Tools, Terminal, Headset } from "react-bootstrap-icons";
+import "./content.css";
 
 const SecondContent = () => {
   return (
@@ -16,7 +17,7 @@ const SecondContent = () => {
             <Col className="d-flex justify-content-center align-items-center">
               <Col className="py-4 px-3">
                 <Col className="judul fs-6">ARMADACOM.ID</Col>
-                <Col className="title fw-bolder fs-5 mb-2">
+                <Col className="title fw-bolder mb-2">
                   Melayani segala kebutuhan IT
                 </Col>
                 <Col className="text-abu">

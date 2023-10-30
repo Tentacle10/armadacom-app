@@ -25,8 +25,10 @@ const FifthContent = () => {
             <img src={Devimg} alt="dev" className="dev-img w-100" />
           </Col>
           <Col sm={6}>
-            <div className="fs-5 fw-bolder">
-              PALUGADA - Apa yang lu mau, Gue ada!
+            <div className="title fw-bolder">
+              PALUGADA!!!
+              <br />
+              Apa yang lu mau Gue ada!
             </div>
             <div className="fs-6 text-abu">
               Menyediakan software untuk penunjang aktifitas bisnis ataupun

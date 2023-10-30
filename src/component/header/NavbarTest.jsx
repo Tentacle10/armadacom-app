@@ -30,9 +30,6 @@ const NavbarTest = () => {
         ref.current.classList.add("start-header");
       }
     });
-
-    // Kode animasi
-    // document.body.classList.remove("hero-anime");
   }, []);
 
   return (
@@ -65,7 +62,7 @@ const NavbarTest = () => {
               <Offcanvas.Title id="offcanvasNavbarLabel-expand-md"></Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body className="justify-content-md-end px-5">
-              <Nav className="navbar-nav py-4 py-md-0">
+              <Nav className="navbar-nav py-3 py-md-0">
                 <Nav.Link href="#home" className="nav-item">
                   Home
                 </Nav.Link>
@@ -83,7 +80,7 @@ const NavbarTest = () => {
                   }}
                   onMouseLeave={() => {
                     // console.log(showDropdown);
-                    setShowDropdown(true);
+                    setShowDropdown(false);
                   }}
                 >
                   <NavDropdown.Item href="#">Store</NavDropdown.Item>
