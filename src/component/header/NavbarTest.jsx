@@ -64,7 +64,7 @@ const NavbarTest = () => {
                 <Offcanvas.Title id="offcanvasNavbarLabel-expand-md"></Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body className="justify-content-md-end px-5">
-                <Nav className="navbar-nav py-3 py-md-0">
+                <Nav className="navbar-nav align-items-md-center py-3 py-md-0">
                   <Nav.Link href="#home" className="nav-item">
                     Home
                   </Nav.Link>
@@ -72,7 +72,7 @@ const NavbarTest = () => {
                     About Us
                   </Nav.Link>
                   <NavDropdown
-                    className="pl-4 pl-md-0 ml-0 ml-md-4"
+                    className=""
                     title="Layanan"
                     id="offcanvasNavbarDropdown-expand-md"
                     show={showDropdown}
@@ -99,11 +99,11 @@ const NavbarTest = () => {
                   </NavDropdown>
                   <Nav.Link
                     href="#testimonials"
-                    className="nav-item pl-4 pl-md-0 ml-0 ml-md-4"
+                    className="nav-item"
                   >
                     Testimonial
                   </Nav.Link>
-                  <Button variant="light" className="btn-blue w-sm-100 ms-md-5">
+                  <Button className="btn-blue w-sm-100 ms-md-5">
                     Pricelist
                   </Button>
                 </Nav>

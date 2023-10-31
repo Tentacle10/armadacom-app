@@ -1,14 +1,14 @@
-import { useState } from "react";
-import { Button, ButtonGroup } from "react-bootstrap";
-import { CSSTransition } from "react-transition-group";
-import { ChatTextFill } from "react-bootstrap-icons";
+import {useState} from "react";
+import {Button, ButtonGroup} from "react-bootstrap";
+import {CSSTransition} from "react-transition-group";
+import {ChatTextFill} from "react-bootstrap-icons";
 import Facebook from "../../assets/icon/medsos/facebook.png";
 import Instagram from "../../assets/icon/medsos/instagram.png";
 import Shopee from "../../assets/icon/medsos/shopee.png";
 import Tiktok from "../../assets/icon/medsos/tiktok.png";
 import Tokopedia from "../../assets/icon/medsos/tokopedia.png";
 import Wabusiness from "../../assets/icon/medsos/wabusiness.png";
-import Whatsapp from "../../assets/icon/medsos/whatsapp.png";
+// import Whatsapp from "../../assets/icon/medsos/whatsapp.png";
 
 const ContactBtn = () => {
   const [open, setOpen] = useState(false);
@@ -24,40 +24,22 @@ const ContactBtn = () => {
             unmountOnExit
           >
             <ButtonGroup id="example-fade-text" className="mb-3" vertical>
-              <Button
-                className="contact-fade"
-                href="https://www.facebook.com/armadacom.id"
-              >
+              <Button className="contact-fade" href="https://www.facebook.com/armadacom.id">
                 <img src={Facebook} alt="Facebook" />
               </Button>
-              <Button
-                className="contact-fade"
-                href="https://www.instagram.com/armadacom.id"
-              >
+              <Button className="contact-fade" href="https://www.instagram.com/armadacom.id">
                 <img src={Instagram} alt="Instagram" />
               </Button>
-              <Button
-                className="contact-fade"
-                href="https://shopee.co.id/armadacom.id"
-              >
+              <Button className="contact-fade" href="https://shopee.co.id/armadacom.id">
                 <img src={Shopee} alt="Shopee" />
               </Button>
-              <Button
-                className="contact-fade"
-                href="https://www.tiktok.com/@armadacom.id"
-              >
+              <Button className="contact-fade" href="https://www.tiktok.com/@armadacom.id">
                 <img src={Tiktok} alt="Tiktok" />
               </Button>
-              <Button
-                className="contact-fade"
-                href="https://www.tokopedia.com/armadacomputer"
-              >
+              <Button className="contact-fade" href="https://www.tokopedia.com/armadacomputer">
                 <img src={Tokopedia} alt="Tokopedia" />
               </Button>
-              <Button
-                className="contact-fade"
-                href="https://api.whatsapp.com/send/?phone=6282322006005&text=Hallo+Admin+Service+%2AArmada+Computer%2C%2A++&type=phone_number&app_absent=0"
-              >
+              <Button className="contact-fade" href="https://api.whatsapp.com/send/?phone=6282322006005&text=Hallo+Admin+Service+%2AArmada+Computer%2C%2A++&type=phone_number&app_absent=0">
                 <img src={Wabusiness} alt="Wabusiness" />
               </Button>
               {/* <Button
@@ -68,12 +50,7 @@ const ContactBtn = () => {
               </Button> */}
             </ButtonGroup>
           </CSSTransition>
-          <Button
-            onClick={() => setOpen(!open)}
-            aria-expanded={open}
-            className="contact-float"
-            variant="link"
-          >
+          <Button onClick={() => setOpen(!open)} aria-expanded={open} className="contact-float" variant="link">
             <ChatTextFill className="icontact" />
           </Button>
         </ButtonGroup>
