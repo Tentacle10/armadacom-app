@@ -12,15 +12,15 @@ const SecondContent = () => {
         </Row>
       </Container>
       <Container fluid>
-        <Row>
-          <Col md={6} className="d-flex">
+        <Row className="justify-content-md-center">
+          <Col md={3} className="d-flex">
             <Col className="d-flex justify-content-center align-items-center">
               <Col className="py-4 px-3">
-                <Col className="judul fs-6">ARMADACOM.ID</Col>
-                <Col className="title fw-bolder mb-2">
+                <Col className="judul fs-6 d-block d-md-none">ARMADACOM.ID</Col>
+                <Col className="fs-5 fw-bolder mb-2">
                   Melayani segala kebutuhan IT
                 </Col>
-                <Col className="text-abu">
+                <Col className="fs-6 text-abu">
                   Armada Computer atau yang sekarang lebih dikenal dengan
                   Armadacom.id merupakan toko komputer terlengkap di Wonosobo
                   yang menyediakan berbagai perihal komputer dan jaringan.
@@ -33,13 +33,13 @@ const SecondContent = () => {
             <Row className="rows-cols-2">
               <Col md={6} className="box">
                 <Card>
-                  <Row>
+                  <Row style={{ width: "130%" }}>
                     <Col className="col-3 icon text-center align-self-center align-item-center">
                       <Shop className="card-icon" />
                       {/* <StoreRoundedIcon className="card-icon" /> */}
                     </Col>
                     <Col className="col-9">
-                      <Card.Body>
+                      <Card.Body className="pe-md-4">
                         <Card.Title>Store</Card.Title>
                         <Card.Text className="text-abu">
                           Penjualan Perangkat Laptop, Komputer, Printer,
@@ -52,12 +52,12 @@ const SecondContent = () => {
               </Col>
               <Col md={6} className="box">
                 <Card>
-                  <Row>
+                  <Row style={{ width: "120%" }}>
                     <Col className="col-3 icon text-center align-self-center align-item-center">
                       <Tools className="card-icon" />
                     </Col>
                     <Col className="col-9">
-                      <Card.Body>
+                      <Card.Body className="pe-md-4">
                         <Card.Title>Service Center</Card.Title>
                         <Card.Text className="text-abu">
                           Service Perangkat Laptop, Komputer, Printer, Jaringan,
@@ -70,12 +70,12 @@ const SecondContent = () => {
               </Col>
               <Col md={6} className="box">
                 <Card>
-                  <Row>
+                  <Row style={{ width: "130%" }}>
                     <Col className="col-3 icon text-center align-self-center align-item-center">
                       <Terminal className="card-icon" />
                     </Col>
                     <Col className="col-9">
-                      <Card.Body>
+                      <Card.Body className="pe-md-4">
                         <Card.Title>Software Dev</Card.Title>
                         <Card.Text className="text-abu">
                           Pengembangan software berbasis Web dan Android.
@@ -87,12 +87,12 @@ const SecondContent = () => {
               </Col>
               <Col md={6} className="box">
                 <Card>
-                  <Row>
+                  <Row style={{ width: "130%" }}>
                     <Col className="col-3 icon text-center align-self-center align-item-center">
                       <Headset className="card-icon" />
                     </Col>
                     <Col className="col-9">
-                      <Card.Body>
+                      <Card.Body className="pe-md-4">
                         <Card.Title>IT Consultant</Card.Title>
                         <Card.Text className="text-abu">
                           Konsultasi terkait kebutuhan dab produk IT.
