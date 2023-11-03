@@ -66,9 +66,6 @@
   font-weight: 500;
   transition: all 200ms linear;
 }
-.nav-item.active .nav-link {
-  color: #777 !important;
-}
 .nav-link {
   position: relative;
   padding: 5px 0 !important;
@@ -88,9 +85,6 @@
 .nav-item:hover:after {
   bottom: 0;
   opacity: 1;
-}
-.nav-item.active:hover:after {
-  opacity: 0;
 }
 .nav-item {
   position: relative;
@@ -172,6 +166,11 @@
   margin-left: 1.5rem !important;
 }
 
+.nav-link.active {
+  color: #ffffff80 !important;
+  pointer-events: none;
+}
+
 .btn-blue {
   color: #2e64aa !important;
   font-weight: 600;
@@ -240,11 +239,6 @@
   .nav-link {
     letter-spacing: 1px;
     color: #555 !important;
-  }
-
-  .nav-link.active,
-  .nav-link.show {
-    color: #555;
   }
 
   .nav-link:focus,
@@ -324,7 +318,4 @@
   display: block;
   filter: brightness(10%);
   transition: all 250ms linear;
-}
-body.dark .logo img {
-  filter: brightness(100%);
 }

@@ -14,10 +14,10 @@ const FirstContent = () => {
         <Carousel controls={false} indicators={true} fade>
           <Carousel.Item className="carousel-item">
             <Row sm={8} className="row-carousel d-flex justify-content-center justify-content-md-end align-items-center">
-              <Col sm={8} className="d-flex justify-content-center justify-content-md-end">
+              <Col sm={8} className="d-flex justify-content-center justify-content-md-center">
                 <img src={HPElite} alt="slide" />
               </Col>
-              <Col sm={8} className="caption px-3 pt-3">
+              <Col sm={8} className="caption pt-3">
                 <h2 className="text-uppercase fs-3">Udah muter muter ujungnya ke Armada</h2>
                 <p className="desc">Armadacom adalah Toko komputer terlengkap di Wonosobo, menyediakan berbagai perangkat komputer dan perangkat jaringan</p>
               </Col>
@@ -25,7 +25,7 @@ const FirstContent = () => {
             <Row sm={8} className="justify-content-center">
               <Col className="text-center">
                 <Button
-                  className="mt-2 w-button"
+                  className="mt-1 w-button"
                   variant="light"
                   // href="https://api.whatsapp.com/send/?phone=6282322006005&text=Hallo+Admin+Service+%2AArmada+Computer%2C%2A++&type=phone_number&app_absent=0"
                   href="#about"
@@ -35,7 +35,7 @@ const FirstContent = () => {
               </Col>
             </Row>
           </Carousel.Item>
-          <Carousel.Item className="carousel-item">
+          {/* <Carousel.Item className="carousel-item">
             <Row className="row-carousel d-flex justify-content-center justify-content-md-end align-items-center">
               <Col sm={8} className="d-flex justify-content-center justify-content-md-end">
                 <img src={CPUBlack} alt="slide" />
@@ -103,7 +103,7 @@ const FirstContent = () => {
                 </Button>
               </Col>
             </Row>
-          </Carousel.Item>
+          </Carousel.Item> */}
         </Carousel>
       </Container>
     </>

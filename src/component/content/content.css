@@ -275,17 +275,19 @@
   .slideshow {
     margin-top: -1rem;
     background-image: url(./../../assets/img/bg-armadacom.png);
+    background-position-x: center;
+    background-repeat: no-repeat;
   }
 
   .carousel {
-    height: 92vh;
+    height: 94vh;
     justify-content: center;
     padding-top: 2rem;
   }
 
   .carousel img {
     margin-right: 10rem;
-    width: 70vh;
+    width: 75vh;
     height: auto;
   }
 
@@ -294,7 +296,7 @@
     width: 50vw;
     /* padding: 2rem 2rem 2rem 2rem !important; */
     margin-top: 0 !important;
-    margin-right: 10rem;
+    margin-right: 11rem;
     padding-top: 0;
     /* box-shadow: 0px 0px 80px 0px rgba(0, 0, 0, 0.251); */
   }
