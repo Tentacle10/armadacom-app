@@ -61,6 +61,7 @@
 }
 
 .text-abu {
+  font-size: 14px;
   color: #70707e;
 }
 
@@ -271,6 +272,10 @@
   margin-left: 0.2rem;
 }
 
+.pbox {
+  padding-right: 3.8rem;
+}
+
 @media (min-width: 992px) {
   .slideshow {
     margin-top: -1rem;
@@ -337,7 +342,40 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
 
-  .iPhone {
+  .third {
+    margin-top: 1.5rem;
+    background-color: #2e64aa;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 20px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: 80vh;
+  }
+  
+  .iPhone img {
+    /* background-color: #fff; */
+    /* border-radius: 10px; */
+    width: 75%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .iPhone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 1rem;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+  }
+
+  .fservice {
+    font-size: 28px !important;
+  }
+
+  .tservice {
+    padding-left: 5rem;
+    padding-right: 5rem;
+    font-size: 20px !important;
+    margin-top: 1rem;
   }
 }

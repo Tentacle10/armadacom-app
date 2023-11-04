@@ -10,7 +10,7 @@ const DamkarContent = () => {
         </Row>
       </Container>
       <Container>
-        <Row className=" px-3">
+        <Row className=" px-3 d-block d-md-none">
           <Col className="judul mt-3 mb-3">DAMKAR EXPRESS</Col>
         </Row>
         <Row className="damkar text-light d-flex justify-content-center align-items-center flex-column text-center px-5 pb-5">

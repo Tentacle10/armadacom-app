@@ -7,13 +7,13 @@ const ThirdContent = () => {
   return (
     <>
       <Container>
-        <Row className="mt-5 pt-3 mx-1">
+        <Row className="mt-5 pt-3 mx-1 d-block d-md-none">
           <Col className="judul fs-6">SERVICE CENTER</Col>
         </Row>
       </Container>
-      <Container id="service" className="d-flex justify-content-center" fluid>
+      <Container id="service" className="d-flex justify-content-center">
         <Row className="third mt-3 d-flex justify-content-center">
-          <Col className="text-light d-flex justify-content-center align-items-center flex-column text-center px-5 pt-5">
+          <Col className="text-light d-flex justify-content-center align-items-center flex-column text-center px-5 pt-5 d-block d-md-none">
             <div className="fw-bold fs-3">Fitur Tracking Service</div>
             <div className="fw-lighter fs-6 text-light text-opacity-75">
               Memudahkan customer dalam memantau progres service
@@ -24,16 +24,16 @@ const ThirdContent = () => {
           </Col>
           <Col
             md={8}
-            className="text-light d-flex justify-content-center align-items-center flex-column text-center px-5 pb-5"
+            className="text-light d-flex justify-content-center align-items-center flex-column text-center px-2 pb-5 py-md-1"
           >
-            <div className="fw-bold fs-3 d-none d-sm-block">
+            <div className="fservice fw-bold fs-3 d-none d-sm-block">
               Fitur Tracking Service
             </div>
-            <div className="fw-lighter text-light text-opacity-75 d-none d-sm-block">
+            <div className="tservice fw-lighter text-light text-opacity-75 d-none d-sm-block">
               Memudahkan customer dalam memantau progres service
             </div>
-            <div className="fw-bold fs-3 mt-4">Aplikasi Armadacom</div>
-            <div className="fw-lighter text-light text-opacity-75 fs-6">
+            <div className="fservice fw-bold fs-3 mt-4">Aplikasi Armadacom</div>
+            <div className="tservice fw-lighter text-light text-opacity-75 fs-6">
               Download sekarang di playstore untuk menikmati fitur tracking dan
               live update harga.
             </div>

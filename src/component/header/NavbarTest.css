@@ -25,11 +25,6 @@
 
 .navbar.navigation-wrap {
   padding: 10px 0;
-  /* position: fixed; */
-  /* width: 100%; */
-  /* top: 0px; */
-  /* left: 0; */
-  /* z-index: 1000; */
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
@@ -243,7 +238,7 @@
 
   .nav-link:focus,
   .nav-link:hover {
-    color: #555;
+    color: #979797;
   }
   .nav-item {
     margin-top: 0.7rem;
@@ -298,6 +293,10 @@
   .dropdown-toggle[aria-expanded="true"] + .dropdown-menu {
     margin-top: 10px !important;
     margin-bottom: 20px !important;
+  }
+  .nav-link.active {
+    color: #979797 !important;
+    pointer-events: none;
   }
 }
 

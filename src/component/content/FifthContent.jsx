@@ -16,7 +16,7 @@ const FifthContent = () => {
       </Container>
       <Container className="">
         <Row>
-          <Col className="px-3">
+          <Col className="px-3 d-block d-md-none">
             <div className="fs-6 judul mt-3">SOFTWARE DEV</div>
           </Col>
         </Row>

@@ -11,7 +11,7 @@ const SecondContent = () => {
           <Col className="batas-atas"></Col>
         </Row>
       </Container>
-      <Container fluid>
+      <Container className="mb-5" fluid>
         <Row className="justify-content-md-center">
           <Col md={3} className="d-flex">
             <Col className="d-flex justify-content-center align-items-center">
@@ -39,7 +39,7 @@ const SecondContent = () => {
                       {/* <StoreRoundedIcon className="card-icon" /> */}
                     </Col>
                     <Col className="col-9">
-                      <Card.Body className="pe-md-4">
+                      <Card.Body className="pbox pe-md-4">
                         <Card.Title>Store</Card.Title>
                         <Card.Text className="text-abu">
                           Penjualan Perangkat Laptop, Komputer, Printer,
@@ -57,7 +57,7 @@ const SecondContent = () => {
                       <Tools className="card-icon" />
                     </Col>
                     <Col className="col-9">
-                      <Card.Body className="pe-md-4">
+                      <Card.Body className="pbox pe-md-4">
                         <Card.Title>Service Center</Card.Title>
                         <Card.Text className="text-abu">
                           Service Perangkat Laptop, Komputer, Printer, Jaringan,
@@ -75,7 +75,7 @@ const SecondContent = () => {
                       <Terminal className="card-icon" />
                     </Col>
                     <Col className="col-9">
-                      <Card.Body className="pe-md-4">
+                      <Card.Body className="pbox pe-md-4">
                         <Card.Title>Software Dev</Card.Title>
                         <Card.Text className="text-abu">
                           Pengembangan software berbasis Web dan Android.
@@ -92,7 +92,7 @@ const SecondContent = () => {
                       <Headset className="card-icon" />
                     </Col>
                     <Col className="col-9">
-                      <Card.Body className="pe-md-4">
+                      <Card.Body className="pbox pe-md-4">
                         <Card.Title>IT Consultant</Card.Title>
                         <Card.Text className="text-abu">
                           Konsultasi terkait kebutuhan dab produk IT.
