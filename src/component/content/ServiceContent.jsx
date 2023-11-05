@@ -66,7 +66,7 @@ const ServiceContent = () => {
             </Col>
           </Row>
           <Row className="aservice justify-content-center align-items-center">
-            <Col xs={10} className="text-center fw-bold fs-5 pt-md-3 pt-4">
+            <Col xs={10} className="text-center fw-bold fs-5 pt-md-3 pt-4" style={{color: "#9b9b9b"}}>
               ARMADA SERVICE
             </Col>
             <Col xs={10} className="text-center fw-bold fs-6 pb-2">
@@ -75,9 +75,6 @@ const ServiceContent = () => {
                 Rapi
               </Badge>
               <Badge bg="warning">Berkualitas</Badge>
-              {/* <span>Cepat</span>
-              <span className="px-1">Rapi</span>
-              <span>Berkualitas</span> */}
             </Col>
             <Col md={10} className="d-flex align-items-center pb-4" style={{height: "100%"}}>
               <Row xs={1} md={3} className="g-3 py-3 g-md-4 p-md-3">
@@ -91,8 +88,8 @@ const ServiceContent = () => {
                         <Col xs={9} md={8} className="pe-4 align-self-center align-item-center" style={{fontSize: "14px", color: "#555", fontWeight: "600", textTransform: "uppercase"}}>
                           {isiabout.title}
                         </Col>
-                        <div class="h-divider">
-                          <div class="shadow"></div>
+                        <div className="h-divider">
+                          <div className="shadow"></div>
                         </div>
                         <Col xs={12} className="pt-2 px-4">
                           <Card.Text>{isiabout.text}</Card.Text>

@@ -153,6 +153,10 @@ body {
   width: 75%;
 }
 
+.logodankar {
+  width: 80%;
+}
+
 @media (max-width: 768px) {
   .damkar {
     height: 100vh;
@@ -166,4 +170,75 @@ body {
 /* DamkarContent */
 
 /* SoftwareContent ############################################################### */
+.software {
+  box-shadow: rgb(219 230 255 / 99%) 0px 5px 10px 0px;
+  background-color: #fff;
+  border-radius: 15px;
+  height: 100%;
+  color: #555;
+}
+
+.devimg {
+  border-radius: 15px;
+  margin-left: -0.7rem;
+}
+
+.logodev {
+  width: 80%;
+}
+
+@media (max-width: 768px) {
+  .devimg {
+    margin-left: 0;
+  }
+}
 /* SoftwareContent */
+
+/* Testimonials */
+.testimonials {
+  box-shadow: rgb(219 230 255 / 99%) 0px 5px 10px 0px;
+  background-color: #fff;
+  border-radius: 15px;
+  height: 100vh;
+  color: #555;
+}
+/* Testimonials */
+
+/* ContactFloat */
+.contact-float {
+  width: auto !important;
+  font-size: 22px;
+  background-color: #fff !important;
+  color: #2e64aa !important;
+  border-radius: 50% !important;
+  box-shadow: 0px 5px 11px 1px rgba(0, 0, 0, 0.25);
+  border: none;
+}
+
+.contact-float:hover {
+  background-color: #2e64aa !important;
+  color: #fff !important;
+}
+.contact-fade {
+  width: auto !important;
+  font-size: 14px;
+  padding: 0 !important;
+  border: 0.5px solid #ffffff31;
+  border-radius: 50% !important;
+  box-shadow: 0px 5px 11px 1px rgba(0, 0, 0, 0.25);
+  margin-top: 0.5rem !important;
+}
+
+.contact-fade img {
+  width: 40px;
+  height: 40px;
+}
+
+.btn-group-vertical {
+  align-items: center;
+}
+
+.icontact {
+  margin-top: -4px;
+}
+/* ContactFloat */
