@@ -179,16 +179,58 @@ body {
 }
 
 .devimg {
+  overflow: hidden;
+}
+.devimg img {
+  height: 100ch;
   border-radius: 15px;
   margin-left: -0.7rem;
 }
 
 .logodev {
-  width: 80%;
+  width: 100%;
+}
+
+/* .card {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.08), 0 0 6px rgba(0, 0, 0, 0.05);
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.3s box-shadow, 0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(31, 124, 211, 0.12)12), 0 4px 8px rgba(0, 0, 0, 0.06);
+  background-color: #2e64aa;
+} */
+
+.carddev:hover {
+  transition: 0.6s ease-in-out;
+  background-color: #2e7daa;
+}
+.carddev .card2 {
+  transform: translateY(100%);
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+  margin-top: -7rem;
+}
+.carddev:hover .card2 {
+  transform: translateY(0);
+  color: #fff;
+  opacity: 1;
+}
+
+.carddev:hover .c1,
+.carddev:hover .c2,
+.carddev:hover .c3,
+.carddev:hover .c4 {
+  transition: 0.6s ease-in-out;
+  opacity: 0;
 }
 
 @media (max-width: 768px) {
-  .devimg {
+  .devimg img {
+    width: 100%;
+    height: auto;
     margin-left: 0;
   }
 }
