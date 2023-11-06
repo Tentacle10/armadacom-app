@@ -6,7 +6,7 @@ import AboutContent from "./component/content/AboutContent";
 import ServiceContent from "./component/content/ServiceContent";
 import DamkarContent from "./component/content/DamkarContent";
 import SoftwareContent from "./component/content/SoftwareContent";
-// import TestimonialContent from "./component/content/TestimonialContent";
+import TestimonialContent from "./component/content/TestimonialContent";
 import Footer from "./component/footer/Footer";
 import ContactFloat from "./component/contact/ContactFloat";
 
@@ -19,7 +19,7 @@ function App() {
       <ServiceContent />
       <DamkarContent />
       <SoftwareContent />
-      {/* <TestimonialContent /> */}
+      <TestimonialContent />
       <Footer />
       <ContactFloat />
     </>
