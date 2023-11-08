@@ -1,0 +1,9 @@
+.footer {
+  background-color: #2e64aa !important;
+  height: 37vh !important;
+}
+@media (max-width: 768px) {
+  .footer {
+    height: 88vh !important;
+  }
+}

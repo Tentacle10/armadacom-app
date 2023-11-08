@@ -57,6 +57,63 @@ body {
 }
 /* Divider */
 
+/* HeroContent ################################################################### */
+.slideshow {
+  color: #fff;
+  background-color: #2e64aa;
+  background-image: url(./assets/img/bg-armadacom.png);
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: center;
+  padding-top: 4.5rem;
+}
+.carousel {
+  height: 90vh;
+  justify-content: center;
+}
+.carousel-item {
+  margin-top: 1rem;
+}
+.row-carousel {
+  height: auto;
+}
+.carousel img {
+  height: 50vh;
+}
+.caption {
+  padding-right: 10rem !important;
+}
+
+@media (max-width: 768px) {
+  .slideshow {
+    background-color: #2e64aa;
+    background-image: none;
+    padding-top: 2.5rem;
+  }
+
+  .carousel {
+    height: 93vh;
+    justify-content: center;
+  }
+
+  .carousel-item {
+    margin-top: 1rem;
+  }
+
+  .row-carousel {
+    height: auto;
+  }
+
+  .carousel img {
+    height: 45vh;
+  }
+  .caption {
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+  }
+}
+/* HeroContent */
+
 /* AboutContent ################################################################### */
 .cabout {
   padding-top: 4.5rem;
@@ -227,8 +284,6 @@ body {
   opacity: 0;
 }
 
-
-
 @media (max-width: 768px) {
   .devimg img {
     width: 100%;
@@ -238,17 +293,19 @@ body {
 }
 /* SoftwareContent */
 
-/* Testimonials */
+/* Testimonials ################################################################### */
 .testimonials {
   box-shadow: rgb(219 230 255 / 99%) 0px 5px 10px 0px;
   background-color: #fff;
   border-radius: 15px;
   height: 100vh;
   color: #555;
+  cursor: -webkit-grab;
+  cursor: grab;
 }
 /* Testimonials */
 
-/* ContactFloat */
+/* ContactFloat ################################################################### */
 .contact-float {
   width: auto !important;
   font-size: 22px;
