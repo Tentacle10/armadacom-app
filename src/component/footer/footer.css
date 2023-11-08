@@ -1,9 +1,33 @@
 .footer {
   background-color: #2e64aa !important;
-  height: 37vh !important;
+  height: 42vh !important;
 }
+
+.iconB {
+  font-size: 18px;
+  margin-right: 0.8rem;
+}
+
+.btnSos {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.3s box-shadow, 0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+}
+
+.btnSos:hover {
+  color: #f1f1f1;
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(31, 124, 211, 0.12)12), 0 4px 8px rgba(0, 0, 0, 0.06);
+  border: 1.5px solid #fff;
+}
+
+
+
 @media (max-width: 768px) {
   .footer {
-    height: 88vh !important;
+    height: 81vh !important;
+  }
+  .framemaps {
+    height: 150px !important;
   }
 }
