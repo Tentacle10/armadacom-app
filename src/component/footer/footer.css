@@ -1,6 +1,7 @@
 .footer {
   background-color: #2e64aa !important;
-  height: 42vh !important;
+  height: 100% !important;
+  letter-spacing: 1.3px;
 }
 
 .iconB {
@@ -8,7 +9,12 @@
   margin-right: 0.8rem;
 }
 
+.listfoot {
+  margin-left: 1rem;
+}
+
 .btnSos {
+  width: 70%;
   color: #fff;
   text-decoration: none;
   transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.3s box-shadow, 0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
@@ -21,11 +27,47 @@
   border: 1.5px solid #fff;
 }
 
+.bukalapak,
+.shopee,
+.tokopedia,
+.siplah {
+  padding: 0 !important;
+  width: 95% !important;
+  text-decoration: none;
+  transition: 0.5s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.5s box-shadow, 0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+}
 
+.bukalapak img,
+.shopee img,
+.tokopedia img,
+.siplah img {
+  width: 100%;
+}
+
+.bukalapak:hover {
+  border: 1.5px solid #e31e52;
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(31, 124, 211, 0.12)12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+.shopee:hover {
+  border: 1.5px solid #ea501f;
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(31, 124, 211, 0.12)12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+.tokopedia:hover {
+  border: 1.5px solid #3caf41;
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(31, 124, 211, 0.12)12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
+.siplah:hover {
+  border: 1.5px solid #1e7ad6;
+  transform: scale(1.05);
+  box-shadow: 0 10px 20px rgba(31, 124, 211, 0.12)12), 0 4px 8px rgba(0, 0, 0, 0.06);
+}
 
 @media (max-width: 768px) {
   .footer {
-    height: 81vh !important;
+    height: 100% !important;
   }
   .framemaps {
     height: 150px !important;
