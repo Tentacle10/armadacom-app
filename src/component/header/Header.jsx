@@ -1,8 +1,17 @@
-import {useEffect, useRef, useState} from "react";
-import {Container, Row, Col, Nav, Navbar, NavDropdown, Button, Offcanvas} from "react-bootstrap";
+import { useEffect, useRef, useState } from "react";
+import {
+  Container,
+  Row,
+  Col,
+  Nav,
+  Navbar,
+  NavDropdown,
+  Button,
+  Offcanvas,
+} from "react-bootstrap";
 import "./Header.css";
 import ArmadaIcon from "../../assets/logo/Logo_white.png";
-import {Tiktok, Facebook, Instagram} from "react-bootstrap-icons";
+import { Tiktok, Facebook, Instagram } from "react-bootstrap-icons";
 
 const Header = () => {
   // const [activeSection, setActiveSection] = useState("home");
@@ -57,15 +66,31 @@ const Header = () => {
   return (
     <>
       <Container fluid>
-        <Navbar expand="md" className="navigation-wrap bg-light start-header start-style" variant="dark" ref={ref} fixed="top">
+        <Navbar
+          expand="md"
+          className="navigation-wrap start-header start-style"
+          variant="dark"
+          ref={ref}
+          fixed="top"
+        >
           <Container>
             <Navbar.Brand className="navbar-brand" href="#">
               <img src={ArmadaIcon} alt="Logo_Armada" />
             </Navbar.Brand>
 
-            <Navbar.Toggle aria-controls="offcanvasNavbar-expand-md" type="button" aria-label="Toggle navigation" variant="dark" />
+            <Navbar.Toggle
+              aria-controls="offcanvasNavbar-expand-md"
+              type="button"
+              aria-label="Toggle navigation"
+              variant="dark"
+            />
 
-            <Navbar.Offcanvas id="offcanvasNavbar-expand-md" aria-labelledby="offcanvasNavbarLabel-expand-md" placement="end" data-bs-theme="light">
+            <Navbar.Offcanvas
+              id="offcanvasNavbar-expand-md"
+              aria-labelledby="offcanvasNavbarLabel-expand-md"
+              placement="end"
+              data-bs-theme="light"
+            >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id="offcanvasNavbarLabel-expand-md"></Offcanvas.Title>
               </Offcanvas.Header>
@@ -95,15 +120,22 @@ const Header = () => {
                       Store
                     </NavDropdown.Item>
                     <NavDropdown.Item href="#service">Service</NavDropdown.Item>
-                    <NavDropdown.Item href="#damkar" className="border border-primary-subtle f-damkar">
+                    <NavDropdown.Item
+                      href="#damkar"
+                      className="border border-primary-subtle f-damkar"
+                    >
                       Damkar Express
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="#software">Software</NavDropdown.Item>
+                    <NavDropdown.Item href="#software">
+                      Software
+                    </NavDropdown.Item>
                   </NavDropdown>
                   <Nav.Link href="#testimonials" className="nav-item">
                     Testimonial
                   </Nav.Link>
-                  <Button className="btn-blue w-sm-100 ms-md-5">Pricelist</Button>
+                  <Button className="btn-blue w-sm-100 ms-md-5">
+                    Pricelist
+                  </Button>
                 </Nav>
               </Offcanvas.Body>
               <Row className="canvas-footer text-center d-block d-md-none">

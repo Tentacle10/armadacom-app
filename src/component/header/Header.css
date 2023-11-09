@@ -8,6 +8,7 @@
   padding: 20px 0 !important;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
+  background-color: transparent !important;
 }
 
 .start-header.scroll-on {
@@ -24,6 +25,7 @@
 }
 
 .navbar.navigation-wrap {
+  background-color: #2e64aae8;
   padding: 10px 0;
   /* position: fixed; */
   /* width: 100%; */
@@ -95,9 +97,8 @@
 ================================================== */
 
 .bg-light {
-  background-color: #2e64aa !important;
-  transition: all 200ms linear;
 }
+
 .section {
   position: relative;
   width: 100%;

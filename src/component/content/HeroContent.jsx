@@ -1,10 +1,14 @@
-import {Container, Row, Col} from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import Carousel from "react-bootstrap/Carousel";
 import Button from "react-bootstrap/Button";
 import HPElite from "../../assets/img/Hp-Eliete.png";
 import CPUBlack from "../../assets/img/cpublack.png";
 import Damkar from "../../assets/img/damkar.png";
 import CrossPlatform from "../../assets/img/Cross-platform.png";
+import satu from "../../assets/img/banner/1.jpg";
+import dua from "../../assets/img/banner/2.jpg";
+import tiga from "../../assets/img/banner/3.jpg";
+import empat from "../../assets/img/banner/4.jpg";
 
 const HeroContent = () => {
   const hero = [
@@ -31,41 +35,27 @@ const HeroContent = () => {
   ];
   return (
     <>
-      <Container id="home" className="slideshow" fluid>
-        <Carousel controls={false} indicators={true} fade>
-          {hero.map((hero, index) => (
-            <Carousel.Item key={index} className="carousel-item">
-              <Row sm={8} className="row-carousel d-flex justify-content-center justify-content-md-end align-items-center">
-                <Col sm={8} className="d-flex justify-content-center justify-content-md-center">
-                  <img src={hero.img} alt="slide" />
-                </Col>
-                <Col sm={8} className="caption pt-3">
-                  <h2 className="fw-bold text-uppercase fs-3" style={{textShadow: "rgb(85, 85, 85) 2px 2px 5px"}}>
-                    {hero.tag}
-                  </h2>
-                  <p className="desc pt-1">{hero.desc}</p>
-                </Col>
-              </Row>
-              <Row sm={8} className="justify-content-center">
-                <Col className="text-center">
-                  <Button
-                    className="mt-1 w-button"
-                    variant="light"
-                    href="#about"
-                    style={{
-                      color: "#2e64aa",
-                      fontWeight: "600",
-                      textShadow: "1px 1px 1px #fff",
-                      boxShadow: "rgb(63 63 63 / 50%) 0px 5px 10px 0px",
-                    }}
-                  >
-                    Selengkapnya
-                  </Button>
-                </Col>
-              </Row>
-            </Carousel.Item>
-          ))}
-        </Carousel>
+      <Container id="home" className="slideshow w-100" fluid>
+        <div className="gradient-overlay"></div>
+        <Row className="">
+          <Col
+            md={8}
+            style={{
+              padding: "0",
+            }}
+          >
+            <img
+              src={satu}
+              alt="laptop"
+              className="banner"
+              style={{
+                height: "100%",
+                color: "#b90c4f",
+              }}
+            />
+          </Col>
+          <Col md={4}>asdasdasd</Col>
+        </Row>
       </Container>
     </>
   );
