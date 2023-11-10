@@ -37,7 +37,7 @@
 .whatsapp:hover {
   color: #f1f1f1;
   transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(31, 124, 211, 0.12)12), 0 4px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 20px rgba(31, 124, 211, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
   border: 1.5px solid #fff;
 }
 .bukalapak,
@@ -58,22 +58,22 @@
 .bukalapak:hover {
   border: 1.5px solid #e31e52;
   transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(31, 124, 211, 0.12)12), 0 4px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 20px rgba(31, 124, 211, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
 }
 .shopee:hover {
   border: 1.5px solid #ea501f;
   transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(31, 124, 211, 0.12)12), 0 4px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 20px rgba(31, 124, 211, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
 }
 .tokopedia:hover {
   border: 1.5px solid #3caf41;
   transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(31, 124, 211, 0.12)12), 0 4px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 20px rgba(31, 124, 211, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
 }
 .siplah:hover {
   border: 1.5px solid #1e7ad6;
   transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(31, 124, 211, 0.12)12), 0 4px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 20px rgba(31, 124, 211, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
 }
 
 @media (max-width: 768px) {

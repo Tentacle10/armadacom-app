@@ -7,22 +7,22 @@ const AboutContent = () => {
     {
       icon: <Shop size={45} style={{color: "rgb(169 169 169)"}} />,
       title: "Store",
-      text: "Penjualan Perangkat Laptop, Komputer, Printer, Jaringan, dll.",
+      text: "Penjualan Perangkat Laptop, Komputer, Printer, Jaringan, dll",
     },
     {
       icon: <Tools size={45} style={{color: "rgb(169 169 169)"}} />,
       title: "Service",
-      text: "Penjualan Perangkat Laptop, Komputer, Printer, Jaringan, dll.",
+      text: "Service perangkat Laptop, Komputer, Printer, Jaringan, dll",
     },
     {
       icon: <Terminal size={45} style={{color: "rgb(169 169 169)"}} />,
       title: "Software",
-      text: "Penjualan Perangkat Laptop, Komputer, Printer, Jaringan, dll.",
+      text: "Pengembangan software berbasis Web dan Android",
     },
     {
       icon: <Headset size={45} style={{color: "rgb(169 169 169)"}} />,
       title: "IT Consultant",
-      text: "Penjualan Perangkat Laptop, Komputer, Printer, Jaringan, dll.",
+      text: "Konsultasi terkait kebutuhan dab produk IT",
     },
   ];
   return (

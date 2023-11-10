@@ -1,10 +1,5 @@
-import { Container, Row, Col, Button } from "react-bootstrap";
-import {
-  GeoAltFill,
-  ClockHistory,
-  EnvelopeFill,
-  TelephoneInboundFill,
-} from "react-bootstrap-icons";
+import {Container, Row, Col, Button} from "react-bootstrap";
+import {GeoAltFill, ClockHistory, EnvelopeFill, TelephoneInboundFill} from "react-bootstrap-icons";
 import bar from "./../../assets/icon/bar.png";
 import Facebook from "./../../assets/icon/facebook.png";
 import Instagram from "./../../assets/icon/instagram.png";
@@ -20,7 +15,7 @@ const Footer = () => {
   const kaki = [
     {
       iconB: <GeoAltFill className="iconB" />,
-      textB: "Jln. Girimargo 10A, Kerkop, Wonosobo",
+      textB: "Jl Girimargo 10A, Kerkop, Wonosobo",
     },
     {
       iconB: <ClockHistory className="iconB" />,
@@ -83,10 +78,7 @@ const Footer = () => {
   ];
   return (
     <Container id="footer" className="footer" fluid>
-      <Row
-        className="align-items-start justify-content-center text-light"
-        style={{ paddingTop: "2.3rem", paddingBottom: "1rem" }}
-      >
+      <Row className="align-items-start justify-content-center text-light" style={{paddingTop: "2.3rem", paddingBottom: "1rem"}}>
         <Col xs={10} md={3} className="d-flex maps">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d989.2354472943107!2d109.89963278960028!3d-7.360422349200887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7aa1aaad2dd44d%3A0x6a66eadf4d7bc6e0!2sArmada%20Computer!5e0!3m2!1sen!2sid!4v1697420773581!5m2!1sen!2sid"
@@ -102,7 +94,7 @@ const Footer = () => {
             }}
           />
         </Col>
-        <Col xs={10} md={3} className="address" style={{ fontSize: "12px" }}>
+        <Col xs={10} md={3} className="address" style={{fontSize: "12px"}}>
           <Col
             md={12}
             className="listfoot fw-bold mb-2 mb-md-1 d-none d-md-block"
@@ -113,10 +105,7 @@ const Footer = () => {
           >
             <img src={bar} alt="bar" className="bar" /> ARMADA COMPUTER
           </Col>
-          <Row
-            className="textB"
-            style={{ lineHeight: "1.8rem", marginTop: "1.4rem" }}
-          >
+          <Row className="textB" style={{lineHeight: "1.8rem", marginTop: "1.4rem"}}>
             {kaki.map((kaki, index1) => (
               <Col key={index1} md={12} className="address pb-2">
                 {kaki.iconB}
@@ -168,11 +157,7 @@ const Footer = () => {
             <Col>
               {marketplace.map((marketplace, index3) => (
                 <Button variant="link" className={marketplace.class}>
-                  <img
-                    key={index3}
-                    src={marketplace.iconMarket}
-                    alt={marketplace.textMarket}
-                  />
+                  <img key={index3} src={marketplace.iconMarket} alt={marketplace.textMarket} />
                 </Button>
               ))}
             </Col>
@@ -180,7 +165,7 @@ const Footer = () => {
         </Col>
       </Row>
       <Row md={12} className="text-light">
-        <Col md={12} className="text-center" style={{ fontSize: "10px" }}>
+        <Col md={12} className="text-center" style={{fontSize: "10px"}}>
           All Rights Reserved. Armadacom.id © 2023 - Tentackle Studio{" "}
         </Col>
       </Row>

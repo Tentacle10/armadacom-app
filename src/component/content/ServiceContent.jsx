@@ -8,32 +8,32 @@ const ServiceContent = () => {
     {
       icon: <Windows size={45} style={{color: "rgb(169 169 169)"}} />,
       title: "Install Ulang",
-      text: "Install ulang sistem operasi PC ataupun Laptop untuk merefresh sistem supaya kembali seperti baru.",
+      text: "Install ulang sistem operasi PC ataupun Laptop untuk merefresh sistem supaya kembali seperti baru",
     },
     {
       icon: <Tools size={45} style={{color: "rgb(169 169 169)"}} />,
       title: "Service Hardware",
-      text: "Servis hardware Komputer, Laptop, atau Printer kalian, mencakup kerusakan LED, Keyboard, Engsel, dll.",
+      text: "Servis hardware Komputer, Laptop, atau Printer kalian, mencakup kerusakan LED, Keyboard, Engsel, dll",
     },
     {
       icon: <GearWideConnected size={45} style={{color: "rgb(169 169 169)"}} />,
       title: "Maintenance Software",
-      text: "Kendala yang berhubungan dengan software Laptop ataupun PC, dari kendala sistem, sampai aktivasi.",
+      text: "Kendala yang berhubungan dengan software Laptop ataupun PC, dari kendala sistem, sampai aktivasi",
     },
     {
       icon: <ArrowRepeat size={45} style={{color: "rgb(169 169 169)"}} />,
       title: "Upgrade Sparepart",
-      text: "Upgrade device supaya kondisi semakin prima dan cepat Upgrade RAM, HDD, SSD, dll.",
+      text: "Upgrade device supaya kondisi semakin prima dan cepat Upgrade RAM, HDD, SSD, dll",
     },
     {
       icon: <Webcam size={45} style={{color: "rgb(169 169 169)"}} />,
       title: "CCTV dan Jaringan",
-      text: "Service dan pemasangan CCTV, IPCam, Smart IPCAM, dan juga Jaringan Internet/WiFi.",
+      text: "Service dan pemasangan CCTV, IPCam, Smart IPCAM, dan juga Jaringan Internet/Wi-Fi",
     },
     {
       icon: <Motherboard size={45} style={{color: "rgb(169 169 169)"}} />,
       title: "Service Mainboard",
-      text: "Cek service mesin ditunggu. Bagiam Mainboard atau mesin sering menyebabkan laptop mati.",
+      text: "Cek service mesin ditunggu. Bagiam Mainboard atau mesin sering menyebabkan laptop mati",
     },
   ];
   return (

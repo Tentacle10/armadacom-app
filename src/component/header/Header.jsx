@@ -1,22 +1,17 @@
-import { useEffect, useRef, useState } from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Nav,
-  Navbar,
-  NavDropdown,
-  Button,
-  Offcanvas,
-} from "react-bootstrap";
+import {useEffect, useRef, useState} from "react";
+import {Container, Row, Col, Nav, Navbar, NavDropdown, Button, Offcanvas} from "react-bootstrap";
 import "./Header.css";
 import ArmadaIcon from "../../assets/logo/Logo_white.png";
-import { Tiktok, Facebook, Instagram } from "react-bootstrap-icons";
+import {Tiktok, Facebook, Instagram, CaretDownFill} from "react-bootstrap-icons";
 
 const Header = () => {
   // const [activeSection, setActiveSection] = useState("home");
   const ref = useRef();
+  const nav = useRef();
+  const btn = useRef();
+
   const [showDropdown, setShowDropdown] = useState(false);
+  const [isMouseOver, setIsMouseOver] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -26,9 +21,17 @@ const Header = () => {
         // console.log(ref);
         ref.current.classList.remove("start-header");
         ref.current.classList.add("scroll-on");
+        nav.current.classList.remove("start-nav");
+        nav.current.classList.add("scroll-nav");
+        btn.current.classList.remove("start-btn");
+        btn.current.classList.add("scroll-btn");
       } else {
         ref.current.classList.remove("scroll-on");
         ref.current.classList.add("start-header");
+        nav.current.classList.remove("scroll-nav");
+        nav.current.classList.add("start-nav");
+        btn.current.classList.remove("scroll-btn");
+        nav.current.classList.add("start-btn");
       }
     });
 
@@ -66,31 +69,15 @@ const Header = () => {
   return (
     <>
       <Container fluid>
-        <Navbar
-          expand="md"
-          className="navigation-wrap start-header start-style"
-          variant="dark"
-          ref={ref}
-          fixed="top"
-        >
+        <Navbar expand="md" className="navigation-wrap start-header start-style" variant="dark" ref={ref} fixed="top">
           <Container>
-            <Navbar.Brand className="navbar-brand" href="#">
+            <Navbar.Brand className="start-nav" href="#" ref={nav}>
               <img src={ArmadaIcon} alt="Logo_Armada" />
             </Navbar.Brand>
 
-            <Navbar.Toggle
-              aria-controls="offcanvasNavbar-expand-md"
-              type="button"
-              aria-label="Toggle navigation"
-              variant="dark"
-            />
+            <Navbar.Toggle aria-controls="offcanvasNavbar-expand-md" type="button" aria-label="Toggle navigation" variant="dark" />
 
-            <Navbar.Offcanvas
-              id="offcanvasNavbar-expand-md"
-              aria-labelledby="offcanvasNavbarLabel-expand-md"
-              placement="end"
-              data-bs-theme="light"
-            >
+            <Navbar.Offcanvas id="offcanvasNavbar-expand-md" aria-labelledby="offcanvasNavbarLabel-expand-md" placement="end" data-bs-theme="light">
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id="offcanvasNavbarLabel-expand-md"></Offcanvas.Title>
               </Offcanvas.Header>
@@ -103,37 +90,35 @@ const Header = () => {
                     About Us
                   </Nav.Link>
                   <NavDropdown
-                    className=""
+                    className="nav-drop"
                     title="Layanan"
                     id="offcanvasNavbarDropdown-expand-md"
+                    active={isMouseOver}
                     show={showDropdown}
                     onMouseEnter={() => {
                       // console.log(showDropdown);
                       setShowDropdown(true);
+                      setIsMouseOver(true);
                     }}
                     onMouseLeave={() => {
                       // console.log(showDropdown);
                       setShowDropdown(false);
+                      setIsMouseOver(false);
                     }}
                   >
                     <NavDropdown.Item href="#" disabled>
                       Store
                     </NavDropdown.Item>
                     <NavDropdown.Item href="#service">Service</NavDropdown.Item>
-                    <NavDropdown.Item
-                      href="#damkar"
-                      className="border border-primary-subtle f-damkar"
-                    >
+                    <NavDropdown.Item href="#damkar" className="border border-primary-subtle f-damkar">
                       Damkar Express
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="#software">
-                      Software
-                    </NavDropdown.Item>
+                    <NavDropdown.Item href="#software">Software</NavDropdown.Item>
                   </NavDropdown>
                   <Nav.Link href="#testimonials" className="nav-item">
                     Testimonial
                   </Nav.Link>
-                  <Button className="btn-blue w-sm-100 ms-md-5">
+                  <Button variant="light" className="start-btn ms-md-5">
                     Pricelist
                   </Button>
                 </Nav>
