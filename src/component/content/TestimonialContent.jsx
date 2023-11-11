@@ -71,7 +71,7 @@ const TestimonialContent = () => {
   ];
   return (
     <>
-      <Container id="testimonials" style={{ paddingTop: "4rem" }} fluid>
+      <Container style={{ paddingTop: "4rem" }} fluid>
         <Row className="testimonials">
           <Carousel
             responsive={responsive}

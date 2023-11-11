@@ -1,14 +1,83 @@
-import {useEffect, useRef, useState} from "react";
-import {Container, Row, Col, Nav, Navbar, NavDropdown, Button, Offcanvas} from "react-bootstrap";
+import { useEffect, useRef, useState } from "react";
+import {
+  Container,
+  Row,
+  Col,
+  Nav,
+  Navbar,
+  NavDropdown,
+  Button,
+  Offcanvas,
+} from "react-bootstrap";
 import "./Header.css";
 import ArmadaIcon from "../../assets/logo/Logo_white.png";
-import {Tiktok, Facebook, Instagram, CaretDownFill} from "react-bootstrap-icons";
+import { Tiktok, Facebook, Instagram } from "react-bootstrap-icons";
+import HeroContent from "./../content/HeroContent";
+import AboutContent from "./../content/AboutContent";
+import ServiceContent from "./../content/ServiceContent";
+import DamkarContent from "./../content/DamkarContent";
+import SoftwareContent from "./../content/SoftwareContent";
+import TestimonialContent from "./../content/TestimonialContent";
 
 const Header = () => {
   // const [activeSection, setActiveSection] = useState("home");
   const ref = useRef();
   const nav = useRef();
-  const btn = useRef();
+
+  // Refs for sections
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  // const storeRef = useRef(null);
+  const serviceRef = useRef(null);
+  const damkarRef = useRef(null);
+  const softwareRef = useRef(null);
+  const testimonialRef = useRef(null);
+
+  // Refs for nav items
+  const homeNavItemRef = useRef(null);
+  const aboutNavItemRef = useRef(null);
+  // const storeNavItemRef = useRef(null);
+  const serviceNavItemRef = useRef(null);
+  const damkarNavItemRef = useRef(null);
+  const softwareNavItemRef = useRef(null);
+  const testimonialNavItemRef = useRef(null);
+
+  const navItemRefs = {
+    home: homeNavItemRef,
+    about: aboutNavItemRef,
+    service: serviceNavItemRef,
+    damkar: damkarNavItemRef,
+    software: softwareNavItemRef,
+    testimonial: testimonialNavItemRef,
+  };
+
+  // Intersection observer setup
+  const observerOptions = {
+    root: null,
+    rootMargin: "0px",
+    threshold: 0.7,
+  };
+
+  // Callback function for the observer
+  const observerCallback = (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const navItemRef = navItemRefs[entry.target.id];
+        navItemRef.current.classList.add("active");
+
+        // Remove 'active' class from other nav items
+        Object.values(navItemRefs).forEach((itemRef) => {
+          if (itemRef.current !== navItemRef.current) {
+            itemRef.current.classList.remove("active");
+          }
+        });
+      }
+    });
+  };
+
+  // Creating observer
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  const observer = new IntersectionObserver(observerCallback, observerOptions);
 
   const [showDropdown, setShowDropdown] = useState(false);
   const [isMouseOver, setIsMouseOver] = useState(false);
@@ -23,70 +92,71 @@ const Header = () => {
         ref.current.classList.add("scroll-on");
         nav.current.classList.remove("start-nav");
         nav.current.classList.add("scroll-nav");
-        btn.current.classList.remove("start-btn");
-        btn.current.classList.add("scroll-btn");
       } else {
         ref.current.classList.remove("scroll-on");
         ref.current.classList.add("start-header");
         nav.current.classList.remove("scroll-nav");
         nav.current.classList.add("start-nav");
-        btn.current.classList.remove("scroll-btn");
-        nav.current.classList.add("start-btn");
       }
     });
 
-    // function handleScroll() {
-    //   const scrollY = window.scrollY;
-    //   const home = document.getElementById("home");
-    //   const about = document.getElementById("about");
-    //   const service = document.getElementById("service");
-    //   const damkar = document.getElementById("damkar");
-    //   const sofware = document.getElementById("sofware");
-    //   const testimonials = document.getElementById("testimonials");
-    //   const footer = document.getElementById("footer");
+    observer.observe(homeRef.current);
+    observer.observe(aboutRef.current);
+    // observer.observe(storeRef.current);
+    observer.observe(serviceRef.current);
+    observer.observe(damkarRef.current);
+    observer.observe(softwareRef.current);
+    observer.observe(testimonialRef.current);
 
-    //   if (scrollY < about.offsetTop) {
-    //     setActiveSection("home");
-    //   } else if (scrollY < service.offsetTop) {
-    //     setActiveSection("about");
-    //     // } else if (scrollY < damkar.offsetTop) {
-    //     //   setActiveSection("service");
-    //     // } else if (scrollY < sofware.offsetTop) {
-    //     //   setActiveSection("damkar");
-    //     // } else if (scrollY < testimonials.offsetTop) {
-    //     //   setActiveSection("sofware");
-    //   } else {
-    //     setActiveSection("testimonials");
-    //   }
-    // }
+    // Clean up the observer when the component unmounts
+    return () => observer.disconnect();
+  }, [observer]);
 
-    // window.addEventListener("scroll", handleScroll);
-
-    // return () => {
-    //   window.removeEventListener("scroll", handleScroll);
-    // };
-  }, []);
   return (
     <>
       <Container fluid>
-        <Navbar expand="md" className="navigation-wrap start-header start-style" variant="dark" ref={ref} fixed="top">
+        <Navbar
+          expand="md"
+          className="navigation-wrap start-header start-style"
+          variant="dark"
+          ref={ref}
+          fixed="top"
+        >
           <Container>
             <Navbar.Brand className="start-nav" href="#" ref={nav}>
               <img src={ArmadaIcon} alt="Logo_Armada" />
             </Navbar.Brand>
 
-            <Navbar.Toggle aria-controls="offcanvasNavbar-expand-md" type="button" aria-label="Toggle navigation" variant="dark" />
+            <Navbar.Toggle
+              aria-controls="offcanvasNavbar-expand-md"
+              type="button"
+              aria-label="Toggle navigation"
+              variant="dark"
+            />
 
-            <Navbar.Offcanvas id="offcanvasNavbar-expand-md" aria-labelledby="offcanvasNavbarLabel-expand-md" placement="end" data-bs-theme="light">
+            <Navbar.Offcanvas
+              id="offcanvasNavbar-expand-md"
+              aria-labelledby="offcanvasNavbarLabel-expand-md"
+              placement="end"
+              data-bs-theme="light"
+            >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id="offcanvasNavbarLabel-expand-md"></Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body className="justify-content-md-end px-5">
                 <Nav className="navbar-nav align-items-md-center py-3 py-md-0">
-                  <Nav.Link href="#home" className="nav-item">
+                  <Nav.Link
+                    ref={homeNavItemRef}
+                    href="#home"
+                    className="homeNavItem nav-item"
+                  >
                     Home
                   </Nav.Link>
-                  <Nav.Link href="#about" className="nav-item">
+                  <Nav.Link
+                    ref={aboutNavItemRef}
+                    href="#about"
+                    className="homeNavItem nav-item"
+                  >
                     About Us
                   </Nav.Link>
                   <NavDropdown
@@ -106,19 +176,43 @@ const Header = () => {
                       setIsMouseOver(false);
                     }}
                   >
-                    <NavDropdown.Item href="#" disabled>
+                    <NavDropdown.Item
+                      // ref={storeNavItemRef}
+                      href="#store"
+                      disabled
+                    >
                       Store
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="#service">Service</NavDropdown.Item>
-                    <NavDropdown.Item href="#damkar" className="border border-primary-subtle f-damkar">
+                    <NavDropdown.Item
+                      ref={serviceNavItemRef}
+                      href="#service"
+                      className="serviceNavItem"
+                    >
+                      Service
+                    </NavDropdown.Item>
+                    <NavDropdown.Item
+                      ref={damkarNavItemRef}
+                      href="#damkar"
+                      className="border border-primary-subtle f-damkar damkarNavItem"
+                    >
                       Damkar Express
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="#software">Software</NavDropdown.Item>
+                    <NavDropdown.Item
+                      ref={softwareNavItemRef}
+                      href="#software"
+                      className="softwareNavItem"
+                    >
+                      Software
+                    </NavDropdown.Item>
                   </NavDropdown>
-                  <Nav.Link href="#testimonials" className="nav-item">
+                  <Nav.Link
+                    ref={testimonialNavItemRef}
+                    href="#testimonial"
+                    className="homeNavItem nav-item"
+                  >
                     Testimonial
                   </Nav.Link>
-                  <Button variant="light" className="start-btn ms-md-5">
+                  <Button variant="light" className=" ms-md-5">
                     Pricelist
                   </Button>
                 </Nav>
@@ -140,6 +234,24 @@ const Header = () => {
           </Container>
         </Navbar>
       </Container>
+      <div ref={homeRef} id="home">
+        <HeroContent />
+      </div>
+      <div ref={aboutRef} id="about">
+        <AboutContent />
+      </div>
+      <div ref={serviceRef} id="service">
+        <ServiceContent />
+      </div>
+      <div ref={damkarRef} id="damkar">
+        <DamkarContent />
+      </div>
+      <div ref={softwareRef} id="software">
+        <SoftwareContent />
+      </div>
+      <div ref={testimonialRef} id="testimonial">
+        <TestimonialContent />
+      </div>
     </>
   );
 };

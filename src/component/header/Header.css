@@ -74,8 +74,6 @@
   color: #ededed !important;
   font-weight: 500;
   transition: all 200ms linear;
-}
-.nav-link {
   position: relative;
   padding: 5px 0 !important;
   display: inline-block;
@@ -274,6 +272,7 @@
   .nav-link {
     letter-spacing: 1px;
     color: #555 !important;
+    text-shadow: none;
   }
   .nav-link.active {
     color: #5555556b !important;

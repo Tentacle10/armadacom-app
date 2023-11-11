@@ -39,7 +39,7 @@ const SoftwareContent = () => {
   ];
   return (
     <>
-      <Container id="software" style={{ paddingTop: "4rem" }}>
+      <Container style={{ paddingTop: "4rem" }}>
         <Row className="software align-items-center justify-content-center">
           <Col md={4} className="devimg">
             <img src={Devimg} alt="dev" />

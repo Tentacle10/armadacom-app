@@ -1,4 +1,4 @@
-import {Container, Row, Col} from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import Carousel from "react-bootstrap/Carousel";
 import Button from "react-bootstrap/Button";
 import satu from "../../assets/img/banner/1.jpg";
@@ -31,10 +31,10 @@ const HeroContent = () => {
   ];
   return (
     <>
-      <Carousel id="home" controls={true} indicators={true} fade>
+      <Carousel controls={true} indicators={true} fade>
         {hero.map((hero, index) => (
           <Carousel.Item key={index}>
-            <Container className="slideshow w-100" fluid>
+            <Container className="slideshow" fluid>
               <div className="gradient-overlay"></div>
 
               <Row className="">
@@ -55,11 +55,19 @@ const HeroContent = () => {
                   />
                 </Col>
               </Row>
-              <Row className="textBanner flex-">
-                <Col md={9} className="fs-2 fw-bold text-uppercase" style={{textShadow: "2px 2px 5px #555"}}>
+              <Row className="textBanner">
+                <Col
+                  md={9}
+                  className="fs-2 fw-bold text-uppercase"
+                  style={{ textShadow: "2px 2px 5px #555" }}
+                >
                   {hero.tag}
                 </Col>
-                <Col md={9} className="fs-6 mt-2" style={{textShadow: "2px 2px 5px #555"}}>
+                <Col
+                  md={9}
+                  className="fs-6 mt-2"
+                  style={{ textShadow: "2px 2px 5px #555" }}
+                >
                   {hero.desc}
                 </Col>
                 <Col md={4} className="mt-3">
