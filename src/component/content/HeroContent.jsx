@@ -1,4 +1,5 @@
-import { Container, Row, Col } from "react-bootstrap";
+import {useEffect} from "react";
+import {Container, Row, Col} from "react-bootstrap";
 import Carousel from "react-bootstrap/Carousel";
 import Button from "react-bootstrap/Button";
 import satu from "../../assets/img/banner/1.jpg";
@@ -29,15 +30,32 @@ const HeroContent = () => {
       desc: "Bikin aplikasi berbasis web ataupun Android di Wonosobo ya ke Armadacom.id Sebagai penunjang aktifitas bisnis kalian",
     },
   ];
+
+  // useEffect(() => {
+  //   const parallax = () => {
+  //     const scrolled = window.scrollY;
+  //     document.querySelector(".hero").style.top = `-${scrolled * 0.0315}rem`;
+  //     document.querySelector(".hero > h1").style.top = `-${scrolled * -0.005}rem`;
+  //     document.querySelector(".hero > h1").style.opacity = 1 - scrolled * 0.00175;
+  //   };
+
+  //   window.addEventListener("scroll", parallax);
+
+  //   // Clean up the event listener when the component unmounts
+  //   return () => {
+  //     window.removeEventListener("scroll", parallax);
+  //   };
+  // }, []);
+
   return (
     <>
-      <Carousel controls={true} indicators={true} fade>
+      <Carousel className="hero" controls={true} indicators={true} fade>
         {hero.map((hero, index) => (
           <Carousel.Item key={index}>
             <Container className="slideshow" fluid>
               <div className="gradient-overlay"></div>
 
-              <Row className="">
+              <Row>
                 <Col
                   md={8}
                   style={{
@@ -56,33 +74,14 @@ const HeroContent = () => {
                 </Col>
               </Row>
               <Row className="textBanner">
-                <Col
-                  md={9}
-                  className="fs-2 fw-bold text-uppercase"
-                  style={{ textShadow: "2px 2px 5px #555" }}
-                >
+                <Col md={9} className="fs-2 fw-bold text-uppercase" style={{textShadow: "2px 2px 5px #555"}}>
                   {hero.tag}
                 </Col>
-                <Col
-                  md={9}
-                  className="fs-6 mt-2"
-                  style={{ textShadow: "2px 2px 5px #555" }}
-                >
+                <Col md={9} className="fs-6 mt-2" style={{textShadow: "2px 2px 5px #555"}}>
                   {hero.desc}
                 </Col>
                 <Col md={4} className="mt-3">
-                  <Button
-                    className="mt-1"
-                    variant="light"
-                    href="#about"
-                    style={{
-                      color: "#2e64aa",
-                      fontWeight: "600",
-                      textShadow: "1px 1px 1px #fff",
-                      boxShadow: "rgb(63 63 63 / 50%) 0px 5px 10px 0px",
-                      width: "100%",
-                    }}
-                  >
+                  <Button variant="light" href="#about" className="btn-a">
                     Selengkapnya
                   </Button>
                 </Col>

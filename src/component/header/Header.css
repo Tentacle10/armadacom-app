@@ -156,7 +156,6 @@
   padding: 10px !important;
   margin: 0;
   font-size: 13px;
-  letter-spacing: 1px;
   color: #212121;
   background-color: #fcfaff;
   border: none;
@@ -207,18 +206,19 @@
   color: #ffffff80 !important;
   pointer-events: none;
 }
-.btn-blue {
+.btn-a {
   color: #2e64aa !important;
   font-weight: 600;
   background-color: #fff;
-  border: 2px solid #fff;
+  text-shadow: 1px 1px 1px #fff;
+  box-shadow: rgb(63 63 63 / 30%) 0px 5px 10px 0px;
+  letter-spacing: 0.8px !important;
 }
-.btn-blue:hover {
+/* .btn-a:hover {
   color: #fff !important;
-  font-weight: 600;
   background-color: #2e64aa;
   border: 2px solid #fff;
-}
+} */
 .navbar-expand-md .navbar-collapse {
   flex-grow: 0 !important;
 }
@@ -240,7 +240,7 @@
   .offcanvas {
     max-width: 65%;
   }
-  .btn-blue {
+  .btn-a {
     margin-top: 1rem;
     background-color: #2e64aa;
     border: none;
@@ -270,7 +270,6 @@
     margin-right: 2.3rem;
   }
   .nav-link {
-    letter-spacing: 1px;
     color: #555 !important;
     text-shadow: none;
   }

@@ -1,7 +1,6 @@
 body {
   font-family: "Poppins", sans-serif !important;
-  line-height: 1.5;
-  letter-spacing: 0.5px;
+  line-height: 1.5px;
   /* background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg"); */
   background-position: center;
   background-repeat: repeat;
@@ -9,7 +8,7 @@ body {
   background-color: #fff;
   overflow-x: hidden;
   transition: all 200ms linear;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.5px !important;
 }
 
 /* Scrollbar CSS */
@@ -130,22 +129,83 @@ body {
 
 /* AboutContent ################################################################### */
 .cabout {
-  padding-top: 4.5rem;
-  margin-top: 1rem;
+  padding: 5rem 10rem 5rem 10rem;
   color: #555;
 }
-
-.about {
-  height: 100%;
-  padding: 1rem;
-  border-radius: 15px;
-  background-color: #fff;
-  box-shadow: rgb(219 230 255 / 99%) 0px 5px 10px 0px;
+.aboutcol {
+  padding: 2rem 2rem 2rem 0rem !important;
 }
-.atext {
-  font-size: 16px;
+.title h2::after {
+  background: #2e64aa;
+  content: "";
+  display: block;
+  width: 50px;
+  height: 5px;
+  margin-top: 1rem;
+}
+.body-text {
+  font-size: 15px;
   color: #9b9b9b;
 }
+
+/* custom-card */
+/* .a-drop {
+  padding: 1rem;
+}
+.drop {
+  position: relative;
+  box-shadow: inset 20px 20px 20px rgba(0, 0, 0, 0.05), 25px 35px 20px rgba(0, 0, 0, 0.05), 25px 30px 30px rgba(0, 0, 0, 0.05), inset -20px -20px 25px rgba(255, 255, 255, 0.9);
+  transition: 0.5s ease-in-out;
+  background-color: #fff;
+}
+.drop:nth-child(1) {
+  border-radius: 47% 53% 70% 30% / 30% 43% 57% 70%;
+}
+.drop:nth-child(2) {
+  border-radius: 61% 39% 52% 48% / 44% 59% 41% 56%;
+}
+.drop:nth-child(3) {
+  border-radius: 35% 65% 31% 69% / 57% 59% 41% 43%;
+}
+.drop:nth-child(4) {
+  border-radius: 61% 39% 52% 48% / 44% 59% 41% 56%;
+}
+.drop:hover {
+  border-radius: 50%;
+}
+.drop::before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 85px;
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0.9;
+}
+.drop::after {
+  content: "";
+  position: absolute;
+  top: 90px;
+  left: 110px;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 50%;
+  opacity: 0.9;
+}
+.content-drop {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 2rem 3rem 3rem 3rem;
+  gap: 15px;
+} */
+/* custom-card */
 
 @media (max-width: 768px) {
   .cabout {
@@ -335,7 +395,7 @@ body {
   right: 0 !important;
   bottom: 0 !important;
   margin-right: 3rem;
-  margin-bottom: 4.5rem;
+  margin-bottom: 3rem;
 }
 .contact-float {
   width: auto !important;

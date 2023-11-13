@@ -1,4 +1,4 @@
-import { Container, Row, Col } from "react-bootstrap";
+import {Container, Row, Col} from "react-bootstrap";
 import Carousel from "react-bootstrap/Carousel";
 import Button from "react-bootstrap/Button";
 import HPElite from "../../assets/img/Hp-Eliete.png";
@@ -35,21 +35,12 @@ const HeroContent = () => {
         <Carousel controls={false} indicators={true} fade>
           {hero.map((hero, index) => (
             <Carousel.Item key={index} className="carousel-item">
-              <Row
-                sm={8}
-                className="row-carousel d-flex justify-content-center justify-content-md-end align-items-center"
-              >
-                <Col
-                  sm={8}
-                  className="d-flex justify-content-center justify-content-md-center"
-                >
+              <Row sm={8} className="row-carousel d-flex justify-content-center justify-content-md-end align-items-center">
+                <Col sm={8} className="d-flex justify-content-center justify-content-md-center">
                   <img src={hero.img} alt="slide" />
                 </Col>
                 <Col sm={8} className="caption pt-3">
-                  <h2
-                    className="fw-bold text-uppercase fs-3"
-                    style={{ textShadow: "rgb(85, 85, 85) 2px 2px 5px" }}
-                  >
+                  <h2 className="fw-bold text-uppercase fs-3" style={{textShadow: "rgb(85, 85, 85) 2px 2px 5px"}}>
                     {hero.tag}
                   </h2>
                   <p className="desc pt-1">{hero.desc}</p>
