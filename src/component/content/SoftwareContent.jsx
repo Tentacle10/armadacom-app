@@ -122,10 +122,7 @@ const SoftwareContent = () => {
                               <CheckAll /> Setting Lengkap & Mudah
                             </Col>
                           </Col>
-                          <Button
-                            variant="light"
-                            style={{ color: "#2e64aa", fontWeight: "600" }}
-                          >
+                          <Button variant="light" className="btn-a ">
                             {devcard.btn}
                           </Button>
                         </Col>

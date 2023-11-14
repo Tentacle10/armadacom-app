@@ -1,3 +1,31 @@
+/* palette */
+.color1 {
+ color: #2E64AA;
+}
+.color2 {
+ color: #009AD1;
+}
+.color3 {
+ color: #00CCD8;
+}
+.color4 {
+ color: #72FACA;
+}
+.bg-color1 {
+  background-color: #2E64AA !important;
+}
+.bg-color2 {
+  background-color: #009AD1 !important;
+}
+.bg-color3 {
+  background-color: #00CCD8 !important;
+}
+.bg-color4 {
+  background-color: #72FACA !important;
+}
+/* palette */
+
+
 body {
   font-family: "Poppins", sans-serif !important;
   line-height: 1.5px;
@@ -61,7 +89,6 @@ body {
 .slideshow {
   height: 100vh;
   color: #fff;
-  background-color: #2e64aa;
   /* background-image: url(./assets/img/bg-armadacom.png); */
   /* background-repeat: no-repeat; */
   /* background-position-y: center; */
@@ -91,7 +118,9 @@ body {
   bottom: 0%;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(270deg, #2e64aa, #2e64aa, #2e64aa, #2e64aa73, #2e64aa33, #2e64aa21, #2e64aa00);
+  background-image: linear-gradient(260deg, #2e64aa, #2e64aa, #0099d1, #0099d1, #72faca5e, #72faca2a, #72faca00, #72faca00, #72faca00);
+  /* background-image: linear-gradient(270deg, #2E64AA,#2e64aaec, #009AD1, #00cdd880, #72faca21, #72faca00, #72faca00); */
+  /* background-image: linear-gradient(270deg, #2e64aa, #2e64aa, #2e64aa, #2e64aa73, #2e64aa33, #2e64aa21, #2e64aa00); */
   opacity: 1;
 }
 .banner {
@@ -110,7 +139,8 @@ body {
     background-image: none;
   }
   .gradient-overlay {
-    background-image: linear-gradient(0deg, #2e64aa, #2e64aa, #2e64aa, #2e64aa73, #2e64aa33, #2e64aa21, #2e64aa00);
+    background-image: linear-gradient(30deg, #2E64AA,#2e64aaec, #0099d1e3, #00cdd875, #72faca1e, #72faca00, #72faca00);
+  /* background-image: linear-gradient(0deg, #2e64aa, #2e64aa, #009AD1, #00CCD8, #72FACA, #2e64aa21, #2e64aa00); */
   }
   .textBanner {
     top: unset;
@@ -124,6 +154,9 @@ body {
   .carousel-control-next {
     display: none !important;
   }
+  .textBanner {
+    bottom: 28%;
+  }
 }
 /* HeroContent */
 
@@ -133,19 +166,27 @@ body {
   color: #555;
 }
 .aboutcol {
-  padding: 2rem 2rem 2rem 0rem !important;
+  padding: 2rem 3rem 2rem 0rem !important;
 }
-.title h2::after {
-  background: #2e64aa;
+.title h6::after {
+  background: #009AD1;
   content: "";
   display: block;
   width: 50px;
   height: 5px;
-  margin-top: 1rem;
+  margin-top: 0.3rem;
+}
+.title h2{
+  color: #555;
 }
 .body-text {
   font-size: 15px;
   color: #9b9b9b;
+}
+.acard{
+  color: #009AD1;
+  border-radius: 11px;
+  border: 0;
 }
 .about-card {
   flex: 0 50%;
@@ -153,7 +194,7 @@ body {
   box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2),
     0 5px 15px 0 rgba(37, 44, 97, 0.15);
   /* border-radius: 15px; */
-  margin: 1rem 1rem 1rem 1rem !important;
+  margin: 1rem 0rem 1.5rem 1rem !important;
   /* padding: 10px 15px; */
   position: relative;
   z-index: 1;
@@ -162,6 +203,25 @@ body {
   transition: 1s;
 }
 
+.about-icon {
+  border-radius: 50%;
+  background-color: #009AD1;
+  width: 60px !important;
+  height: 60px;
+  box-shadow: 5px 5px 0 0 rgb(85 108 214 / 15%);
+  color: #fff;
+  margin-bottom: 1rem;
+  transition: 1s;
+}
+.title-card {
+  text-shadow: 2px 2px 5px #55555555;
+  color: #555;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 5px 4px 0 rgba(136, 144, 195, 0.2);
+}
 .about-card::before {
   content: "";
   position: absolute;
@@ -176,97 +236,105 @@ body {
 }
 
 .about-card:hover::before {
-  background: rgb(85 108 214 / 10%);
+  background: #00cdd828;
 }
 
 .about-card:hover {
-  background: #309df0;
+  background: #009AD1;
   color: #fff;
   transform: scale(1.05);
   z-index: 9;
 }
 
-/* custom-card */
-/* .a-drop {
-  padding: 1rem;
-}
-.drop {
-  position: relative;
-  box-shadow: inset 20px 20px 20px rgba(0, 0, 0, 0.05), 25px 35px 20px rgba(0, 0, 0, 0.05), 25px 30px 30px rgba(0, 0, 0, 0.05), inset -20px -20px 25px rgba(255, 255, 255, 0.9);
-  transition: 0.5s ease-in-out;
+.about-card:hover .about-icon {
+  color: #009AD1;
   background-color: #fff;
+  box-shadow: none;
 }
-.drop:nth-child(1) {
-  border-radius: 47% 53% 70% 30% / 30% 43% 57% 70%;
+.about-card:hover .title-card {
+  color: #fff;
 }
-.drop:nth-child(2) {
-  border-radius: 61% 39% 52% 48% / 44% 59% 41% 56%;
+.about-card:hover .body-text {
+  color: #fff;
 }
-.drop:nth-child(3) {
-  border-radius: 35% 65% 31% 69% / 57% 59% 41% 43%;
-}
-.drop:nth-child(4) {
-  border-radius: 61% 39% 52% 48% / 44% 59% 41% 56%;
-}
-.drop:hover {
-  border-radius: 50%;
-}
-.drop::before {
-  content: "";
+
+/* .hover_color_bubble {
   position: absolute;
-  top: 50px;
-  left: 85px;
-  width: 35px;
-  height: 35px;
-  background: #fff;
+  background: rgb(54 81 207 / 15%);
+  width: 100rem;
+  height: 100rem;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  top: 16rem;
   border-radius: 50%;
-  opacity: 0.9;
-}
-.drop::after {
-  content: "";
-  position: absolute;
-  top: 90px;
-  left: 110px;
-  width: 15px;
-  height: 15px;
-  background: #fff;
-  border-radius: 50%;
-  opacity: 0.9;
-}
-.content-drop {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 2rem 3rem 3rem 3rem;
-  gap: 15px;
+  transform: rotate(-36deg);
+  left: -18rem;
+  transition: 0.7s;
 } */
-/* custom-card */
 
 @media (max-width: 768px) {
+
   .cabout {
-    padding-top: 3rem;
+    padding: 2.5rem 3rem 0rem 3rem !important;
+    color: #555;
   }
-  .about {
-    background-color: #fff;
-    box-shadow: none !important;
+  .aboutcol {
+    padding: 2rem 0rem 1rem 0rem !important;
   }
+  .title h6::after {
+    background: #009AD1;
+    content: "";
+    display: block;
+    width: 50px;
+    height: 5px;
+    margin-top: 0.3rem;
+  }
+  .title h2{
+    color: #555;
+  }
+  .body-text {
+    font-size: 15px;
+    color: #9b9b9b;
+  }
+  .acard{
+    color: #009AD1;
+    border-radius: 11px;
+    border: 0;
+    padding: 0 !important;
+  }
+  .about-card {
+    flex: 0 50%;
+    background: #fff;
+    box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2),
+      0 5px 15px 0 rgba(37, 44, 97, 0.15);
+    /* border-radius: 15px; */
+    margin: 0.6rem 0 !important;
+    /* padding: 10px 15px; */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    min-height: 200px;
+    transition: 1s;
+  }
+  
 }
 /* AboutContent */
 
 /* ServiceContent ################################################################# */
+.cservice {
+  padding: 4rem 0 0 0;
+}
 .service {
   height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: rgb(219 230 255 / 99%) 0px 5px 10px 0px;
+  /* box-shadow: rgb(219 230 255 / 99%) 0px 5px 10px 0px; */
   border-radius: 15px;
 }
-.appservice {
-  background-color: #2e64aa !important;
+.appservice {  
+  background-image: linear-gradient(90deg, #2e64aac2,#2e64aaec,#009AD1,#009AD1, #009AD1, #00cdd880);
   border-radius: 15px;
 }
 .iPhone img {
@@ -285,11 +353,15 @@ body {
 }
 
 @media (max-width: 768px) {
+  .cservice {
+    padding: 3rem 0 0 0;
+  }
   .service {
     border-radius: 0;
     box-shadow: none !important;
   }
   .appservice {
+    background-image: linear-gradient(180deg, #2e64aa,#2e64aaec,#009AD1,#009AD1, #009AD1, #00cdd8cb);
     height: 100vh;
     border-radius: 0;
     margin-top: -0.3rem !important;
@@ -297,7 +369,6 @@ body {
   .iPhone img {
     width: 60%;
     height: 90%;
-    /* margin-left: 3rem; */
     padding-top: 0rem;
     padding-bottom: 0rem;
     margin-top: 0rem;
@@ -311,9 +382,12 @@ body {
 /* ServiceContent */
 
 /* DamkarContent ################################################################# */
+.cdamkar{
+  padding: 4rem 0 0 0;
+}
 .damkar {
   box-shadow: rgb(219 230 255 / 99%) 0px 5px 10px 0px;
-  background-color: #2e64aa !important;
+  background-image: linear-gradient(90deg, #2e64aac2,#2e64aaec,#009AD1,#009AD1, #009AD1, #00cdd880);
   border-radius: 15px;
   height: 100%;
 }
@@ -322,18 +396,30 @@ body {
   width: 75%;
 }
 
-.logodankar {
+.logodamkar {
   width: 80%;
 }
 
+.dtext {
+  font-size: 15px;
+}
+
 @media (max-width: 768px) {
+  .cdamkar{
+    padding: 1rem 0 0 0;
+  }
   .damkar {
     height: 100vh;
+    background-image: linear-gradient(180deg, #2e64aa,#2e64aaec,#009AD1,#009AD1, #009AD1, #00cdd8cb);
     border-radius: 0;
     margin-top: -0.3rem !important;
   }
   .gbdamkar img {
+    margin: -3rem 0 0 0;
     width: 80vw;
+  }
+  .logodamkar {
+    margin: -3rem 0 1rem 0;
   }
 }
 /* DamkarContent */
@@ -373,7 +459,7 @@ body {
 
 .carddev:hover {
   transition: 0.6s ease-in-out;
-  background-color: #2e64aa;
+  background-color: #009AD1;
 }
 .carddev .card2 {
   transform: translateY(100%);

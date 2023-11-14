@@ -4,22 +4,22 @@ import { Shop, Tools, Terminal, Headset } from "react-bootstrap-icons";
 const AboutContent = () => {
   const aboutcard = [
     {
-      icon: <Shop size={30} style={{ color: "#2e64aa" }} />,
+      icon: <Shop size={30} />,
       title: "Store",
       text: "Penjualan Perangkat Laptop, Komputer, Printer, Jaringan, dll",
     },
     {
-      icon: <Tools size={30} style={{ color: "#2e64aa" }} />,
+      icon: <Tools size={30} />,
       title: "Service",
       text: "Service perangkat Laptop, Komputer, Printer, Jaringan, dll",
     },
     {
-      icon: <Terminal size={30} style={{ color: "#2e64aa" }} />,
+      icon: <Terminal size={30} />,
       title: "Software",
       text: "Pengembangan software berbasis Web dan Android",
     },
     {
-      icon: <Headset size={30} style={{ color: "#2e64aa" }} />,
+      icon: <Headset size={30} />,
       title: "IT Consultant",
       text: "Konsultasi terkait kebutuhan dan produk IT",
     },
@@ -31,7 +31,14 @@ const AboutContent = () => {
           <Col md={4} className="aboutcol">
             <div className="title">
               <h6 style={{ color: "#9b9b9b", fontWeight: "600" }}>ABOUT US</h6>
-              <h2 className="pb-md-3" style={{ fontWeight: "600" }}>
+              <h2
+                className="pb-md-2"
+                style={{
+                  fontWeight: "600",
+                  textShadow: "2px 2px 5px #55555555",
+                  // color: "#009AD1",
+                }}
+              >
                 Melayani segala kebutuhan IT
               </h2>
             </div>
@@ -39,8 +46,9 @@ const AboutContent = () => {
               Armada Computer hadir sebagai toko komputer terlengkap di
               Wonosobo, menawarkan berbagai peralatan komputer dan perangkat
               jaringan. Dari komponen utama seperti CPU, motherboard, hingga
-              aksesori seperti keyboard dan mouse, Kami juga menyediakan solusi
-              lengkap untuk kebutuhan teknologi informasi.
+              aksesori seperti keyboard dan mouse, dan juga perangkat Jaringan
+              seperti Router, Switch Hub dan Kabel Jaringan. Kami juga
+              menyediakan solusi lengkap untuk kebutuhan teknologi informasi.
             </div>
           </Col>
           <Col
@@ -48,46 +56,20 @@ const AboutContent = () => {
             style={{ height: "100%" }}
             className="d-flex align-items-center"
           >
-            <Row xs={1} md={2} className="">
+            <Row xs={1} md={2}>
               {aboutcard.map((isiabout, index) => (
-                <Col
-                  key={index}
-                  style={{
-                    color: "#9b9b9b",
-                    borderRadius: "11px",
-                    border: "0",
-                    // boxShadow: "0 5px 10px 0 rgba(138, 155, 165, 0.3)",
-                  }}
-                  className="hover_color_bubble"
-                >
+                <Col key={index} className="acard">
                   <Row className="about-card p-3">
+                    <div className="hover_color_bubble"></div>
                     <Col
                       xs={2}
-                      className="d-flex justify-content-center align-items-center"
-                      style={{
-                        borderRadius: "50%",
-                        backgroundColor: "#fff",
-                        width: "60px",
-                        height: "60px",
-                        boxShadow: "5px 5px 0 0 #2e64aa",
-                        color: "#2e64aa",
-                        marginBottom: "1rem",
-                      }}
+                      className="about-icon d-flex justify-content-center align-items-center"
                     >
                       {isiabout.icon}
                     </Col>
                     <Col xs={12} style={{ padding: "0" }}>
-                      <div
-                        style={{
-                          fontSize: "18px",
-                          fontWeight: "600",
-                          textTransform: "uppercase",
-                          marginBottom: "0.5rem",
-                        }}
-                      >
-                        {isiabout.title}
-                      </div>
-                      <div>{isiabout.text}</div>
+                      <div className="title-card">{isiabout.title}</div>
+                      <div className="body-text">{isiabout.text}</div>
                     </Col>
                   </Row>
                 </Col>

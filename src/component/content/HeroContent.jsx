@@ -1,11 +1,11 @@
-import {useEffect} from "react";
-import {Container, Row, Col} from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import Carousel from "react-bootstrap/Carousel";
 import Button from "react-bootstrap/Button";
 import satu from "../../assets/img/banner/1.jpg";
 import dua from "../../assets/img/banner/2.jpg";
 import tiga from "../../assets/img/banner/3.jpg";
 import empat from "../../assets/img/banner/4.jpg";
+import lima from "../../assets/img/banner/5.jpg";
 
 const HeroContent = () => {
   const hero = [
@@ -20,33 +20,21 @@ const HeroContent = () => {
       desc: "Armadacom.id melayani service komputer, Laptop, Printer maupun Jaringan dan CCTV di wonosobo dengan kualitas pelayanan terbaik",
     },
     {
-      img: tiga,
-      tag: "Anda Sibuk? Tidak bisa ke Toko Offline?",
-      desc: "Selain jualan dan servis, ARMADA juga punya layanan antar jemput Lo.. di DAMKARin aja, Kapan lagi bisa servis/beli tanpa keluar rumah",
+      img: lima,
+      tag: "DAMKAR! Solusi Praktis Tanpa Ribet",
+      desc: "Damkar hadir sebagai solusi penuh kenyamanan untuk kebutuhan jualan, servis, dan antar jemput. Nikmati kemudahan servis dan beli tanpa perlu keluar rumah",
     },
     {
       img: empat,
       tag: "Bikin Aplikasi Juga Bisa Tentunya",
       desc: "Bikin aplikasi berbasis web ataupun Android di Wonosobo ya ke Armadacom.id Sebagai penunjang aktifitas bisnis kalian",
     },
+    {
+      img: tiga,
+      tag: "Laptop Anda Mati? Serahkan pada Ahlinya!",
+      desc: "Kami adalah solusi terpercaya untuk laptop mati Anda. Percayakan pada ahli kami untuk menghidupkan kembali gadget Anda dengan keahlian dan layanan yang cepat.",
+    },
   ];
-
-  // useEffect(() => {
-  //   const parallax = () => {
-  //     const scrolled = window.scrollY;
-  //     document.querySelector(".hero").style.top = `-${scrolled * 0.0315}rem`;
-  //     document.querySelector(".hero > h1").style.top = `-${scrolled * -0.005}rem`;
-  //     document.querySelector(".hero > h1").style.opacity = 1 - scrolled * 0.00175;
-  //   };
-
-  //   window.addEventListener("scroll", parallax);
-
-  //   // Clean up the event listener when the component unmounts
-  //   return () => {
-  //     window.removeEventListener("scroll", parallax);
-  //   };
-  // }, []);
-
   return (
     <>
       <Carousel className="hero" controls={true} indicators={true} fade>
@@ -74,10 +62,18 @@ const HeroContent = () => {
                 </Col>
               </Row>
               <Row className="textBanner">
-                <Col md={9} className="fs-2 fw-bold text-uppercase" style={{textShadow: "2px 2px 5px #555"}}>
+                <Col
+                  md={9}
+                  className="fs-2 fw-bold text-uppercase"
+                  style={{ textShadow: "2px 2px 5px #555" }}
+                >
                   {hero.tag}
                 </Col>
-                <Col md={9} className="fs-6 mt-2" style={{textShadow: "2px 2px 5px #555"}}>
+                <Col
+                  md={9}
+                  className="fs-6 mt-2"
+                  style={{ textShadow: "2px 2px 5px #555" }}
+                >
                   {hero.desc}
                 </Col>
                 <Col md={4} className="mt-3">
