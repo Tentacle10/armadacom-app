@@ -1,10 +1,10 @@
-import { Col, Container, Row, Card, Button } from "react-bootstrap";
+import {Col, Container, Row, Button} from "react-bootstrap";
 import Devimg from "../../assets/img/devimg.jpg";
 import Toska from "../../assets/img/dev/toska.png";
 import UpSensei from "../../assets/img/dev/upsensei.png";
 import Evoting from "../../assets/img/dev/evoting.png";
 import Custom from "../../assets/img/dev/custom.png";
-import { CheckAll } from "react-bootstrap-icons";
+import {CheckAll} from "react-bootstrap-icons";
 
 const SoftwareContent = () => {
   const devcard = [
@@ -25,7 +25,7 @@ const SoftwareContent = () => {
     {
       icon: Evoting,
       title: "E VOTING",
-      desc: "Software vote pemilihan pimpinan untuk organisasi maupun instansi, kemudahan dalam rekap dan tanpa media kertas.",
+      desc: "Software vote pemilihan pimpinan untuk organisasi maupun instansi kemudahan dalam rekap tanpa media kertas.",
       harga: "2.250K",
       btn: "Rent Now",
     },
@@ -39,98 +39,98 @@ const SoftwareContent = () => {
   ];
   return (
     <>
-      <Container style={{ paddingTop: "4rem" }}>
-        <Row className="software align-items-center justify-content-center">
+      <Container className="csoftware d-flex justify-content-center">
+        <Row className="software align-items-start justify-content-center">
           <Col md={4} className="devimg">
             <img src={Devimg} alt="dev" />
           </Col>
-          <Col
-            md={8}
-            className="d-flex flex-column align-items-center justify-content-center"
-          >
-            <Col
-              xs={12}
-              className="fw-bold fs-5 ps-3 pt-3"
-              style={{ color: "#9b9b9b" }}
-            >
+          <Col className="softwaredev d-flex flex-column align-items-center justify-content-center">
+            <Col xs={12} className="fw-bold fs-5" style={{color: "#9b9b9b"}}>
               ARMADA SOFTWARE
             </Col>
             <Col md={12} className="">
-              <div className="fw-bolder pb-2 ps-3">
-                PALUGADA - Apa yang lu mau Gue ada!
-              </div>
-              <div className="fs-6 ps-3" style={{ color: "#9b9b9b" }}>
-                Menyediakan software untuk penunjang aktifitas bisnis ataupun
-                kegiatan instansi, dengan teknologi sebagai alat untuk
-                meningkatkan efektifitas, kecepatan dan ketepatan dalam bekerja.
-              </div>
+              <div className="fw-bolder">PALUGADA - Apa yang lu mau Gue ada!</div>
+              <div style={{color: "#9b9b9b"}}>Menyediakan software untuk penunjang aktifitas bisnis ataupun kegiatan instansi, dengan teknologi sebagai alat untuk meningkatkan efektifitas, kecepatan dan ketepatan dalam bekerja.</div>
             </Col>
-            <Col
-              md={12}
-              className="d-flex align-items-center pb-4"
-              style={{ height: "100%" }}
-            >
-              <Row xs={1} md={2} className="g-3 py-3 g-md-4 p-md-3">
+            <Col md={12} className="d-flex flex-column align-items-center justify-content-center pt-md-4">
+              <Row md={12} className="card-container justify-content-center">
                 {devcard.map((devcard, index) => (
-                  <Col key={index}>
-                    <Card
-                      className="carddev"
-                      style={{
-                        color: "#9b9b9b",
-                        borderRadius: "11px",
-                        border: "0",
-                        boxShadow: "0 5px 10px 0 rgba(138, 155, 165, 0.3)",
-                      }}
-                    >
-                      <Row className="flex-column card1 align-items-center justify-content-center">
-                        <Col xs={5} className="c1">
-                          <img
-                            src={devcard.icon}
-                            alt="Devimg"
-                            className="logodev"
-                          />
+                  <Col md={6} key={index} className="carddev">
+                    <Row className="carddev-inner">
+                      <div className="card-front text-center">
+                        <img src={devcard.icon} alt="Devimg" className="logodev" />
+                        <Col>
+                          <div className="title-card">{devcard.title}</div>
+                          <div className="body-text text-start">{devcard.desc}</div>
                         </Col>
-                        <Card.Title className="c2 text-center fw-bold">
-                          {devcard.title}
-                        </Card.Title>
-                        <div className="c3 h-divider">
-                          <div className="shadow"></div>
-                        </div>
-                        <Col xs={12} className="c4 pt-2 px-5">
-                          <Card.Text>{devcard.desc}</Card.Text>
-                        </Col>
-                        <Col
-                          xs={12}
-                          className="card2 px-4 d-flex flex-column align-items-center justify-content-center "
-                        >
-                          <h6>Start From</h6>
-                          <h1 className="fw-bold">{devcard.harga}</h1>
-                          <Col className="list mt-3 mb-3">
-                            <Col>
-                              <CheckAll /> Cross Platform
-                            </Col>
-                            <Col>
-                              <CheckAll /> 2 in 1 POS Jasa & Barang
-                            </Col>
-                            <Col>
-                              <CheckAll /> Laporan Transaksi
-                            </Col>
-                            <Col>
-                              <CheckAll /> Device Printing
-                            </Col>
-                            <Col>
-                              <CheckAll /> Setting Lengkap & Mudah
-                            </Col>
+                      </div>
+                      <div className="card-back text-center">
+                        <h6>Start From</h6>
+                        <h1 className="fw-bold">{devcard.harga}</h1>
+                        <Col className="list text-start">
+                          <Col>
+                            <CheckAll /> Cross Platform
                           </Col>
-                          <Button variant="light" className="btn-a ">
-                            {devcard.btn}
-                          </Button>
+                          <Col>
+                            <CheckAll /> 2 in 1 POS Jasa & Barang
+                          </Col>
+                          <Col>
+                            <CheckAll /> Laporan Transaksi
+                          </Col>
+                          <Col>
+                            <CheckAll /> Device Printing
+                          </Col>
+                          <Col>
+                            <CheckAll /> Setting Lengkap & Mudah
+                          </Col>
                         </Col>
-                      </Row>
-                    </Card>
+                        <Button variant="light" className="btn-a ">
+                          {devcard.btn}
+                        </Button>
+                      </div>
+                    </Row>
                   </Col>
                 ))}
               </Row>
+              {/* {devcard.map((devcard, index) => (
+                  <div key={index} className="carddev">
+                    <Row className="carddev-inner">
+                      <Col className="card-front">
+                        <div className="c1">
+                          <img src={devcard.icon} alt="Devimg" className="logodev" />
+                        </div>
+                        <div className="c2 text-center fw-bold">{devcard.title}</div>
+                        <div xs={12} className="c4">
+                          {devcard.desc}
+                        </div>
+                      </Col>
+                      <Col xs={12} className="card-back">
+                        <h6>Start From</h6>
+                        <h1 className="fw-bold">{devcard.harga}</h1>
+                        <Col className="list">
+                          <Col>
+                            <CheckAll /> Cross Platform
+                          </Col>
+                          <Col>
+                            <CheckAll /> 2 in 1 POS Jasa & Barang
+                          </Col>
+                          <Col>
+                            <CheckAll /> Laporan Transaksi
+                          </Col>
+                          <Col>
+                            <CheckAll /> Device Printing
+                          </Col>
+                          <Col>
+                            <CheckAll /> Setting Lengkap & Mudah
+                          </Col>
+                        </Col>
+                        <Button variant="light" className="btn-a ">
+                          {devcard.btn}
+                        </Button>
+                      </Col>
+                    </Row>
+                  </div>
+                ))} */}
             </Col>
           </Col>
         </Row>

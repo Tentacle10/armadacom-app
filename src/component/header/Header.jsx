@@ -1,17 +1,8 @@
-import { useEffect, useRef, useState } from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Nav,
-  Navbar,
-  NavDropdown,
-  Button,
-  Offcanvas,
-} from "react-bootstrap";
+import {useEffect, useRef, useState} from "react";
+import {Container, Row, Col, Nav, Navbar, NavDropdown, Button, Offcanvas} from "react-bootstrap";
 import "./Header.css";
 import ArmadaIcon from "../../assets/logo/Logo_white.png";
-import { Tiktok, Facebook, Instagram } from "react-bootstrap-icons";
+import {Tiktok, Facebook, Instagram} from "react-bootstrap-icons";
 import HeroContent from "./../content/HeroContent";
 import AboutContent from "./../content/AboutContent";
 import ServiceContent from "./../content/ServiceContent";
@@ -115,48 +106,24 @@ const Header = () => {
   return (
     <>
       <Container fluid>
-        <Navbar
-          expand="md"
-          className="navigation-wrap start-header start-style"
-          variant="dark"
-          ref={ref}
-          fixed="top"
-        >
+        <Navbar expand="md" className="navigation-wrap start-header start-style" variant="dark" ref={ref} fixed="top">
           <Container>
             <Navbar.Brand className="start-nav" href="#" ref={nav}>
               <img src={ArmadaIcon} alt="Logo_Armada" />
             </Navbar.Brand>
 
-            <Navbar.Toggle
-              aria-controls="offcanvasNavbar-expand-md"
-              type="button"
-              aria-label="Toggle navigation"
-              variant="dark"
-            />
+            <Navbar.Toggle aria-controls="offcanvasNavbar-expand-md" type="button" aria-label="Toggle navigation" variant="dark" />
 
-            <Navbar.Offcanvas
-              id="offcanvasNavbar-expand-md"
-              aria-labelledby="offcanvasNavbarLabel-expand-md"
-              placement="end"
-              data-bs-theme="light"
-            >
+            <Navbar.Offcanvas id="offcanvasNavbar-expand-md" aria-labelledby="offcanvasNavbarLabel-expand-md" placement="end" data-bs-theme="light">
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id="offcanvasNavbarLabel-expand-md"></Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body className="justify-content-md-end px-5">
                 <Nav className="navbar-nav align-items-md-center py-3 py-md-0">
-                  <Nav.Link
-                    ref={homeNavItemRef}
-                    href="#home"
-                    className="homeNavItem nav-item"
-                  >
+                  <Nav.Link ref={homeNavItemRef} href="#home" className="homeNavItem nav-item">
                     Home
                   </Nav.Link>
-                  <Nav.Link
-                    ref={aboutNavItemRef}
-                    href="#about"
-                    className="homeNavItem nav-item"
-                  >
+                  <Nav.Link ref={aboutNavItemRef} href="#about" className="homeNavItem nav-item">
                     About Us
                   </Nav.Link>
                   <NavDropdown
@@ -179,37 +146,22 @@ const Header = () => {
                     <NavDropdown.Item
                       // ref={storeNavItemRef}
                       href="#store"
+                      className="drop-a"
                       disabled
                     >
                       Store
                     </NavDropdown.Item>
-                    <NavDropdown.Item
-                      ref={serviceNavItemRef}
-                      href="#service"
-                      className="serviceNavItem"
-                    >
+                    <NavDropdown.Item ref={serviceNavItemRef} href="#service" className="drop-a serviceNavItem">
                       Service
                     </NavDropdown.Item>
-                    <NavDropdown.Item
-                      ref={damkarNavItemRef}
-                      href="#damkar"
-                      className="btn-a damkarNavItem"
-                    >
+                    <NavDropdown.Item ref={damkarNavItemRef} href="#damkar" className="btn-a damkarNavItem">
                       Damkar Express
                     </NavDropdown.Item>
-                    <NavDropdown.Item
-                      ref={softwareNavItemRef}
-                      href="#software"
-                      className="softwareNavItem"
-                    >
+                    <NavDropdown.Item ref={softwareNavItemRef} href="#software" className="drop-a softwareNavItem">
                       Software
                     </NavDropdown.Item>
                   </NavDropdown>
-                  <Nav.Link
-                    ref={testimonialNavItemRef}
-                    href="#testimonial"
-                    className="homeNavItem nav-item"
-                  >
+                  <Nav.Link ref={testimonialNavItemRef} href="#testimonial" className="homeNavItem nav-item">
                     Testimonial
                   </Nav.Link>
                   <Button variant="light" className="btn-a ms-md-4">
@@ -250,7 +202,7 @@ const Header = () => {
         <SoftwareContent />
       </div>
       <div ref={testimonialRef} id="testimonial">
-        {/* <TestimonialContent /> */}
+        <TestimonialContent />
       </div>
     </>
   );
