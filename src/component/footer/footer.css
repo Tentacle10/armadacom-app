@@ -1,5 +1,5 @@
 .footer {
-  background-image: linear-gradient(200deg, #2e64aac2, #2e64aaec, #009ad1, #00cdd880);
+  background-image: linear-gradient(200deg, #0698f3, #2e64aa, #2e64aa, #2e64aa, #2e64aa, #0698f3);
   height: 100% !important;
   letter-spacing: 1.3px;
 }
@@ -78,7 +78,7 @@
 
 @media (max-width: 768px) {
   .footer {
-    background-image: linear-gradient(0deg, #2e64aa, #2e64aaec, #009ad1, #009ad1, #009ad1, #00cdd8cb);
+    background-image: linear-gradient(200deg, #2e64aa, #2e64aa, #0698f3, #0698f3, #2e64aa, #2e64aa);
     height: 100% !important;
   }
   .listfoot {

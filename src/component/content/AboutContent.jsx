@@ -32,7 +32,7 @@ const AboutContent = () => {
             <div className="title">
               <h6 style={{ color: "#9b9b9b", fontWeight: "600" }}>ABOUT US</h6>
               <h2
-                className="pb-md-2"
+                className="ls pb-md-2"
                 style={{
                   fontWeight: "600",
                   textShadow: "2px 2px 5px #55555555",
@@ -59,7 +59,7 @@ const AboutContent = () => {
             <Row xs={1} md={2}>
               {aboutcard.map((isiabout, index) => (
                 <Col key={index} className="acard">
-                  <Row className="about-card p-3">
+                  <Row className="about-card">
                     <div className="hover_color_bubble"></div>
                     <Col
                       xs={2}
@@ -67,8 +67,8 @@ const AboutContent = () => {
                     >
                       {isiabout.icon}
                     </Col>
-                    <Col xs={12} style={{ padding: "0" }}>
-                      <div className="title-card">{isiabout.title}</div>
+                    <Col xs={12}>
+                      <div className="ls title-card">{isiabout.title}</div>
                       <div className="body-text">{isiabout.text}</div>
                     </Col>
                   </Row>

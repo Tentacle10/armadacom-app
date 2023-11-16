@@ -64,7 +64,7 @@ const HeroContent = () => {
               <Row className="textBanner">
                 <Col
                   md={9}
-                  className="fs-2 fw-bold text-uppercase"
+                  className="ls fs-2 fw-bold text-uppercase"
                   style={{ textShadow: "2px 2px 5px #555" }}
                 >
                   {hero.tag}
