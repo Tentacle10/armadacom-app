@@ -60,7 +60,6 @@ const AboutContent = () => {
               {aboutcard.map((isiabout, index) => (
                 <Col key={index} className="acard">
                   <Row className="about-card">
-                    <div className="hover_color_bubble"></div>
                     <Col
                       xs={2}
                       className="about-icon d-flex justify-content-center align-items-center"

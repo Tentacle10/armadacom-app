@@ -45,21 +45,44 @@ const ServiceContent = () => {
   ];
   return (
     <>
-      <Container className="cservice">
-        <Row className="service">
-          <Row className="appservice text-light">
-            <Col className="d-flex flex-column justify-content-center align-items-center text-center d-block d-md-none">
-              <div className="ls ts fw-bold fs-3">Fitur Tracking Service</div>
-              <div className="ls ts fw-lighter fs-6 text-opacity-75">
-                Memudahkan customer dalam memantau progres service
-              </div>
-            </Col>
-            <Col md={4} className="iPhone d-flex justify-content-center">
+      <Container
+        className="cservice"
+        style={{
+          display: "flex",
+          height: "100%",
+          width: "100%",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <Row
+          style={{
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <Row className="appservice">
+            <Col
+              md={4}
+              className="iPhone"
+              style={{
+                display: "flex",
+                textAlign: "center",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
               <img src={iPhone} alt="phone" style={{}} />
             </Col>
             <Col
-              md={7}
-              className="d-flex flex-column text-center justify-content-start justify-content-md-center align-items-center px-md-5 pt-md-4 pb-4"
+              md={8}
+              className="flex-column text-center text-light"
+              style={{
+                display: "flex",
+                textAlign: "center",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
             >
               <div className="ls ts fw-bold fs-3 d-none d-md-block">
                 Fitur Tracking Service
@@ -89,46 +112,179 @@ const ServiceContent = () => {
               </Button>
             </Col>
           </Row>
-          <Row className="aservice justify-content-center">
-            <Col
-              xs={10}
-              className="text-center fw-bold fs-5 pt-md-3 pt-4"
-              style={{ color: "#9b9b9b" }}
+          <Col
+            md={12}
+            className="flex-column"
+            style={{
+              display: "flex",
+              textAlign: "center",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            <h6
+              style={{
+                margin: "1rem 0 0.5rem 0",
+                color: "#9b9b9b",
+                fontWeight: "600",
+                textAlign: "center",
+              }}
             >
               ARMADA SERVICE
-            </Col>
-            <Col xs={10} className="text-center fw-bold fs-6 pb-2">
+            </h6>
+            <div md={12} className="text-center fw-bold fs-6 pb-2">
               <Badge bg="danger">Cepat</Badge>
               <Badge bg="info" className="mx-2">
                 Rapi
               </Badge>
               <Badge bg="warning">Berkualitas</Badge>
-            </Col>
-            <Col
-              md={12}
-              style={{ height: "100%" }}
-              className="d-flex justify-content-center align-items-center"
+            </div>
+          </Col>
+
+          <Col
+            md={4}
+            className="bg-primary"
+            style={{
+              display: "flex",
+              textAlign: "center",
+              justifyContent: "center",
+              alignItems: "center",
+              border: "5px solid #000",
+            }}
+          >
+            <div
+              className="p-3 bg-warning"
+              style={{
+                display: "flex",
+                textAlign: "center",
+                justifyContent: "center",
+                alignItems: "center",
+                border: "5px solid #000",
+              }}
             >
-              <Row xs={1} md={3} className="justify-content-center">
-                {servicecard.map((servicecard, index) => (
-                  <Col key={index} className="scard">
-                    <Row className="service-card p-3">
-                      <Col
-                        xs={2}
-                        className="service-icon d-flex justify-content-center align-items-center"
-                      >
-                        {servicecard.icon}
-                      </Col>
-                      <Col xs={12}>
-                        <div className="ls title-card">{servicecard.title}</div>
-                        <div className="body-text">{servicecard.text}</div>
-                      </Col>
-                    </Row>
-                  </Col>
-                ))}
-              </Row>
-            </Col>
-          </Row>
+              dasdasdasdasd
+            </div>
+          </Col>
+          <Col
+            md={4}
+            className="bg-primary"
+            style={{
+              display: "flex",
+              textAlign: "center",
+              justifyContent: "center",
+              alignItems: "center",
+              border: "5px solid #000",
+            }}
+          >
+            <div
+              className="p-3 bg-warning"
+              style={{
+                display: "flex",
+                textAlign: "center",
+                justifyContent: "center",
+                alignItems: "center",
+                border: "5px solid #000",
+              }}
+            >
+              dasdasdasdasd
+            </div>
+          </Col>
+          <Col
+            md={4}
+            className="bg-primary"
+            style={{
+              display: "flex",
+              textAlign: "center",
+              justifyContent: "center",
+              alignItems: "center",
+              border: "5px solid #000",
+            }}
+          >
+            <div
+              className="p-3 bg-warning"
+              style={{
+                display: "flex",
+                textAlign: "center",
+                justifyContent: "center",
+                alignItems: "center",
+                border: "5px solid #000",
+              }}
+            >
+              dasdasdasdasd
+            </div>
+          </Col>
+          <Col
+            md={4}
+            className="bg-primary"
+            style={{
+              display: "flex",
+              textAlign: "center",
+              justifyContent: "center",
+              alignItems: "center",
+              border: "5px solid #000",
+            }}
+          >
+            <div
+              className="p-3 bg-warning"
+              style={{
+                display: "flex",
+                textAlign: "center",
+                justifyContent: "center",
+                alignItems: "center",
+                border: "5px solid #000",
+              }}
+            >
+              dasdasdasdasd
+            </div>
+          </Col>
+          <Col
+            md={4}
+            className="bg-primary"
+            style={{
+              display: "flex",
+              textAlign: "center",
+              justifyContent: "center",
+              alignItems: "center",
+              border: "5px solid #000",
+            }}
+          >
+            <div
+              className="p-3 bg-warning"
+              style={{
+                display: "flex",
+                textAlign: "center",
+                justifyContent: "center",
+                alignItems: "center",
+                border: "5px solid #000",
+              }}
+            >
+              dasdasdasdasd
+            </div>
+          </Col>
+          <Col
+            md={4}
+            className="bg-primary"
+            style={{
+              display: "flex",
+              textAlign: "center",
+              justifyContent: "center",
+              alignItems: "center",
+              border: "5px solid #000",
+            }}
+          >
+            <div
+              className="p-3 bg-warning"
+              style={{
+                display: "flex",
+                textAlign: "center",
+                justifyContent: "center",
+                alignItems: "center",
+                border: "5px solid #000",
+              }}
+            >
+              dasdasdasdasd
+            </div>
+          </Col>
         </Row>
       </Container>
     </>

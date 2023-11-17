@@ -172,8 +172,8 @@ const Header = () => {
                     }}
                     onMouseLeave={() => {
                       // console.log(showDropdown);
-                      setShowDropdown(true);
-                      setIsMouseOver(true);
+                      setShowDropdown(false);
+                      setIsMouseOver(false);
                     }}
                   >
                     <NavDropdown.Item

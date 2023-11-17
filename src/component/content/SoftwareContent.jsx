@@ -45,10 +45,10 @@ const SoftwareContent = () => {
             <img src={Devimg} alt="dev" />
           </Col>
           <Col className="softwaredev d-flex flex-column align-items-center justify-content-center">
-            <Col xs={12} className="fw-bold fs-5" style={{ color: "#9b9b9b" }}>
-              ARMADA SOFTWARE
-            </Col>
             <Col md={12} className="">
+              <h6 xs={12} className="fw-bold fs-5" style={{ color: "#9b9b9b" }}>
+                ARMADA SOFTWARE
+              </h6>
               <h2 className="fw-bolder mb-2">
                 PALUGADA - Apa yang lu mau Gue ada!
               </h2>
@@ -58,56 +58,51 @@ const SoftwareContent = () => {
                 meningkatkan efektifitas, kecepatan dan ketepatan dalam bekerja.
               </div>
             </Col>
-            <Col
-              md={12}
-              className="d-flex flex-column align-items-center justify-content-center pt-md-4"
-            >
-              <Row md={12} className="card-container justify-content-center">
-                {devcard.map((devcard, index) => (
-                  <Col md={6} key={index} className="carddev">
-                    <Row className="carddev-inner">
-                      <div className="card-front text-center">
-                        <img
-                          src={devcard.icon}
-                          alt="Devimg"
-                          className="logodev"
-                        />
+            <Row md={12} className="card-container justify-content-center">
+              {devcard.map((devcard, index) => (
+                <Col md={6} key={index} className="carddev">
+                  <Row className="carddev-inner">
+                    <div className="card-front text-center">
+                      <img
+                        src={devcard.icon}
+                        alt="Devimg"
+                        className="logodev"
+                      />
+                      <Col>
+                        <div className="ls title-card">{devcard.title}</div>
+                        <div className="body-text text-center">
+                          {devcard.desc}
+                        </div>
+                      </Col>
+                    </div>
+                    <div className="card-back text-center">
+                      <h6>Start From</h6>
+                      <h1 className="fw-bold">{devcard.harga}</h1>
+                      <Col className="list text-start">
                         <Col>
-                          <div className="ls title-card">{devcard.title}</div>
-                          <div className="body-text text-start">
-                            {devcard.desc}
-                          </div>
+                          <CheckAll /> Cross Platform
                         </Col>
-                      </div>
-                      <div className="card-back text-center">
-                        <h6>Start From</h6>
-                        <h1 className="fw-bold">{devcard.harga}</h1>
-                        <Col className="list text-start">
-                          <Col>
-                            <CheckAll /> Cross Platform
-                          </Col>
-                          <Col>
-                            <CheckAll /> 2 in 1 POS Jasa & Barang
-                          </Col>
-                          <Col>
-                            <CheckAll /> Laporan Transaksi
-                          </Col>
-                          <Col>
-                            <CheckAll /> Device Printing
-                          </Col>
-                          <Col>
-                            <CheckAll /> Setting Lengkap & Mudah
-                          </Col>
+                        <Col>
+                          <CheckAll /> 2 in 1 POS Jasa & Barang
                         </Col>
-                        <Button variant="light" className="btn-a ">
-                          {devcard.btn}
-                        </Button>
-                      </div>
-                    </Row>
-                  </Col>
-                ))}
-              </Row>
-            </Col>
+                        <Col>
+                          <CheckAll /> Laporan Transaksi
+                        </Col>
+                        <Col>
+                          <CheckAll /> Device Printing
+                        </Col>
+                        <Col>
+                          <CheckAll /> Setting Lengkap & Mudah
+                        </Col>
+                      </Col>
+                      <Button variant="light" className="btn-a ">
+                        {devcard.btn}
+                      </Button>
+                    </div>
+                  </Row>
+                </Col>
+              ))}
+            </Row>
           </Col>
         </Row>
       </Container>
