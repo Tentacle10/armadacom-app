@@ -93,8 +93,10 @@ body {
     /* background-image: linear-gradient(0deg, #2e64aa, #2e64aa, #009AD1, #00CCD8, #72FACA, #2e64aa21, #2e64aa00); */
   }
   .banner {
-    margin-left: -16rem !important;
-    margin-top: -6rem;
+    width: 150%;
+    height: 150% !important;
+    /* margin-left: -16rem !important; */
+    /* margin-top: -6rem; */
   }
   .textBanner {
     top: unset;
@@ -352,7 +354,7 @@ body {
     color: #555;
   }
   .service {
-    margin: 2rem 1.5rem 0rem 1.5rem !important;  
+    margin: 2rem 1.5rem 0rem 1.5rem !important;
   }
   .appservice {
     height: 100vh;
@@ -372,7 +374,7 @@ body {
 .damkar {
   margin: 0 !important;
   box-shadow: rgb(219 230 255 / 99%) 0px 5px 10px 0px;
-  background-image: linear-gradient(200deg, #2e64aa, #2e64aa,#2e64aa, #0698f3, #0698f3, #0698f3,#2e64aa, #2e64aa, #2e64aa);
+  background-image: linear-gradient(200deg, #2e64aa, #2e64aa, #2e64aa, #0698f3, #0698f3, #0698f3, #2e64aa, #2e64aa, #2e64aa);
   border-radius: 15px;
   height: 100%;
 }
@@ -395,7 +397,7 @@ body {
   }
   .damkar {
     height: 100vh;
-    background-image: linear-gradient(200deg, #2e64aa, #2e64aa, #2e64aa, #0698f3, #0698f3,#2e64aa, #2e64aa, #2e64aa);
+    background-image: linear-gradient(200deg, #2e64aa, #2e64aa, #2e64aa, #0698f3, #0698f3, #2e64aa, #2e64aa, #2e64aa);
     border-radius: 0;
     margin-top: -0.3rem !important;
   }
@@ -418,7 +420,7 @@ body {
   /* background-color: #0698f3; */
 }
 .software {
-  margin: 0 !important;
+  /* margin: 0 !important; */
   /* box-shadow: rgb(219 230 255 / 99%) 0px 5px 10px 0px; */
   /* background-color: #c40b0b; */
   /* border-radius: 15px; */
@@ -522,11 +524,8 @@ body {
     overflow: hidden;
   }
   .software {
-    margin: 1rem 0 0 0 !important;
+    /* margin: 2rem 1.5rem 0rem 1.5rem !important; */
     box-shadow: none;
-  }
-  .softwaredev {
-    padding: 1rem 2.5rem !important;
   }
   .devimg {
     overflow: unset;
@@ -536,12 +535,12 @@ body {
     width: 90%;
     height: auto;
   }
-  .card-container {
-    grid-gap: 0.5rem;
+  .devdesc {
+    margin-top: 1.5rem !important;
   }
   .carddev {
-    margin: 0.75rem 2.65rem !important;
-    width: 285px !important;
+    /* margin: 0.75rem 2.65rem !important; */
+    /* width: 100% !important; */
     height: 300px;
   }
 }
@@ -562,7 +561,7 @@ body {
   .testimonials {
     box-shadow: none;
   }
-  .react-multi-carousel-list{
+  .react-multi-carousel-list {
     padding: 0rem !important;
   }
 }
