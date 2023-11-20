@@ -45,7 +45,7 @@ const ServiceContent = () => {
   ];
   return (
     <>
-      <Container className="cservice">
+      <Container className="cservice" fluid>
         <Row className="appservice align-items-center justify-content-center text-light">
           <Col className="d-flex flex-column justify-content-center align-items-center text-center d-block d-md-none">
             <div className="ls ts fw-bold fs-3">Fitur Tracking Service</div>
@@ -101,7 +101,7 @@ const ServiceContent = () => {
             >
               ARMADA SERVICE
             </h6>
-            <div md={12} className="text-center fw-bold fs-6 pb-2">
+            <div className="text-center fw-bold fs-6 pb-2">
               <Badge bg="danger">Cepat</Badge>
               <Badge bg="info" className="mx-2">
                 Rapi

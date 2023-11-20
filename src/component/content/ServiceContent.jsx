@@ -35,7 +35,7 @@ const ServiceContent = () => {
     {
       icon: <Webcam size={45} />,
       title: "CCTV dan Jaringan",
-      text: "Service dan pemasangan CCTV, IPCam, Smart IPCAM, dan Jaringan Internet/Wi-Fi",
+      text: "Service dan pemasangan CCTV, IPCam, Smart IPCAM, dan Jaringan Internet dan Wi-Fi",
     },
     {
       icon: <Motherboard size={45} />,
@@ -45,245 +45,84 @@ const ServiceContent = () => {
   ];
   return (
     <>
-      <Container
-        className="cservice"
-        style={{
-          display: "flex",
-          height: "100%",
-          width: "100%",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+      <Container className="cservice">
         <Row
-          style={{
-            justifyContent: "center",
-            alignItems: "center",
-          }}
+          md={8}
+          className="appservice align-items-center justify-content-center text-light"
         >
-          <Row className="appservice">
-            <Col
-              md={4}
-              className="iPhone"
-              style={{
-                display: "flex",
-                textAlign: "center",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <img src={iPhone} alt="phone" style={{}} />
-            </Col>
-            <Col
-              md={8}
-              className="flex-column text-center text-light"
-              style={{
-                display: "flex",
-                textAlign: "center",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <div className="ls ts fw-bold fs-3 d-none d-md-block">
-                Fitur Tracking Service
-              </div>
-              <div className="ts fw-lighter text-opacity-75 d-none d-md-block">
-                Memudahkan customer dalam memantau progres service
-              </div>
-              <div className="ls ts fw-bold fs-3 mt-md-4">
-                Aplikasi Armadacom
-              </div>
-              <div className="ts fw-lighter text-opacity-75 fs-6">
-                Download sekarang di playstore untuk menikmati fitur tracking
-                dan live update harga.
-              </div>
-              <Button
-                className="btn-a mt-4 px-3 py-2"
-                variant="light"
-                href="https://play.google.com/store/apps/details?id=com.wingbuk.armadacom"
-              >
-                <img
-                  src={PlayStore}
-                  alt="PlayStore"
-                  width={20}
-                  className="me-2"
-                />
-                Download
-              </Button>
-            </Col>
-          </Row>
+          <Col className="d-flex flex-column justify-content-center align-items-center text-center d-block d-md-none">
+            <div className="ls ts fw-bold fs-3">Fitur Tracking Service</div>
+            <div className="ls ts fw-lighter fs-6 text-opacity-75">
+              Memudahkan customer dalam memantau progres service
+            </div>
+          </Col>
+          <Col md={4} className="iPhone d-flex justify-content-center">
+            <img src={iPhone} alt="phone" style={{}} />
+          </Col>
           <Col
-            md={12}
-            className="flex-column"
-            style={{
-              display: "flex",
-              textAlign: "center",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
+            md={4}
+            className="d-flex flex-column text-center justify-content-start justify-content-md-center align-items-center"
           >
-            <h6
-              style={{
-                margin: "1rem 0 0.5rem 0",
-                color: "#9b9b9b",
-                fontWeight: "600",
-                textAlign: "center",
-              }}
+            <div className="ls ts fw-bold fs-3 d-none d-md-block">
+              Fitur Tracking Service
+            </div>
+            <div className="ts fw-lighter text-opacity-75 d-none d-md-block">
+              Memudahkan customer dalam memantau progres service
+            </div>
+            <div className="ls ts fw-bold fs-3 mt-md-4">Aplikasi Armadacom</div>
+            <div className="ts fw-lighter text-opacity-75 fs-6">
+              Download sekarang di playstore untuk menikmati fitur tracking dan
+              live update harga.
+            </div>
+            <Button
+              className="btn-a mt-4 px-3 py-2"
+              variant="light"
+              href="https://play.google.com/store/apps/details?id=com.wingbuk.armadacom"
             >
+              <img
+                src={PlayStore}
+                alt="PlayStore"
+                width={20}
+                className="me-2"
+              />
+              Download
+            </Button>
+          </Col>
+        </Row>
+        <Row className="service align-items-center justify-content-center">
+          <Col md={12} className="text-center mt-4 mb-2">
+            <h6 style={{ color: "#9b9b9b", fontWeight: "600" }}>
               ARMADA SERVICE
             </h6>
-            <div md={12} className="text-center fw-bold fs-6 pb-2">
-              <Badge bg="danger">Cepat</Badge>
-              <Badge bg="info" className="mx-2">
-                Rapi
-              </Badge>
-              <Badge bg="warning">Berkualitas</Badge>
-            </div>
-          </Col>
-
-          <Col
-            md={4}
-            className="bg-primary"
-            style={{
-              display: "flex",
-              textAlign: "center",
-              justifyContent: "center",
-              alignItems: "center",
-              border: "5px solid #000",
-            }}
-          >
-            <div
-              className="p-3 bg-warning"
-              style={{
-                display: "flex",
-                textAlign: "center",
-                justifyContent: "center",
-                alignItems: "center",
-                border: "5px solid #000",
-              }}
-            >
-              dasdasdasdasd
-            </div>
+            <Badge bg="danger">Cepat</Badge>
+            <Badge bg="info" className="mx-2">
+              Rapi
+            </Badge>
+            <Badge bg="warning">Berkualitas</Badge>
           </Col>
           <Col
-            md={4}
-            className="bg-primary"
-            style={{
-              display: "flex",
-              textAlign: "center",
-              justifyContent: "center",
-              alignItems: "center",
-              border: "5px solid #000",
-            }}
+            md={12}
+            style={{ height: "100%" }}
+            className="d-flex align-items-center"
           >
-            <div
-              className="p-3 bg-warning"
-              style={{
-                display: "flex",
-                textAlign: "center",
-                justifyContent: "center",
-                alignItems: "center",
-                border: "5px solid #000",
-              }}
-            >
-              dasdasdasdasd
-            </div>
-          </Col>
-          <Col
-            md={4}
-            className="bg-primary"
-            style={{
-              display: "flex",
-              textAlign: "center",
-              justifyContent: "center",
-              alignItems: "center",
-              border: "5px solid #000",
-            }}
-          >
-            <div
-              className="p-3 bg-warning"
-              style={{
-                display: "flex",
-                textAlign: "center",
-                justifyContent: "center",
-                alignItems: "center",
-                border: "5px solid #000",
-              }}
-            >
-              dasdasdasdasd
-            </div>
-          </Col>
-          <Col
-            md={4}
-            className="bg-primary"
-            style={{
-              display: "flex",
-              textAlign: "center",
-              justifyContent: "center",
-              alignItems: "center",
-              border: "5px solid #000",
-            }}
-          >
-            <div
-              className="p-3 bg-warning"
-              style={{
-                display: "flex",
-                textAlign: "center",
-                justifyContent: "center",
-                alignItems: "center",
-                border: "5px solid #000",
-              }}
-            >
-              dasdasdasdasd
-            </div>
-          </Col>
-          <Col
-            md={4}
-            className="bg-primary"
-            style={{
-              display: "flex",
-              textAlign: "center",
-              justifyContent: "center",
-              alignItems: "center",
-              border: "5px solid #000",
-            }}
-          >
-            <div
-              className="p-3 bg-warning"
-              style={{
-                display: "flex",
-                textAlign: "center",
-                justifyContent: "center",
-                alignItems: "center",
-                border: "5px solid #000",
-              }}
-            >
-              dasdasdasdasd
-            </div>
-          </Col>
-          <Col
-            md={4}
-            className="bg-primary"
-            style={{
-              display: "flex",
-              textAlign: "center",
-              justifyContent: "center",
-              alignItems: "center",
-              border: "5px solid #000",
-            }}
-          >
-            <div
-              className="p-3 bg-warning"
-              style={{
-                display: "flex",
-                textAlign: "center",
-                justifyContent: "center",
-                alignItems: "center",
-                border: "5px solid #000",
-              }}
-            >
-              dasdasdasdasd
-            </div>
+            <Row xs={1} md={3}>
+              {servicecard.map((servicecard, index) => (
+                <Col key={index} className="acard">
+                  <Row className="about-card">
+                    <Col
+                      xs={2}
+                      className="about-icon d-flex justify-content-center align-items-center"
+                    >
+                      {servicecard.icon}
+                    </Col>
+                    <Col xs={12}>
+                      <div className="ls title-card">{servicecard.title}</div>
+                      <div className="body-text">{servicecard.text}</div>
+                    </Col>
+                  </Row>
+                </Col>
+              ))}
+            </Row>
           </Col>
         </Row>
       </Container>
