@@ -139,6 +139,11 @@ body {
   font-size: 15px;
   color: #9b9b9b;
 }
+.body-text-light {
+  font-size: 15px !important;
+  color: #ffffffc4 !important;
+  text-shadow: 1px 1px 3px rgba(199, 199, 199, 0.1) !important;
+}
 .acard {
   color: #0698f3;
   border-radius: 11px;

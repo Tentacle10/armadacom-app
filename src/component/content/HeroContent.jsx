@@ -69,11 +69,7 @@ const HeroContent = () => {
                 >
                   {hero.tag}
                 </Col>
-                <Col
-                  md={9}
-                  className="fs-6 mt-2"
-                  style={{ textShadow: "2px 2px 5px #555" }}
-                >
+                <Col md={9} className="mt-2 body-text-light">
                   {hero.desc}
                 </Col>
                 <Col md={4} className="mt-3">
