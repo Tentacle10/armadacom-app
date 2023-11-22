@@ -52,7 +52,7 @@ const ServiceContent = () => {
         >
           <Col className="d-flex flex-column justify-content-center align-items-center text-center d-block d-md-none">
             <div className="ls ts fw-bold fs-3">Fitur Tracking Service</div>
-            <div className="ls body-text-light text-opacity-75">
+            <div className="body-text-light text-opacity-75">
               Memudahkan customer dalam memantau progres service
             </div>
           </Col>
@@ -70,7 +70,7 @@ const ServiceContent = () => {
               Memudahkan customer dalam memantau progres service
             </div>
             <div className="ls ts fw-bold fs-3 mt-md-4">Aplikasi Armadacom</div>
-            <div className="ts body-text-light text-opacity-75 fs-6">
+            <div className="body-text-light text-opacity-75 fs-6">
               Download sekarang di playstore untuk menikmati fitur tracking dan
               live update harga.
             </div>

@@ -292,11 +292,6 @@
   .offcanvas-body {
     padding: 0 2.5rem !important;
   }
-  .btn-a {
-    background-color: #fff;
-    border: none;
-    color: #2e64aa !important;
-  }
   .btn-a.dropdown-item {
     background-color: transparent !important;
   }

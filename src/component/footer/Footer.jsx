@@ -39,46 +39,38 @@ const Footer = () => {
   const sos = [
     {
       iconSos: Facebook,
-      textSos: "Facebook",
-      class: "facebook",
+      textSos: "icon_Facebook",
     },
     {
       iconSos: Tiktok,
-      textSos: "TikTok",
-      class: "tiktok",
+      textSos: "icon_TikTok",
     },
     {
       iconSos: Instagram,
-      textSos: "Instagram",
-      class: "instagram",
+      textSos: "icon_Instagram",
     },
     {
       iconSos: Whatsapp,
-      textSos: "Whatsapp",
-      class: "whatsapp",
+      textSos: "icon_Whatsapp",
     },
   ];
 
   const marketplace = [
     {
       iconMarket: Bukalapak,
-      textMarket: "Bukalapak",
-      class: "bukalapak",
+      textMarket: "icon_Bukalapak",
     },
     {
       iconMarket: Shopee,
-      textMarket: "Shopee",
-      class: "shopee",
+      textMarket: "icon_Shopee",
     },
     {
       iconMarket: Tokopedia,
-      textMarket: "Tokopedia",
-      class: "tokopedia",
+      textMarket: "icon_Tokopedia",
     },
     {
       iconMarket: SipLah,
-      textMarket: "SIPLah",
-      class: "siplah",
+      textMarket: "icon_SIPLah",
     },
   ];
   return (
@@ -90,6 +82,7 @@ const Footer = () => {
         <Col xs={10} md={3} className="d-flex maps">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d989.2354472943107!2d109.89963278960028!3d-7.360422349200887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7aa1aaad2dd44d%3A0x6a66eadf4d7bc6e0!2sArmada%20Computer!5e0!3m2!1sen!2sid!4v1697420773581!5m2!1sen!2sid"
+            title="maps_armnada"
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
@@ -102,7 +95,7 @@ const Footer = () => {
             }}
           />
         </Col>
-        <Col xs={10} md={3} className="address" style={{ fontSize: "12px" }}>
+        <Col xs={10} md={3}>
           <Col
             md={12}
             className="listfoot fw-bold mb-2 mb-md-1 d-none d-md-block"
@@ -118,9 +111,9 @@ const Footer = () => {
             style={{ lineHeight: "1.8rem", marginTop: "1.4rem" }}
           >
             {kaki.map((kaki, index1) => (
-              <Col key={index1} md={12} className="address pb-2">
-                {kaki.iconB}
-                {kaki.textB}
+              <Col key={index1} md={12} className="pb-2">
+                <span className="iconB">{kaki.iconB}</span>
+                <span className="textB">{kaki.textB}</span>
               </Col>
             ))}
           </Row>
@@ -128,17 +121,22 @@ const Footer = () => {
         <Col xs={10} md={2}>
           <Col
             md={12}
-            className="listfoot fw-bold mb-2 mb-md-1"
+            className="listfoot fw-bold mb-2 mb-md-1 text-center"
             style={{
               textShadow: "rgb(85, 85, 85) 2px 2px 5px",
             }}
           >
-            <img src={bar} alt="bar" className="bar" /> CONTACT US
+            <img src={bar} alt="bar" className="bar d-none d-md-block" />{" "}
+            CONTACT US
           </Col>
           <Row className="flex-column py-md-2">
-            <Col>
+            <Col className="text-center">
               {sos.map((sos, index2) => (
-                <Button key={index2} variant="link" className={sos.class}>
+                <Button
+                  key={index2}
+                  variant="link"
+                  className="btn-b text-center"
+                >
                   <img
                     src={sos.iconSos}
                     alt={sos.textSos}
@@ -147,7 +145,7 @@ const Footer = () => {
                       marginRight: "0.5rem",
                     }}
                   />
-                  {sos.textSos}
+                  <span className="tm">{sos.textSos}</span>
                 </Button>
               ))}
             </Col>
@@ -156,26 +154,31 @@ const Footer = () => {
         <Col xs={10} md={2}>
           <Col
             md={12}
-            className="listfoot fw-bold mb-2 mb-md-1"
+            className="listfoot fw-bold mb-2 mb-md-1 text-center"
             style={{
               textShadow: "rgb(85, 85, 85) 2px 2px 5px",
             }}
           >
-            <img src={bar} alt="bar" className="bar" /> WE READY ON
+            <img src={bar} alt="bar" className="bar d-none d-md-block" /> WE
+            READY ON
           </Col>
-
           <Row className="flex-column py-md-2">
-            <Col>
-              {marketplace.map((marketplace, index3) => (
+            <Col className="text-center">
+              {marketplace.map((marketplace, index2) => (
                 <Button
-                  key={index3}
+                  key={index2}
                   variant="link"
-                  className={marketplace.class}
+                  className="btn-b text-center"
                 >
                   <img
                     src={marketplace.iconMarket}
                     alt={marketplace.textMarket}
+                    style={{
+                      width: "25px",
+                      marginRight: "0.5rem",
+                    }}
                   />
+                  <span className="tm">{marketplace.textMarket}</span>
                 </Button>
               ))}
             </Col>
@@ -183,7 +186,11 @@ const Footer = () => {
         </Col>
       </Row>
       <Row md={12} className="text-light">
-        <Col md={12} className="text-center" style={{ fontSize: "10px" }}>
+        <Col
+          md={12}
+          className="text-center"
+          style={{ fontSize: "10px", padding: "0.5rem 0 1rem 0" }}
+        >
           All Rights Reserved. Armadacom.id © 2023 - Tentackle Studio{" "}
         </Col>
       </Row>

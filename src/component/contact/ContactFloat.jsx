@@ -1,7 +1,7 @@
-import {useState} from "react";
-import {Button, ButtonGroup} from "react-bootstrap";
-import {CSSTransition} from "react-transition-group";
-import {ChatTextFill} from "react-bootstrap-icons";
+import { useState } from "react";
+import { Button, ButtonGroup } from "react-bootstrap";
+import { CSSTransition } from "react-transition-group";
+import { ChatTextFill } from "react-bootstrap-icons";
 import Facebook from "../../assets/icon/medsos/facebook.png";
 import Instagram from "../../assets/icon/medsos/instagram.png";
 import Shopee from "../../assets/icon/medsos/shopee.png";
@@ -47,19 +47,36 @@ const ContactFloat = () => {
     <>
       <div className="float">
         <ButtonGroup vertical>
-          <CSSTransition in={open} timeout={500} classNames="fade-in-right" unmountOnExit>
+          <CSSTransition
+            in={open}
+            timeout={500}
+            classNames="fade-in-right"
+            unmountOnExit
+          >
             <ButtonGroup id="example-fade-text" className="mb-3" vertical>
               {floatSOS.map((floatSOS, index) => (
-                <Button key={index} className="contact-fade" href={floatSOS.link}>
+                <Button
+                  key={index}
+                  className="contact-fade"
+                  href={floatSOS.link}
+                >
                   <img src={floatSOS.img} alt={floatSOS.alt} />
                 </Button>
               ))}
-              <Button className="contact-fade" href="https://api.whatsapp.com/send/?phone=6282322006005&text=Hallo+Admin+Service+%2AArmada+Computer%2C%2A++&type=phone_number&app_absent=0">
+              <Button
+                className="contact-fade"
+                href="https://api.whatsapp.com/send/?phone=6282322006005&text=Hallo+Admin+Service+%2AArmada+Computer%2C%2A++&type=phone_number&app_absent=0"
+              >
                 <img src={Wabusiness} alt="Wabusiness" />
               </Button>
             </ButtonGroup>
           </CSSTransition>
-          <Button onClick={() => setOpen(!open)} aria-expanded={open} className="contact-float" variant="link">
+          <Button
+            onClick={() => setOpen(!open)}
+            aria-expanded={open}
+            className="contact-float"
+            variant="link"
+          >
             <ChatTextFill className="icontact" />
           </Button>
         </ButtonGroup>

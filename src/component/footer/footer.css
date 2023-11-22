@@ -1,7 +1,7 @@
 .footer {
   background-image: linear-gradient(200deg, #0698f3, #2e64aa, #2e64aa, #2e64aa, #2e64aa, #0698f3);
   height: 100% !important;
-  letter-spacing: 1.3px;
+  /* letter-spacing: 1.3px; */
 }
 .bar {
   width: 16px;
@@ -9,12 +9,13 @@
   margin-right: 0.5rem;
 }
 .textB {
-  line-height: 1.8rem;
-  margin-top: 1.4rem;
+  font-size: 14px;
+  /* line-height: 1.8rem; */
+  /* margin-top: 1rem; */
 }
 .iconB {
   font-size: 18px;
-  margin-right: 0.8rem;
+  margin-right: 0.5rem;
 }
 .listfoot {
   font-size: 16px !important;
@@ -38,14 +39,15 @@
   color: #f1f1f1;
   transform: scale(1.05);
   box-shadow: 0 10px 20px rgba(31, 124, 211, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
-  border: 1.5px solid #fff;
+  /* border: 1.5px solid #fff; */
 }
 .bukalapak,
 .shopee,
 .tokopedia,
 .siplah {
-  padding: 0.25rem 0 !important;
-  width: 75% !important;
+  padding: 0.4rem 0.25rem !important;
+  text-align: start;
+  width: 70%;
   text-decoration: none;
   transition: 0.5s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.5s box-shadow, 0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
 }
@@ -53,27 +55,50 @@
 .shopee img,
 .tokopedia img,
 .siplah img {
-  width: 100%;
+  width: 25px;
 }
-.bukalapak:hover {
-  border: 1.5px solid #e31e52;
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(31, 124, 211, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
-}
-.shopee:hover {
-  border: 1.5px solid #ea501f;
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(31, 124, 211, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
-}
-.tokopedia:hover {
-  border: 1.5px solid #3caf41;
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(31, 124, 211, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
-}
+.bukalapak:hover,
+.shopee:hover,
+.tokopedia:hover,
 .siplah:hover {
-  border: 1.5px solid #1e7ad6;
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(31, 124, 211, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+  color: #f1f1f1;
+  /* transform: scale(1.05); */
+  /* box-shadow: 0 10px 20px rgba(31, 124, 211, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06); */
+  /* border: 1.5px solid #fff; */
+}
+
+.btn-b img {
+  width: 25px;
+}
+.btn-b {
+  margin: 0.1rem 0;
+  padding: 0.4rem 0.25rem !important;
+  text-decoration: none;
+  text-align: start;
+  width: 70%;
+  border: none !important;
+  color: #fff !important;
+  overflow: hidden;
+  position: relative;
+  background: transparent !important;
+}
+.btn-b::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, #cccccc, transparent);
+  transform: translateX(-101%);
+  transition: 0.6s;
+  position: absolute;
+}
+.btn-b:hover {
+  background: transparent;
+  /* box-shadow: 0 0 2px 0.5px #fff; */
+}
+.btn-b:hover::before {
+  transform: translateX(101%);
 }
 
 @media (max-width: 768px) {
@@ -89,28 +114,20 @@
     height: 150px !important;
   }
   .textB {
-    font-size: 11px !important;
+    font-size: 14px !important;
   }
-  .facebook,
-  .tiktok,
-  .instagram,
-  .whatsapp {
-    text-align: justify;
-    width: 50%;
+  .btn-b img {
+    width: 30px !important;
   }
-  .bukalapak,
-  .shopee,
-  .tokopedia,
-  .siplah {
-    text-align: justify;
-    width: 45% !important;
+  .btn-b {
+    /* display: flex; */
+    text-align: center;
+    align-items: center;
+    margin: 0 0.3rem;
+    padding: 0.4rem 0.4rem !important;
+    width: auto
   }
-  .shopee,
-  .siplah {
-    margin-left: 1rem;
-  }
-  .shopee,
-  .siplah {
-    margin-left: 1rem;
+  .tm {
+    display: none;
   }
 }

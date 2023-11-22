@@ -21,7 +21,7 @@ const DamkarContent = () => {
             <div className="ls ts fw-bold fs-4 pb-md-3  d-none d-md-block">
               ANDA BELI KAMI ANTAR
             </div>
-            <div className="ts dtext fw-lighter text-opacity-75">
+            <div className="body-text-light text-opacity-75 mx-4">
               Damkar hadir sebagai solusi penuh kenyamanan untuk kebutuhan
               jualan, servis, dan antar jemput. Nikmati kemudahan servis dan
               beli tanpa perlu keluar rumah

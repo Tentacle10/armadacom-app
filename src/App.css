@@ -1,7 +1,6 @@
 body {
   font-family: "Poppins", sans-serif !important;
   line-height: 1.5px;
-  /* background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg"); */
   background-position: center;
   background-repeat: repeat;
   background-size: 7%;
@@ -10,11 +9,6 @@ body {
   transition: all 200ms linear;
   /* letter-spacing: 1.5px !important; */
 }
-
-.ls {
-  letter-spacing: 1.2px !important;
-}
-
 /* Scrollbar CSS */
 * {
   scrollbar-width: auto;
@@ -40,28 +34,7 @@ body {
 .slideshow {
   height: 100vh;
   color: #fff;
-  /* background-image: url(./assets/img/bg-armadacom.png); */
-  /* background-repeat: no-repeat; */
-  /* background-position-y: center; */
-  /* background-position-x: center; */
-  /* padding-top: 4.5rem; */
 }
-/* .slideshow{
-  background: linear-gradient(-45deg, #b90c4f, #2e64aa, #b90c4f);
-	background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-}
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-} */
 .gradient-overlay {
   position: absolute;
   top: 0%;
@@ -70,7 +43,6 @@ body {
   width: 100vw;
   height: 100vh;
   background-image: linear-gradient(270deg, #2e64aa, #2e64aa, #0698f3, #0698f38f, #72faca1e, #72faca00, #72faca00);
-  /* background-image: linear-gradient(270deg, #2e64aa, #2e64aa, #2e72aa,  #18a2fe, #18adfed7, #18adfe48, #18adfe17, #18adfe1a, #18adfe00); */
   opacity: 1;
 }
 .banner {
@@ -85,18 +57,16 @@ body {
 
 @media (max-width: 768px) {
   .slideshow {
+    height: 95vh;
     background-color: #2e64aa;
     background-image: none;
   }
   .gradient-overlay {
     background-image: linear-gradient(30deg, #2e64aa, #2e64aa, #0698f3, #0698f38f, #72faca1e, #72faca00, #72faca00);
-    /* background-image: linear-gradient(0deg, #2e64aa, #2e64aa, #009AD1, #00CCD8, #72FACA, #2e64aa21, #2e64aa00); */
   }
   .banner {
     width: 150%;
     height: 150% !important;
-    /* margin-left: -16rem !important; */
-    /* margin-top: -6rem; */
   }
   .textBanner {
     top: unset;
@@ -112,6 +82,9 @@ body {
   }
   .textBanner {
     bottom: 28%;
+  }
+  .carousel-indicators {
+    margin-bottom: 2rem !important;
   }
 }
 /* HeroContent */
@@ -153,7 +126,6 @@ body {
   flex: 0 50%;
   background: #fff;
   box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2), 0 5px 15px 0 rgba(37, 44, 97, 0.15);
-  /* border-radius: 15px; */
   margin: 1rem 0rem 1.5rem 1rem !important;
   padding: 10px 15px;
   position: relative;
@@ -222,7 +194,7 @@ body {
 
 @media (max-width: 768px) {
   .cabout {
-    padding: 2.5rem 3rem 0rem 3rem !important;
+    padding: 2.5rem 3rem 2rem 3rem !important;
     color: #555;
   }
   .aboutcol {
@@ -267,7 +239,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* box-shadow: rgb(219 230 255 / 99%) 0px 5px 10px 0px; */
   border-radius: 15px;
 }
 .appservice {
@@ -276,11 +247,8 @@ body {
 }
 .iPhone img {
   width: 65%;
-  /* margin-left: 3rem; */
   padding-top: 1rem;
   padding-bottom: 1rem;
-  /* margin-top: -3rem; */
-  /* margin-bottom: -4rem; */
 }
 .aservice {
   color: #555;
@@ -296,8 +264,6 @@ body {
   color: #0698f3;
   border-radius: 11px;
   border: 0;
-  /* margin: 1rem 1rem 1rem 0rem !important; */
-  /* padding: 1rem !important; */
 }
 .service-card {
   position: relative;
@@ -356,6 +322,7 @@ body {
 @media (max-width: 768px) {
   .cservice {
     padding-top: 1rem;
+    padding-bottom: 2rem;
     color: #555;
   }
   .service {
@@ -421,15 +388,9 @@ body {
 
 /* SoftwareContent ############################################################### */
 .csoftware {
-  padding: 4rem 0 0 0 !important;
-  /* background-color: #0698f3; */
+  padding: 4rem 0 2rem 0 !important;
 }
 .software {
-  /* margin: 0 !important; */
-  /* box-shadow: rgb(219 230 255 / 99%) 0px 5px 10px 0px; */
-  /* background-color: #c40b0b; */
-  /* border-radius: 15px; */
-  /* height: 100%; */
   color: #555;
 }
 
@@ -443,7 +404,6 @@ body {
 .devimg img {
   height: 86ch;
   border-radius: 15px;
-  /* margin-left: -0.7rem; */
 }
 
 .logodev {
@@ -462,11 +422,7 @@ body {
   height: 300px;
   perspective: 1000px;
   transform: translate3d(0px, 0px, -250px) rotateX(0deg) scale(1, 1);
-  /* border-radius: 20px; */
-  /* border: 5px solid #e6e6e6; */
-  /* box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.3); */
-  transition: 0.4s ease-in-out transform, 0.4s ease-in-out box-shadow; /* Added box-shadow transition */
-  /* flex: 0 50%; */
+  transition: 0.4s ease-in-out transform, 0.4s ease-in-out box-shadow;
   background: #fff;
   box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2), 0 5px 15px 0 rgba(37, 44, 97, 0.15);
   overflow: hidden;
@@ -486,7 +442,6 @@ body {
 
 .carddev:hover {
   transform: translate3d(0px, 0px, -250px);
-  /* box-shadow: 0 50px 80px -20px rgba(32, 195, 187, 0.5); */
 }
 .carddev-inner {
   position: relative;
@@ -511,7 +466,6 @@ body {
   padding: 2rem !important;
   background: linear-gradient(200deg, #2e64aa, #0698f3);
   color: #ffffff;
-  /* box-shadow: 0 5px 20px #3498db; */
   transform: rotateY(180deg);
 }
 .card-front-1,
@@ -521,7 +475,6 @@ body {
   height: 100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  /* border-radius: 16px; */
 }
 
 @media (max-width: 768px) {
@@ -529,7 +482,6 @@ body {
     overflow: hidden;
   }
   .software {
-    /* margin: 2rem 1.5rem 0rem 1.5rem !important; */
     box-shadow: none;
   }
   .devimg {
@@ -544,8 +496,6 @@ body {
     margin-top: 1.5rem !important;
   }
   .carddev {
-    /* margin: 0.75rem 2.65rem !important; */
-    /* width: 100% !important; */
     height: 300px;
   }
 }
@@ -553,10 +503,8 @@ body {
 
 /* Testimonials ################################################################### */
 .testimonials {
-  /* box-shadow: rgb(219 230 255 / 99%) 0px 5px 10px 0px; */
   background-color: #fff;
   border-radius: 20px;
-  /* height: 100vh; */
   color: #555;
   cursor: -webkit-grab;
   cursor: grab;
