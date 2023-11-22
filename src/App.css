@@ -7,7 +7,6 @@ body {
   background-color: #fff;
   overflow-x: hidden;
   transition: all 200ms linear;
-  /* letter-spacing: 1.5px !important; */
 }
 /* Scrollbar CSS */
 * {
@@ -110,7 +109,8 @@ body {
 }
 .body-text {
   font-size: 15px;
-  color: #9b9b9b;
+  /* color: #9b9b9b; */
+  color: #8f8585;
 }
 .body-text-light {
   font-size: 15px !important;
@@ -132,7 +132,7 @@ body {
   z-index: 1;
   overflow: hidden;
   min-height: 200px;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .about-icon {
@@ -144,7 +144,7 @@ body {
   color: #fff;
   margin: 0 0.5rem;
   padding: 1rem !important;
-  transition: 1s;
+  transition: 0.5s;
 }
 .title-card {
   text-shadow: 2px 2px 5px #55555555;
@@ -269,7 +269,7 @@ body {
   position: relative;
   z-index: 1;
   overflow: hidden;
-  transition: 1s;
+  transition: 0.5s;
 }
 
 .service-icon {
@@ -280,7 +280,7 @@ body {
   box-shadow: 5px 5px 0 0 rgb(85 108 214 / 15%);
   color: #fff;
   margin: 1rem !important;
-  transition: 1s;
+  transition: 0.5s;
 }
 .service-card::before {
   content: "";
@@ -317,6 +317,12 @@ body {
 }
 .service-card:hover .body-text {
   color: #fff;
+}
+.badge.bg-info {
+  background-color: #1965c9 !important;
+}
+.badge.bg-warning {
+  background-color: rgb(189, 122, 22) !important;
 }
 
 @media (max-width: 768px) {
@@ -521,6 +527,70 @@ body {
 /* Testimonials */
 
 /* ContactFloat ################################################################### */
+.wrapper {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.wrapper a:nth-child(1) {
+  background-color: green;
+}
+
+.wrapper a:nth-child(2) {
+  background-color: blue;
+}
+
+.wrapper a:nth-child(3) {
+  background-color: purple;
+}
+
+.wrapper a:nth-child(4) {
+  animation: 0.7s ease-out 0s 1 FadeIn;
+  transition: all 0.3s;
+}
+
+.wrapper a:hover:nth-child(4) {
+  background-color: red;
+}
+
+@keyframes FadeIn {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hide {
+  position: absolute;
+  bottom: 0px !important;
+  z-index: -1;
+  transition: all 2s;
+}
+
+.close-button-rotate {
+  transform: rotate(45deg);
+}
+
+.wrapper a {
+  height: 30px;
+  width: 30px;
+  background: #000;
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  margin: 2px;
+}
+
 .float {
   z-index: 3 !important;
   position: fixed !important;
@@ -544,6 +614,7 @@ body {
   color: #fff !important;
 }
 .contact-fade {
+  content: "";
   width: auto !important;
   font-size: 14px;
   padding: 0 !important;

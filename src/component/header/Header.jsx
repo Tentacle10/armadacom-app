@@ -1,17 +1,8 @@
-import { useEffect, useRef, useState } from "react";
-import {
-  Container,
-  Row,
-  Col,
-  Nav,
-  Navbar,
-  NavDropdown,
-  Button,
-  Offcanvas,
-} from "react-bootstrap";
+import {useEffect, useRef, useState} from "react";
+import {Container, Row, Col, Nav, Navbar, NavDropdown, Button, Offcanvas} from "react-bootstrap";
 import "./Header.css";
 import ArmadaIcon from "../../assets/logo/Logo_white.png";
-import { Tiktok, Facebook, Instagram } from "react-bootstrap-icons";
+import {Tiktok, Facebook, Instagram} from "react-bootstrap-icons";
 import HeroContent from "./../content/HeroContent";
 import AboutContent from "./../content/AboutContent";
 import ServiceContent from "./../content/ServiceContent";
@@ -20,6 +11,7 @@ import SoftwareContent from "./../content/SoftwareContent";
 import TestimonialContent from "./../content/TestimonialContent";
 
 const Header = () => {
+  const [activeDropdown, setActiveDropdown] = useState(null);
   // const [activeSection, setActiveSection] = useState("home");
   const ref = useRef();
   const nav = useRef();
@@ -59,18 +51,38 @@ const Header = () => {
   };
 
   // Callback function for the observer
+  // const observerCallback = (entries) => {
+  //   entries.forEach((entry) => {
+  //     if (entry.isIntersecting) {
+  //       const navItemRef = navItemRefs[entry.target.id];
+  //       navItemRef.current.classList.add("active");
+
+  //       // Remove 'active' class from other nav items
+  //       Object.values(navItemRefs).forEach((itemRef) => {
+  //         if (itemRef.current !== navItemRef.current) {
+  //           itemRef.current.classList.remove("active");
+  //         }
+  //       });
+  //     }
+  //   });
+  // };
+
   const observerCallback = (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         const navItemRef = navItemRefs[entry.target.id];
-        navItemRef.current.classList.add("active");
 
-        // Remove 'active' class from other nav items
-        Object.values(navItemRefs).forEach((itemRef) => {
-          if (itemRef.current !== navItemRef.current) {
-            itemRef.current.classList.remove("active");
-          }
-        });
+        // Check if the ref and its current property exist
+        if (navItemRef && navItemRef.current) {
+          navItemRef.current.classList.add("active");
+
+          // Remove 'active' class from other nav items
+          Object.values(navItemRefs).forEach((itemRef) => {
+            if (itemRef.current !== navItemRef.current) {
+              itemRef.current.classList.remove("active");
+            }
+          });
+        }
       }
     });
   };
@@ -108,55 +120,38 @@ const Header = () => {
     observer.observe(softwareRef.current);
     observer.observe(testimonialRef.current);
 
+    // Observe all relevant section refs
+    Object.values(navItemRefs).forEach((itemRef) => {
+      if (itemRef.current) {
+        observer.observe(itemRef.current);
+      }
+    });
+
     // Clean up the observer when the component unmounts
     return () => observer.disconnect();
-  }, [observer]);
+  }, [observerOptions, navItemRefs]);
 
   return (
     <>
       <Container fluid>
-        <Navbar
-          expand="md"
-          className="navigation-wrap start-header start-style"
-          variant="dark"
-          ref={ref}
-          fixed="top"
-        >
+        <Navbar expand="md" className="navigation-wrap start-header start-style" variant="dark" ref={ref} fixed="top">
           <Container>
-            <Navbar.Brand className="start-nav" href="#" ref={nav}>
+            <Navbar.Brand as="a" className="start-nav" href="#" ref={nav}>
               <img src={ArmadaIcon} alt="Logo_Armada" />
             </Navbar.Brand>
 
-            <Navbar.Toggle
-              aria-controls="offcanvasNavbar-expand-md"
-              type="button"
-              aria-label="Toggle navigation"
-              variant="dark"
-            />
+            <Navbar.Toggle aria-controls="offcanvasNavbar-expand-md" type="button" aria-label="Toggle navigation" variant="dark" />
 
-            <Navbar.Offcanvas
-              id="offcanvasNavbar-expand-md"
-              aria-labelledby="offcanvasNavbarLabel-expand-md"
-              placement="end"
-              data-bs-theme="light"
-            >
+            <Navbar.Offcanvas id="offcanvasNavbar-expand-md" aria-labelledby="offcanvasNavbarLabel-expand-md" placement="end" data-bs-theme="light">
               <Offcanvas.Header closeButton>
-                <Offcanvas.Title id="offcanvasNavbarLabel-expand-md"></Offcanvas.Title>
+                <Offcanvas.Title id="offcanvasNavbarLabel-expand-md" aria-label="Offcanvas Menu"></Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body className="justify-content-md-end">
                 <Nav className="navbar-nav align-items-md-center py-3 py-md-0">
-                  <Nav.Link
-                    ref={homeNavItemRef}
-                    href="#home"
-                    className="homeNavItem nav-item"
-                  >
+                  <Nav.Link as="a" ref={homeNavItemRef} href="#home" className="homeNavItem nav-item">
                     Home
                   </Nav.Link>
-                  <Nav.Link
-                    ref={aboutNavItemRef}
-                    href="#about"
-                    className="homeNavItem nav-item"
-                  >
+                  <Nav.Link as="a" ref={aboutNavItemRef} href="#about" className="homeNavItem nav-item">
                     About Us
                   </Nav.Link>
                   <NavDropdown
@@ -184,33 +179,17 @@ const Header = () => {
                     >
                       Store
                     </NavDropdown.Item>
-                    <NavDropdown.Item
-                      ref={serviceNavItemRef}
-                      href="#service"
-                      className="drop-a serviceNavItem"
-                    >
+                    <NavDropdown.Item ref={serviceNavItemRef} href="#service" className="drop-a serviceNavItem" active={activeDropdown === "service"} onClick={() => setActiveDropdown("service")}>
                       Service
                     </NavDropdown.Item>
-                    <NavDropdown.Item
-                      ref={damkarNavItemRef}
-                      href="#damkar"
-                      className="btn-a damkarNavItem"
-                    >
+                    <NavDropdown.Item ref={damkarNavItemRef} href="#damkar" className="btn-a damkarNavItem" active={activeDropdown === "service"} onClick={() => setActiveDropdown("service")}>
                       Damkar Express
                     </NavDropdown.Item>
-                    <NavDropdown.Item
-                      ref={softwareNavItemRef}
-                      href="#software"
-                      className="drop-a softwareNavItem"
-                    >
+                    <NavDropdown.Item ref={softwareNavItemRef} href="#software" className="drop-a softwareNavItem" active={activeDropdown === "service"} onClick={() => setActiveDropdown("service")}>
                       Software
                     </NavDropdown.Item>
                   </NavDropdown>
-                  <Nav.Link
-                    ref={testimonialNavItemRef}
-                    href="#testimonial"
-                    className="homeNavItem nav-item"
-                  >
+                  <Nav.Link as="a" ref={testimonialNavItemRef} href="#testimonial" className="homeNavItem nav-item">
                     Testimonial
                   </Nav.Link>
                   <Button variant="light" className="btn-a bg-blue ms-md-4">

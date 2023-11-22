@@ -46,7 +46,7 @@ const SoftwareContent = () => {
           </Col>
           <Col className="softwaredev d-flex flex-column align-items-center justify-content-center">
             <Col md={12} className="devdesc mb-3">
-              <h6 className="fw-bold fs-5" style={{color: "#9b9b9b"}}>
+              <h6 className="fw-bold" style={{color: "rgb(111 111 111/ 70%)"}}>
                 ARMADA SOFTWARE
               </h6>
               <h2 className="fw-bolder mb-2 text-uppercase">PALUGADA - Apa yang lu mau Gue ada!</h2>
