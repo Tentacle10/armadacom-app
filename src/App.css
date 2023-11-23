@@ -109,7 +109,6 @@ body {
 }
 .body-text {
   font-size: 15px;
-  /* color: #9b9b9b; */
   color: #8f8585;
 }
 .body-text-light {
@@ -527,72 +526,8 @@ body {
 /* Testimonials */
 
 /* ContactFloat ################################################################### */
-.wrapper {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-}
-
-.wrapper a:nth-child(1) {
-  background-color: green;
-}
-
-.wrapper a:nth-child(2) {
-  background-color: blue;
-}
-
-.wrapper a:nth-child(3) {
-  background-color: purple;
-}
-
-.wrapper a:nth-child(4) {
-  animation: 0.7s ease-out 0s 1 FadeIn;
-  transition: all 0.3s;
-}
-
-.wrapper a:hover:nth-child(4) {
-  background-color: red;
-}
-
-@keyframes FadeIn {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.hide {
-  position: absolute;
-  bottom: 0px !important;
-  z-index: -1;
-  transition: all 2s;
-}
-
-.close-button-rotate {
-  transform: rotate(45deg);
-}
-
-.wrapper a {
-  height: 30px;
-  width: 30px;
-  background: #000;
-  padding: 10px;
-  display: flex;
-  flex-direction: row;
-  border-radius: 50%;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: #fff;
-  margin: 2px;
-}
-
 .float {
-  z-index: 3 !important;
+  z-index: 49 !important;
   position: fixed !important;
   right: 0 !important;
   bottom: 0 !important;
@@ -601,12 +536,18 @@ body {
 }
 .contact-float {
   width: auto !important;
-  font-size: 40px;
   background-color: #fff !important;
   color: #2e64aa !important;
   border-radius: 50% !important;
   box-shadow: rgb(63 63 63 / 50%) 0px 5px 10px 0px;
   border: none;
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.contact-float svg {
+  width: 25px !important;
+  height: 25px !important;
 }
 
 .contact-float:hover {
@@ -614,19 +555,39 @@ body {
   color: #fff !important;
 }
 .contact-fade {
-  content: "";
   width: auto !important;
   font-size: 14px;
   padding: 0 !important;
-  border: 0.5px solid #ffffff31;
+  border: none !important;
   border-radius: 50% !important;
   box-shadow: 0px 5px 11px 1px rgba(0, 0, 0, 0.25);
   margin-top: 0.5rem !important;
+  overflow: hidden;
+  position: relative;
+}
+
+.contact-fade::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, #fff, transparent);
+  transform: translateX(-100%);
+  transition: 0.6s;
+  position: absolute;
+}
+.contact-fade:hover {
+  background: transparent;
+  box-shadow: 0 0 2px 0.5px #0698f3;
+}
+.contact-fade:hover::before {
+  transform: translateX(100%);
 }
 
 .contact-fade img {
-  width: 40px;
-  height: 40px;
+  width: 40px !important;
+  height: 40px !important;
 }
 
 .btn-group-vertical {
@@ -634,7 +595,8 @@ body {
 }
 
 .icontact {
-  margin-top: -4px;
+  margin-top: -2.5px;
+  margin-left: -5px !important;
 }
 /* animasi float kontak */
 .fade-in-right-enter {
