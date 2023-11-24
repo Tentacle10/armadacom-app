@@ -64,8 +64,8 @@ body {
     background-image: linear-gradient(30deg, #2e64aa, #2e64aa, #0698f3, #0698f38f, #72faca1e, #72faca00, #72faca00);
   }
   .banner {
-    width: 150%;
-    height: 150% !important;
+    width: 200% !important;
+    height: 130% !important;
   }
   .textBanner {
     top: unset;
