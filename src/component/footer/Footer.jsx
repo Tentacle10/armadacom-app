@@ -16,18 +16,22 @@ const Footer = () => {
     {
       iconB: <GeoAltFill className="iconB" />,
       textB: "Jl Girimargo 10A, Kerkop, Wonosobo",
+      url: "#",
     },
     {
       iconB: <ClockHistory className="iconB" />,
       textB: "Senin - Sabtu | 08.00 - 16.30",
+      url: "#",
     },
     {
       iconB: <EnvelopeFill className="iconB" />,
       textB: "armadacom.wsb@gmail.com",
+      url: "mailto:armadacom.wsb@gmail.com",
     },
     {
       iconB: <TelephoneInboundFill className="iconB" />,
       textB: "(+62) 286 322949",
+      url: "tel:+62286322949",
     },
   ];
 
@@ -35,18 +39,22 @@ const Footer = () => {
     {
       iconSos: Facebook,
       textSos: "Facebook",
+      url: "https://www.facebook.com/armadacom.id",
     },
     {
       iconSos: Tiktok,
       textSos: "TikTok",
+      url: "https://www.tiktok.com/@armadacom.id",
     },
     {
       iconSos: Instagram,
       textSos: "Instagram",
+      url: "https://www.instagram.com/armadacom.id/",
     },
     {
       iconSos: Whatsapp,
       textSos: "Whatsapp",
+      url: "http://wa.me/085842027019",
     },
   ];
 
@@ -54,18 +62,22 @@ const Footer = () => {
     {
       iconMarket: Bukalapak,
       textMarket: "Bukalapak",
+      url: "#",
     },
     {
       iconMarket: Shopee,
       textMarket: "Shopee",
+      url: "https://shopee.co.id/armadacom.id",
     },
     {
       iconMarket: Tokopedia,
       textMarket: "Tokopedia",
+      url: "https://www.tokopedia.com/armadacomputer",
     },
     {
       iconMarket: SipLah,
       textMarket: "SIPLah",
+      url: "#",
     },
   ];
   return (
@@ -98,11 +110,13 @@ const Footer = () => {
           >
             <img src={bar} alt="bar" className="bar" /> ARMADA COMPUTER
           </Col>
-          <Row className="textB" style={{lineHeight: "1.8rem", marginTop: "1.4rem"}}>
+          <Row style={{lineHeight: "1.8rem", marginTop: "1.4rem"}}>
             {kaki.map((kaki, index1) => (
               <Col key={index1} md={12} className="pb-2">
                 <span className="iconB">{kaki.iconB}</span>
-                <span className="textB">{kaki.textB}</span>
+                <Button className="textB" variant="link" href={kaki.url}>
+                  {kaki.textB}
+                </Button>
               </Col>
             ))}
           </Row>
@@ -130,7 +144,7 @@ const Footer = () => {
           <Row className="flex-column py-md-2">
             <Col className="text-center text-md-start">
               {sos.map((sos, index2) => (
-                <Button key={index2} variant="link" className="btn-b">
+                <Button key={index2} variant="link" href={sos.url} className="btn-b">
                   <img
                     src={sos.iconSos}
                     alt="sosial-icon"
@@ -167,7 +181,7 @@ const Footer = () => {
           <Row className="flex-column py-md-2">
             <Col className="text-center text-md-start">
               {marketplace.map((marketplace, index2) => (
-                <Button key={index2} variant="link" className="btn-b">
+                <Button key={index2} variant="link" href={marketplace.url} className="btn-b">
                   <img
                     src={marketplace.iconMarket}
                     alt="market-icon"

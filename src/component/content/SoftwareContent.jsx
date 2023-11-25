@@ -84,7 +84,7 @@ const SoftwareContent = () => {
                             <CheckAll /> Setting Lengkap & Mudah
                           </Col>
                         </Col>
-                        <Button variant="light" className="mt-3 btn-a ">
+                        <Button variant="light" href="http://wa.me/085842027019" className="mt-3 btn-a ">
                           {devcard.btn}
                         </Button>
                       </div>

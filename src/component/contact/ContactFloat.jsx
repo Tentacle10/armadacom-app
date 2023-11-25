@@ -1,7 +1,7 @@
-import { useState } from "react";
-import { Button, ButtonGroup } from "react-bootstrap";
-import { CSSTransition } from "react-transition-group";
-import { ChatTextFill } from "react-bootstrap-icons";
+import {useState} from "react";
+import {Button, ButtonGroup} from "react-bootstrap";
+import {CSSTransition} from "react-transition-group";
+import {ChatTextFill} from "react-bootstrap-icons";
 import Facebook from "../../assets/icon/medsos/facebook.png";
 import Instagram from "../../assets/icon/medsos/instagram.png";
 import Shopee from "../../assets/icon/medsos/shopee.png";
@@ -33,12 +33,12 @@ const ContactFloat = () => {
       alt: "TikTok",
     },
     {
-      link: "https://www.tiktok.com/@armadacom.id",
+      link: "https://www.tokopedia.com/armadacomputer",
       img: Tokopedia,
       alt: "Tokopedia",
     },
     {
-      link: "https://www.tokopedia.com/armadacomputer",
+      link: "http://wa.me/085842027019",
       img: Wabusiness,
       alt: "Whatsapp",
     },
@@ -48,33 +48,16 @@ const ContactFloat = () => {
     <>
       <div className="float">
         <ButtonGroup vertical>
-          <CSSTransition
-            in={open}
-            timeout={500}
-            classNames="fade-in-right"
-            unmountOnExit
-          >
+          <CSSTransition in={open} timeout={500} classNames="fade-in-right" unmountOnExit>
             <ButtonGroup id="example-fade-text" className="mb-3" vertical>
               {floatSOS.map((floatSOS, index) => (
-                <Button
-                  alt="floatbtn"
-                  key={index}
-                  className="contact-fade"
-                  href={floatSOS.link}
-                  aria-label="Floating Button"
-                >
+                <Button alt="floatbtn" key={index} className="contact-fade" href={floatSOS.link} aria-label="Floating Button">
                   <img src={floatSOS.img} alt={floatSOS.alt} />
                 </Button>
               ))}
             </ButtonGroup>
           </CSSTransition>
-          <Button
-            onClick={() => setOpen(!open)}
-            aria-expanded={open}
-            className="contact-float"
-            variant="link"
-            aria-label="Floating Button"
-          >
+          <Button onClick={() => setOpen(!open)} aria-expanded={open} className="contact-float" variant="link" aria-label="Floating Button">
             <ChatTextFill className="icontact" />
           </Button>
         </ButtonGroup>
