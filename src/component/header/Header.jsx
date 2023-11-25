@@ -1,8 +1,18 @@
-import {useEffect, useRef, useState} from "react";
-import {Container, Row, Col, Nav, Navbar, NavDropdown, Button, Offcanvas} from "react-bootstrap";
+import { useEffect, useRef, useState } from "react";
+import {
+  Container,
+  Row,
+  Col,
+  Nav,
+  Navbar,
+  NavDropdown,
+  Button,
+  Offcanvas,
+  ProgressBar,
+} from "react-bootstrap";
 import "./Header.css";
 import ArmadaIcon from "../../assets/logo/Logo_white.png";
-import {Tiktok, Facebook, Instagram} from "react-bootstrap-icons";
+import { Tiktok, Facebook, Instagram } from "react-bootstrap-icons";
 import HeroContent from "./../content/HeroContent";
 import AboutContent from "./../content/AboutContent";
 import ServiceContent from "./../content/ServiceContent";
@@ -15,7 +25,7 @@ const Header = () => {
   const nav = useRef();
   const [showDropdown, setShowDropdown] = useState(false);
   const [isMouseOver, setIsMouseOver] = useState(false);
-  const [activeNavItem, setActiveNavItem] = useState("");
+  const [activeNavItem, setActiveNavItem] = useState("home");
 
   const handleNavItemClick = (navItem) => {
     setActiveNavItem(navItem);
@@ -45,15 +55,16 @@ const Header = () => {
         nav.current.classList.remove("scroll-nav");
       }
 
-      if (scroll < aboutRef.current.offsetTop) {
+      const margin = 50;
+      if (scroll < aboutRef.current.offsetTop - margin) {
         setActiveNavItem("home");
-      } else if (scroll < serviceRef.current.offsetTop) {
+      } else if (scroll < serviceRef.current.offsetTop - margin) {
         setActiveNavItem("about");
-      } else if (scroll < damkarRef.current.offsetTop) {
+      } else if (scroll < damkarRef.current.offsetTop - margin) {
         setActiveNavItem("service");
-      } else if (scroll < softwareRef.current.offsetTop) {
+      } else if (scroll < softwareRef.current.offsetTop - margin) {
         setActiveNavItem("damkar");
-      } else if (scroll < testimonialRef.current.offsetTop) {
+      } else if (scroll < testimonialRef.current.offsetTop - margin) {
         setActiveNavItem("software");
       } else {
         setActiveNavItem("testimonial");
@@ -70,32 +81,66 @@ const Header = () => {
   return (
     <>
       <Container fluid>
-        <Navbar expand="md" className="navigation-wrap start-header start-style" variant="dark" ref={ref} fixed="top">
+        <Navbar
+          expand="md"
+          className="navigation-wrap start-header start-style"
+          variant="dark"
+          ref={ref}
+          fixed="top"
+        >
           <Container>
             <Navbar.Brand as="a" className="start-nav" href="#" ref={nav}>
               <img src={ArmadaIcon} alt="Logo_Armada" />
             </Navbar.Brand>
 
-            <Navbar.Toggle aria-controls="offcanvasNavbar-expand-md" type="button" aria-label="Toggle navigation" variant="dark" />
+            <Navbar.Toggle
+              aria-controls="offcanvasNavbar-expand-md"
+              type="button"
+              aria-label="Toggle navigation"
+              variant="dark"
+            />
 
-            <Navbar.Offcanvas id="offcanvasNavbar-expand-md" aria-labelledby="offcanvasNavbarLabel-expand-md" placement="end" data-bs-theme="light">
+            <Navbar.Offcanvas
+              id="offcanvasNavbar-expand-md"
+              aria-labelledby="offcanvasNavbarLabel-expand-md"
+              placement="end"
+              data-bs-theme="light"
+            >
               <Offcanvas.Header closeButton>
-                <Offcanvas.Title id="offcanvasNavbarLabel-expand-md" aria-label="Offcanvas Menu"></Offcanvas.Title>
+                <Offcanvas.Title
+                  id="offcanvasNavbarLabel-expand-md"
+                  aria-label="Offcanvas Menu"
+                ></Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body className="justify-content-md-end">
                 <Nav className="navbar-nav align-items-md-center py-3 py-md-0">
-                  <Nav.Link as="a" href="#home" className={`homeNavItem nav-item ${activeNavItem === "home" ? "active" : ""}`} onClick={() => handleNavItemClick("home")}>
+                  <Nav.Link
+                    as="a"
+                    href="#home"
+                    className={`homeNavItem nav-item ${
+                      activeNavItem === "home" ? "active" : ""
+                    }`}
+                    onClick={() => handleNavItemClick("home")}
+                  >
                     Home
                   </Nav.Link>
-                  <Nav.Link as="a" href="#about" className={`aboutNavItem nav-item ${activeNavItem === "about" ? "active" : ""}`} onClick={() => handleNavItemClick("about")}>
+                  <Nav.Link
+                    as="a"
+                    href="#about"
+                    className={`aboutNavItem nav-item ${
+                      activeNavItem === "about" ? "active" : ""
+                    }`}
+                    onClick={() => handleNavItemClick("about")}
+                  >
                     About Us
                   </Nav.Link>
                   <NavDropdown
                     className="nav-drop"
                     title="Layanan"
                     id="offcanvasNavbarDropdown-expand-md"
-                    active={isMouseOver}
+                    active={(isMouseOver, showDropdown)}
                     show={showDropdown}
+                    onClick={() => setShowDropdown(!showDropdown)}
                     onMouseEnter={() => {
                       setShowDropdown(true);
                       setIsMouseOver(true);
@@ -106,19 +151,54 @@ const Header = () => {
                     }}
                   >
                     <NavDropdown.Item href="#store" className="drop-a" disabled>
-                      Store
+                      <ProgressBar>
+                        <span className="me-2 text-decoration-line-through">
+                          Store
+                        </span>
+                        <ProgressBar
+                          className="p-1"
+                          now="On Development..."
+                          label="On Development..."
+                          animated
+                        />
+                      </ProgressBar>
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="#service" className={`drop-a serviceNavItem ${activeNavItem === "service" ? "active" : ""}`} onClick={() => handleNavItemClick("service")}>
+                    <NavDropdown.Item
+                      href="#service"
+                      className={`drop-a serviceNavItem ${
+                        activeNavItem === "service" ? "active" : ""
+                      }`}
+                      onClick={() => handleNavItemClick("service")}
+                    >
                       Service
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="#damkar" className={`btn-a damkarNavItem ${activeNavItem === "damkar" ? "active" : ""}`} onClick={() => handleNavItemClick("damkar")}>
+                    <NavDropdown.Item
+                      href="#damkar"
+                      className={`btn-a damkarNavItem ${
+                        activeNavItem === "damkar" ? "active" : ""
+                      }`}
+                      onClick={() => handleNavItemClick("damkar")}
+                    >
                       Damkar Express
                     </NavDropdown.Item>
-                    <NavDropdown.Item href="#software" className={`drop-a softwareNavItem ${activeNavItem === "software" ? "active" : ""}`} onClick={() => handleNavItemClick("software")}>
+                    <NavDropdown.Item
+                      href="#software"
+                      className={`drop-a softwareNavItem ${
+                        activeNavItem === "software" ? "active" : ""
+                      }`}
+                      onClick={() => handleNavItemClick("software")}
+                    >
                       Software
                     </NavDropdown.Item>
                   </NavDropdown>
-                  <Nav.Link as="a" href="#testimonial" className={`testimonialNavItem nav-item ${activeNavItem === "testimonial" ? "active" : ""}`} onClick={() => handleNavItemClick("testimonial")}>
+                  <Nav.Link
+                    as="a"
+                    href="#testimonial"
+                    className={`testimonialNavItem nav-item ${
+                      activeNavItem === "testimonial" ? "active" : ""
+                    }`}
+                    onClick={() => handleNavItemClick("testimonial")}
+                  >
                     Testimonial
                   </Nav.Link>
                   <Button variant="light" className="btn-a bg-blue ms-md-4">
@@ -128,13 +208,25 @@ const Header = () => {
               </Offcanvas.Body>
               <Row className="canvas-footer text-center d-block d-md-none">
                 <Col className="text-center">
-                  <Button href="https://www.facebook.com/armadacom.id" variant="link" className="btn-sos">
+                  <Button
+                    href="https://www.facebook.com/armadacom.id"
+                    variant="link"
+                    className="btn-sos"
+                  >
                     <Facebook className="iMedsos" />
                   </Button>
-                  <Button href="https://www.instagram.com/armadacom.id/" variant="link" className="btn-sos">
+                  <Button
+                    href="https://www.instagram.com/armadacom.id/"
+                    variant="link"
+                    className="btn-sos"
+                  >
                     <Instagram className="iMedsos-c" />
                   </Button>
-                  <Button href="https://www.tiktok.com/@armadacom.id" variant="link" className="btn-sos">
+                  <Button
+                    href="https://www.tiktok.com/@armadacom.id"
+                    variant="link"
+                    className="btn-sos"
+                  >
                     <Tiktok className="iMedsos" />
                   </Button>
                 </Col>
