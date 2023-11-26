@@ -1,10 +1,10 @@
-import { Col, Container, Row, Button } from "react-bootstrap";
+import {Col, Container, Row, Button} from "react-bootstrap";
 import Devimg from "../../assets/img/devimg.jpg";
 import Toska from "../../assets/img/dev/toska.png";
 import Asm from "../../assets/img/dev/asm.png";
 import Evoting from "../../assets/img/dev/evoting.png";
 import Custom from "../../assets/img/dev/custom.png";
-import { Check } from "react-bootstrap-icons";
+import {Check} from "react-bootstrap-icons";
 
 const SoftwareContent = () => {
   const devcard = [
@@ -47,7 +47,7 @@ const SoftwareContent = () => {
     {
       icon: Custom,
       title: "Custom Aplikasi",
-      desc: "Melayani pembuatan software berbasis website maupun android by request sesuai kebutuhan dan keinginan kalian.",
+      desc: "Melayani pembuatan software berbasis website maupun android by request sesuai kebutuhan dan keinginan anda.",
       harga: "$$$$$",
       btn: "Buy Now",
       f1: "Custom sesuka hati",
@@ -66,20 +66,11 @@ const SoftwareContent = () => {
           </Col>
           <Col className="softwaredev d-flex flex-column align-items-center justify-content-center">
             <Col md={12} className="devdesc mb-3">
-              <h6
-                className="fw-bold"
-                style={{ color: "rgb(111 111 111/ 70%)" }}
-              >
+              <h6 className="fw-bold" style={{color: "rgb(111 111 111/ 70%)"}}>
                 ARMADA SOFTWARE
               </h6>
-              <h2 className="fw-bolder mb-2 text-uppercase">
-                PALUGADA - Apa yang lu mau Gue ada!
-              </h2>
-              <div style={{ color: "#9b9b9b" }}>
-                Menyediakan software untuk penunjang aktifitas bisnis ataupun
-                kegiatan instansi, dengan teknologi sebagai alat untuk
-                meningkatkan efektifitas, kecepatan dan ketepatan dalam bekerja.
-              </div>
+              <h2 className="fw-bolder mb-2 text-uppercase">PALUGADA - Apa yang lu mau Gue ada!</h2>
+              <div style={{color: "#9b9b9b"}}>Menyediakan software untuk penunjang aktifitas bisnis ataupun kegiatan instansi, dengan teknologi sebagai alat untuk meningkatkan efektifitas, kecepatan dan ketepatan dalam bekerja.</div>
             </Col>
             <Col className="devcard">
               <Row md={12} className="card-container justify-content-center">
@@ -87,20 +78,14 @@ const SoftwareContent = () => {
                   <Col md={6} key={index} className="carddev">
                     <Row className="carddev-inner">
                       <div className="card-front text-center">
-                        <img
-                          src={devcard.icon}
-                          alt="Devimg"
-                          className="logodev"
-                        />
+                        <img src={devcard.icon} alt="Devimg" className="logodev" />
                         <Col>
                           <div className="ls title-card">{devcard.title}</div>
-                          <div className="body-text text-center">
-                            {devcard.desc}
-                          </div>
+                          <div className="body-text text-center">{devcard.desc}</div>
                         </Col>
                       </div>
                       <div className="card-back text-center">
-                        <h6 style={{ color: "#efefef" }}>Start From</h6>
+                        <h6 style={{color: "#efefef"}}>Start From</h6>
                         <h1 className="fw-bold">{devcard.harga}</h1>
                         <Col className="list text-start mx-4">
                           <Col>
@@ -119,11 +104,7 @@ const SoftwareContent = () => {
                             <Check /> {devcard.f5}
                           </Col>
                         </Col>
-                        <Button
-                          variant="light"
-                          href="http://wa.me/085842027019"
-                          className="mt-3 btn-a "
-                        >
+                        <Button variant="light" href="http://wa.me/6285842027019" className="mt-3 btn-a" target="_blank">
                           {devcard.btn}
                         </Button>
                       </div>

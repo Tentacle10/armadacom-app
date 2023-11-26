@@ -49,10 +49,10 @@ const ServiceContent = () => {
           </Col>
           <Col md={4} className="d-flex flex-column text-center justify-content-start justify-content-md-center align-items-center">
             <div className="ls ts fw-bold fs-3 d-none d-md-block">Fitur Tracking Service</div>
-            <div className="ts body-text-light text-opacity-75 d-none d-md-block">Memudahkan customer dalam memantau progres service</div>
+            <div className="body-text-light text-opacity-75 fs-6 d-none d-md-block">Memudahkan customer dalam memantau progres service</div>
             <div className="ls ts fw-bold fs-3 mt-md-4">Aplikasi Armadacom</div>
             <div className="body-text-light text-opacity-75 fs-6">Download sekarang di playstore untuk menikmati fitur tracking dan live update harga.</div>
-            <Button className="btn-a mt-4 px-3 py-2" variant="light" href="https://play.google.com/store/apps/details?id=com.wingbuk.armadacom">
+            <Button className="btn-a mt-4 px-3 py-2" variant="light" href="https://play.google.com/store/apps/details?id=com.wingbuk.armadacom" target="_blank">
               <img src={PlayStore} alt="PlayStore" width={20} className="me-2" />
               Download
             </Button>

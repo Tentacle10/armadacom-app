@@ -49,7 +49,7 @@ body {
 }
 .textBanner {
   position: absolute;
-  top: 30%;
+  top: 20%;
   transform: translate(25%, 0);
   padding: 1rem 25rem;
 }
@@ -511,8 +511,7 @@ body {
   background-color: #fff;
   border-radius: 20px;
   color: #555;
-  cursor: -webkit-grab;
-  cursor: grab;
+  cursor: default;
 }
 
 @media (max-width: 768px) {

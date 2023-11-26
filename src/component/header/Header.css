@@ -31,15 +31,11 @@
   padding: 10px 0;
   -webkit-backdrop-filter: blur(15px) brightness(75%) saturate(70%);
   backdrop-filter: blur(15px) brightness(75%) saturate(70%);
-  /* position: fixed; */
-  /* width: 100%; */
-  /* top: 0px; */
-  /* left: 0; */
-  /* z-index: 1000; */
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 .navbar {
+  top: -1px;
   padding: 0;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
 }
@@ -172,7 +168,7 @@
   border: 8px solid transparent;
   border-bottom-color: #fff;
   top: -16px;
-  left: 50%;
+  left: 45%;
   margin-left: -37px;
 }
 .dropdown-toggle::after {
@@ -188,7 +184,6 @@
 
 .dropdown-item {
   padding: 3px 15px;
-  /* color: #212121; */
   border-radius: 2px;
   transition: all 200ms linear;
   color: #555;
@@ -280,7 +275,8 @@
 .progress-bar-striped {
   font-size: 10px !important;
 }
-.progress, .progress-stacked{
+.progress,
+.progress-stacked {
   border-radius: 0 !important;
 }
 
