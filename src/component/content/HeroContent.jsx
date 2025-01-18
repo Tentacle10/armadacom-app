@@ -1,4 +1,4 @@
-import {Container, Row, Col} from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import Carousel from "react-bootstrap/Carousel";
 import Button from "react-bootstrap/Button";
 import satu from "../../assets/img/banner/1.jpg";
@@ -50,19 +50,15 @@ const HeroContent = () => {
                     padding: "0",
                   }}
                 >
-                  <img
-                    src={hero.img}
-                    alt="laptop"
-                    className="banner"
-                    style={{
-                      height: "100vh",
-                      color: "#b90c4f",
-                    }}
-                  />
+                  <img src={hero.img} alt="laptop" className="banner" />
                 </Col>
               </Row>
               <Row className="textBanner">
-                <Col md={9} className="ls fs-1 fw-bold text-uppercase" style={{textShadow: "2px 2px 5px #555"}}>
+                <Col
+                  md={9}
+                  className="ls fs-1 fw-bold text-uppercase"
+                  style={{ textShadow: "2px 2px 5px #555" }}
+                >
                   {hero.tag}
                 </Col>
                 <Col md={9} className="mt-2 fs-5 body-text-light">

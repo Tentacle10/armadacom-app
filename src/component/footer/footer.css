@@ -1,5 +1,13 @@
 .footer {
-  background-image: linear-gradient(200deg, #0698f3, #2e64aa, #2e64aa, #2e64aa, #2e64aa, #0698f3);
+  background-image: linear-gradient(
+    200deg,
+    #0698f3,
+    #2e64aa,
+    #2e64aa,
+    #2e64aa,
+    #2e64aa,
+    #0698f3
+  );
   height: 100% !important;
   /* letter-spacing: 1.3px; */
 }
@@ -13,8 +21,6 @@
   font-size: 14px;
   color: #fff !important;
   padding: 0;
-  /* line-height: 1.8rem; */
-  /* margin-top: 1rem; */
 }
 .iconB {
   font-size: 18px;
@@ -33,7 +39,9 @@
   width: 70%;
   color: #fff;
   text-decoration: none;
-  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.3s box-shadow, 0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  transition: 0.3s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    0.3s box-shadow,
+    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
 }
 .facebook:hover,
 .tiktok:hover,
@@ -41,7 +49,8 @@
 .whatsapp:hover {
   color: #f1f1f1;
   transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(31, 124, 211, 0.12), 0 4px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 20px rgba(31, 124, 211, 0.12),
+    0 4px 8px rgba(0, 0, 0, 0.06);
   /* border: 1.5px solid #fff; */
 }
 .bukalapak,
@@ -52,7 +61,9 @@
   text-align: start;
   width: 70%;
   text-decoration: none;
-  transition: 0.5s transform cubic-bezier(0.155, 1.105, 0.295, 1.12), 0.5s box-shadow, 0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
+  transition: 0.5s transform cubic-bezier(0.155, 1.105, 0.295, 1.12),
+    0.5s box-shadow,
+    0.3s -webkit-transform cubic-bezier(0.155, 1.105, 0.295, 1.12);
 }
 .bukalapak img,
 .shopee img,
@@ -106,7 +117,15 @@
 
 @media (max-width: 768px) {
   .footer {
-    background-image: linear-gradient(200deg, #2e64aa, #2e64aa, #0698f3, #0698f3, #2e64aa, #2e64aa);
+    background-image: linear-gradient(
+      200deg,
+      #2e64aa,
+      #2e64aa,
+      #0698f3,
+      #0698f3,
+      #2e64aa,
+      #2e64aa
+    );
     height: 100% !important;
   }
   .listfoot {
@@ -117,7 +136,7 @@
     height: 150px !important;
   }
   .textB {
-    font-size: 14px !important;
+    font-size: 13px;
   }
   .btn-b img {
     width: 30px !important;

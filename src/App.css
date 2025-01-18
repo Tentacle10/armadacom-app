@@ -31,7 +31,7 @@ body {
 
 /* HeroContent ################################################################### */
 .slideshow {
-  height: 100vh;
+  height: 70vh;
   color: #fff;
 }
 .gradient-overlay {
@@ -41,27 +41,67 @@ body {
   bottom: 0%;
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(270deg, #2e64aa, #2e64aa, #0698f3, #0698f38f, #72faca1e, #72faca00, #72faca00);
+  background-image: linear-gradient(
+    270deg,
+    #2e64aa,
+    #2e64aa,
+    #0698f3,
+    #0698f38f,
+    #72faca1e,
+    #72faca00,
+    #72faca00
+  );
   opacity: 1;
+  z-index: 6;
 }
 .banner {
-  margin-top: 0;
+  height: 100vh;
+  color: #b90c4f;
+  position: absolute;
+  bottom: 0;
+  z-index: 5;
 }
 .textBanner {
   position: absolute;
-  top: 20%;
+  bottom: 25%;
   transform: translate(25%, 0);
   padding: 1rem 25rem;
+  z-index: 7;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1400px) {
+  .textBanner {
+    bottom: 25%;
+    transform: translate(25%, 0);
+    padding: 0rem 15rem;
+  }
+}
+
+@media (max-width: 884px) {
+  .textBanner {
+    bottom: 30%;
+    transform: translate(13%, 0);
+    padding: 0rem 6rem;
+  }
+}
+
+@media (max-width: 599px) {
   .slideshow {
-    height: 95vh;
+    height: 100vh;
     background-color: #2e64aa;
     background-image: none;
   }
   .gradient-overlay {
-    background-image: linear-gradient(30deg, #2e64aa, #2e64aa, #0698f3, #0698f38f, #72faca1e, #72faca00, #72faca00);
+    background-image: linear-gradient(
+      30deg,
+      #2e64aa,
+      #2e64aa,
+      #0698f3,
+      #0698f38f,
+      #72faca1e,
+      #72faca00,
+      #72faca00
+    );
   }
   .banner {
     width: 200% !important;
@@ -79,9 +119,6 @@ body {
   .carousel-control-next {
     display: none !important;
   }
-  .textBanner {
-    bottom: 28%;
-  }
   .carousel-indicators {
     margin-bottom: 2rem !important;
   }
@@ -90,12 +127,11 @@ body {
 
 /* AboutContent ################################################################### */
 .cabout {
-  padding: 5rem 3rem 0rem 3rem !important;
-  color: #555;
+  padding-top: 5rem;
+  /* padding: 5rem 3rem 0rem 3rem !important; */
+  /* color: #555; */
 }
-.aboutcol {
-  padding: 2rem 3rem 2rem 0rem !important;
-}
+
 .title h6::after {
   background: #009ad1;
   content: "";
@@ -124,8 +160,9 @@ body {
 .about-card {
   flex: 0 50%;
   background: #fff;
-  box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2), 0 5px 15px 0 rgba(37, 44, 97, 0.15);
-  margin: 1rem 0rem 1.5rem 1rem !important;
+  box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2),
+    0 5px 15px 0 rgba(37, 44, 97, 0.15);
+  margin: 2rem 0.5rem 0 0 !important;
   padding: 10px 15px;
   position: relative;
   z-index: 1;
@@ -136,7 +173,13 @@ body {
 
 .about-icon {
   border-radius: 50%;
-  background-image: linear-gradient(145deg, #2e64aa, #2e64aa, #0698f3, #0698f3bd);
+  background-image: linear-gradient(
+    145deg,
+    #2e64aa,
+    #2e64aa,
+    #0698f3,
+    #0698f3bd
+  );
   width: 60px !important;
   height: 60px;
   box-shadow: 5px 5px 0 0 rgb(85 108 214 / 15%);
@@ -190,6 +233,44 @@ body {
 .about-card:hover .body-text {
   color: #fff;
 }
+.dev-text {
+  color: #cfcfcfb7;
+}
+
+.btn-dev {
+  color: #fff !important;
+  background-color: #2e64aa !important;
+  border: none !important;
+}
+
+.btn-dev::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, #2e64aa, transparent);
+  transform: translateX(-100%);
+  transition: 0.6s;
+  position: absolute;
+}
+
+.btn-dev:hover {
+  box-shadow: 0 0 2px 0.5px #0698f3;
+}
+
+.btn-dev:hover::before {
+  transform: translateX(100%);
+}
+
+.about-card:hover .btn-dev {
+  color: #2e64aa !important;
+  background-color: #fff !important;
+}
+
+.about-card:hover .dev-text {
+  color: #fff;
+}
 
 @media (max-width: 768px) {
   .cabout {
@@ -218,7 +299,7 @@ body {
     padding: 0 !important;
   }
   .about-card {
-    margin: 0.6rem 0 !important;
+    /* margin: 0.6rem 0 !important; */
     padding: 10px 15px;
   }
   .about-icon {
@@ -226,6 +307,56 @@ body {
   }
 }
 /* AboutContent */
+
+/* PromoContent ################################################################# */
+.cpromo {
+  padding: 4rem 0 0 0;
+  --bs-gutter-x: 0 !important;
+  /* height: 200px; */
+}
+
+.carousel-item-padding {
+  margin: 0 16px;
+}
+
+.promoproduct {
+  padding: 2rem 2rem 1rem 2rem;
+  background-image: linear-gradient(
+    200deg,
+    #2e64aa,
+    #2e64aa,
+    #0698f3,
+    #0698f3,
+    #2e64aa,
+    #2e64aa
+  );
+  border-radius: 15px;
+}
+.card {
+  border: none !important;
+  box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2),
+    0 5px 15px 0 rgba(37, 44, 97, 0.15);
+  grid-gap: 0 !important;
+}
+
+.card-img {
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem !important;
+}
+
+@media (max-width: 599px) {
+  .promoproduct {
+    padding: 1rem;
+
+    border-radius: 0px;
+  }
+}
+/* PromoContent */
 
 /* ServiceContent ################################################################# */
 .cservice {
@@ -241,7 +372,15 @@ body {
   border-radius: 15px;
 }
 .appservice {
-  background-image: linear-gradient(200deg, #2e64aa, #2e64aa, #0698f3, #0698f3, #2e64aa, #2e64aa);
+  background-image: linear-gradient(
+    200deg,
+    #2e64aa,
+    #2e64aa,
+    #0698f3,
+    #0698f3,
+    #2e64aa,
+    #2e64aa
+  );
   border-radius: 15px;
 }
 .iPhone img {
@@ -273,7 +412,13 @@ body {
 
 .service-icon {
   border-radius: 50%;
-  background-image: linear-gradient(145deg, #2e64aa, #2e64aa, #0698f3, #0698f3bd);
+  background-image: linear-gradient(
+    145deg,
+    #2e64aa,
+    #2e64aa,
+    #0698f3,
+    #0698f3bd
+  );
   width: 60px !important;
   height: 60px;
   box-shadow: 5px 5px 0 0 rgb(85 108 214 / 15%);
@@ -351,7 +496,18 @@ body {
 .damkar {
   margin: 0 !important;
   box-shadow: rgb(219 230 255 / 99%) 0px 5px 10px 0px;
-  background-image: linear-gradient(200deg, #2e64aa, #2e64aa, #2e64aa, #0698f3, #0698f3, #0698f3, #2e64aa, #2e64aa, #2e64aa);
+  background-image: linear-gradient(
+    200deg,
+    #2e64aa,
+    #2e64aa,
+    #2e64aa,
+    #0698f3,
+    #0698f3,
+    #0698f3,
+    #2e64aa,
+    #2e64aa,
+    #2e64aa
+  );
   border-radius: 15px;
   height: 100%;
 }
@@ -374,7 +530,17 @@ body {
   }
   .damkar {
     height: 100vh;
-    background-image: linear-gradient(200deg, #2e64aa, #2e64aa, #2e64aa, #0698f3, #0698f3, #2e64aa, #2e64aa, #2e64aa);
+    background-image: linear-gradient(
+      200deg,
+      #2e64aa,
+      #2e64aa,
+      #2e64aa,
+      #0698f3,
+      #0698f3,
+      #2e64aa,
+      #2e64aa,
+      #2e64aa
+    );
     border-radius: 0;
     margin-top: -0.3rem !important;
   }
@@ -399,20 +565,24 @@ body {
   color: #555;
 }
 
-.softwaredev {
-  padding: 0rem 2.5rem !important;
-}
+/* .softwaredev {
+  overflow: hidden;
+} */
 
 .devimg {
   overflow: hidden;
 }
 .devimg img {
-  height: 86ch;
-  border-radius: 15px;
+  /* height: 100%; */
+  height: 43ch;
+  /* border-radius: 15px; */
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  object-fit: cover;
 }
 
 .logodev {
-  width: 50% !important;
+  filter: drop-shadow(0px 4px 6px rgba(235, 235, 235, 0.23));
   margin: 0 !important;
 }
 .card-container {
@@ -429,7 +599,8 @@ body {
   transform: translate3d(0px, 0px, -250px) rotateX(0deg) scale(1, 1);
   transition: 0.4s ease-in-out transform, 0.4s ease-in-out box-shadow;
   background: #fff;
-  box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2), 0 5px 15px 0 rgba(37, 44, 97, 0.15);
+  box-shadow: 0 2px 4px 0 rgba(136, 144, 195, 0.2),
+    0 5px 15px 0 rgba(37, 44, 97, 0.15);
   overflow: hidden;
 }
 .carddev::before {
@@ -482,6 +653,30 @@ body {
   backface-visibility: hidden;
 }
 
+@media (max-width: 991px) {
+  .csoftware {
+    overflow: hidden;
+  }
+  .software {
+    box-shadow: none;
+  }
+  .devimg {
+    overflow: unset;
+    text-align: center;
+  }
+  .devimg img {
+    width: 90%;
+    height: 300px;
+    border-radius: 15px;
+  }
+  .devdesc {
+    margin-top: 1.5rem !important;
+  }
+  .carddev {
+    height: 300px;
+  }
+}
+
 @media (max-width: 768px) {
   .csoftware {
     overflow: hidden;
@@ -496,12 +691,19 @@ body {
   .devimg img {
     width: 90%;
     height: auto;
+    border-radius: 15px;
   }
   .devdesc {
     margin-top: 1.5rem !important;
   }
   .carddev {
     height: 300px;
+  }
+}
+
+@media (max-width: 599px) {
+  .csoftware {
+    padding: 2rem !important;
   }
 }
 /* SoftwareContent */
@@ -627,3 +829,16 @@ body {
   }
 }
 /* ContactFloat */
+
+.btn-card {
+  background-color: #2e64aa !important;
+  color: white !important;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.btn-card:hover {
+  background-color: #154e96 !important;
+  color: white !important;
+}
