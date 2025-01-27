@@ -1,7 +1,9 @@
 import React from "react";
 import { Modal, Button } from "react-bootstrap";
+import { API_URL } from "../utils/const";
 
 const DevModal = ({ show, handleClose, modalData }) => {
+  console.log(modalData);
   return (
     <Modal
       show={show}
@@ -18,16 +20,20 @@ const DevModal = ({ show, handleClose, modalData }) => {
       >
         <div className="d-flex justify-content-center">
           <img
-            src={modalData.icon}
+            src={`${API_URL}/uploads/products/` + modalData.t_products_image}
             alt="Devimg"
             className="logodev text-center"
           />
         </div>
         <blockquote className="blockquote mb-3">
-          <h3 className="text-white text-center">{modalData.title}</h3>
-          <p className="text-white fs-6">{modalData.desc}</p>
+          <h3 className="text-white text-center">
+            {modalData.t_products_nama}
+          </h3>
+          <p className="text-white fs-6">{modalData.t_products_desc}</p>
         </blockquote>
-        <p className="justify-content-center text-white">{modalData.fitur}</p>
+        <p className="justify-content-center text-white">
+          {modalData.t_products_feature}
+        </p>
         <div className="flex text-center">
           <Button
             variant="light"
@@ -35,7 +41,7 @@ const DevModal = ({ show, handleClose, modalData }) => {
             className="mt-3 btn-a"
             target="_blank"
           >
-            {modalData.rent != "T" ? "Buy Now" : "Rent Now"}
+            {modalData.t_products_jenis != "SEWA" ? "Buy Now" : "Rent Now"}
           </Button>
         </div>
       </Modal.Body>

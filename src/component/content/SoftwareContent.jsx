@@ -1,77 +1,34 @@
+import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import Devimg from "../../assets/img/devimg.jpg";
-import Toska from "../../assets/img/dev/toska.png";
-import Asm from "../../assets/img/dev/asm.png";
-import Evoting from "../../assets/img/dev/evoting.png";
-import Custom from "../../assets/img/dev/custom.png";
+
 import CarouselDev from "../utils/carouseldev/CarouselDev";
+import { API_URL } from "../utils/const";
 
 const SoftwareContent = () => {
-  const devcard = [
-    {
-      icon: Toska,
-      title: "Aplikasi Kasir",
-      desc: "Aplikasi kasir berbasis website yang bisa kalian pakai dari mana aja dengan fitur lengkap dan interface yang memukau.",
-      harga: "1.499K",
-      rent: "F",
-      fitur:
-        "✔ Cross Platform ✔ 2 in 1 POS Jasa & Barang ✔ Laporan Transaksi ✔ Device Printing ✔ Setting Lengkap & Mudah",
-    },
-    {
-      icon: Asm,
-      title: "ASM",
-      desc: "Aplikasi Service Management berbasis web solusi efisien untuk merencanakan dan melaksanakan layanan teknis dengan inovasi tinggi.",
-      harga: "2.899K",
-      rent: "F",
-      fitur:
-        "✔ Cross Platform ✔ Real-time Confirmation ✔ Live Service Updates ✔ Sistematis ✔ Custom Feature",
-    },
-    {
-      icon: Evoting,
-      title: "E VOTING",
-      desc: "Software vote pemilihan pimpinan untuk organisasi maupun instansi kemudahan dalam rekap tanpa media kertas.",
-      harga: "2.250K",
-      rent: "T",
-      fitur:
-        "✔ Penghitungan suara Cepat ✔ ID Card Kartu Suara ✔ Tanpa Kertas ✔ Sistematis ✔ Effisien",
-    },
-    {
-      icon: Toska,
-      title: "Aplikasi Kasir",
-      desc: "Aplikasi kasir berbasis website yang bisa kalian pakai dari mana aja dengan fitur lengkap dan interface yang memukau.",
-      harga: "1.499K",
-      rent: "F",
-      fitur:
-        "✔ Cross Platform ✔ 2 in 1 POS Jasa & Barang ✔ Laporan Transaksi ✔ Device Printing ✔ Setting Lengkap & Mudah",
-    },
-    {
-      icon: Asm,
-      title: "ASM",
-      desc: "Aplikasi Service Management berbasis web solusi efisien untuk merencanakan dan melaksanakan layanan teknis dengan inovasi tinggi.",
-      harga: "2.899K",
-      rent: "F",
-      fitur:
-        "✔ Cross Platform ✔ Real-time Confirmation ✔ Live Service Updates ✔ Sistematis ✔ Custom Feature",
-    },
-    {
-      icon: Evoting,
-      title: "E VOTING",
-      desc: "Software vote pemilihan pimpinan untuk organisasi maupun instansi kemudahan dalam rekap tanpa media kertas.",
-      harga: "2.250K",
-      rent: "T",
-      fitur:
-        "✔ Penghitungan suara Cepat ✔ ID Card Kartu Suara ✔ Tanpa Kertas ✔ Sistematis ✔ Effisien",
-    },
-    {
-      icon: Custom,
-      title: "Custom Aplikasi",
-      desc: "Melayani pembuatan software berbasis website maupun android by request sesuai kebutuhan dan keinginan anda.",
-      harga: "$$$$$",
-      rent: "F",
-      fitur:
-        "✔ Custom sesuka hati ✔ Sesuaikan kebutuhan ✔ Sesuaikan kebutuhan ✔ Sustainable ✔ Full License",
-    },
-  ];
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  const [dataProducts, setDataProducs] = useState([]);
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch(`${API_URL}/products/active_prod`);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        setDataProducs(data.data);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProducts();
+  }, []);
+
   return (
     <>
       <Container className="csoftware">
@@ -104,7 +61,7 @@ const SoftwareContent = () => {
             </Col>
             <Col xs={12} className="px-2">
               <CarouselDev
-                data={devcard}
+                data={dataProducts}
                 options={{ align: "start", loop: true, slidesToScroll: "auto" }}
               />
             </Col>

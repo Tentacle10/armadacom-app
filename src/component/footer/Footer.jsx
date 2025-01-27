@@ -6,85 +6,41 @@ import {
   TelephoneInboundFill,
 } from "react-bootstrap-icons";
 import bar from "./../../assets/icon/bar.png";
-import Facebook from "./../../assets/icon/facebook.png";
-import Instagram from "./../../assets/icon/instagram.png";
-import Tiktok from "./../../assets/icon/tiktok.png";
-import Whatsapp from "./../../assets/icon/whatsapp.png";
-import Bukalapak from "./../../assets/icon/marketplace/bukalapak.png";
-import Shopee from "./../../assets/icon/marketplace/shopee.png";
-import Tokopedia from "./../../assets/icon/marketplace/tokopedia.png";
-import SipLah from "./../../assets/icon/marketplace/siplah.png";
+
 import "./footer.css";
+import { useSelector } from "react-redux";
+import { API_URL } from "../utils/const";
 
 const Footer = () => {
+  const { data_setting } = useSelector((state) => state.setting);
+
   const kaki = [
     {
       iconB: <GeoAltFill className="iconB" />,
-      textB: "Jl Girimargo 10A, Kerkop, Wonosobo",
+      textB: data_setting?.ALAMAT_WEBSITE,
       url: "#",
     },
     {
       iconB: <ClockHistory className="iconB" />,
-      textB: "Senin - Sabtu | 08.00 - 16.30",
+      textB: data_setting.JAM_OPERASIONAL_WEBSITE,
       url: "#",
     },
     {
       iconB: <EnvelopeFill className="iconB" />,
-      textB: "armadacom.wsb@gmail.com",
-      url: "mailto:armadacom.wsb@gmail.com",
+      textB: data_setting?.EMAIL_WEBSITE,
+      url: `mailto:${data_setting?.EMAIL_WEBSITE}`,
     },
     {
       iconB: <TelephoneInboundFill className="iconB" />,
-      textB: "(+62) 286 322949",
-      url: "tel:+62286322949",
+      textB: data_setting?.TELP_WEBSITE,
+      url: `https://wa.me/${data_setting?.TELP_WEBSITE}`,
     },
   ];
 
-  const sos = [
-    {
-      iconSos: Facebook,
-      textSos: "Facebook",
-      url: "https://www.facebook.com/armadacom.id",
-    },
-    {
-      iconSos: Tiktok,
-      textSos: "TikTok",
-      url: "https://www.tiktok.com/@armadacom.id",
-    },
-    {
-      iconSos: Instagram,
-      textSos: "Instagram",
-      url: "https://www.instagram.com/armadacom.id/",
-    },
-    {
-      iconSos: Whatsapp,
-      textSos: "Whatsapp",
-      url: "https://wa.me/625842027019",
-    },
-  ];
+  const sos = data_setting?.MEDIA_SOSIAL_WEBSITE;
 
-  const marketplace = [
-    {
-      iconMarket: Bukalapak,
-      textMarket: "Bukalapak",
-      url: "#",
-    },
-    {
-      iconMarket: Shopee,
-      textMarket: "Shopee",
-      url: "https://shopee.co.id/armadacom.id",
-    },
-    {
-      iconMarket: Tokopedia,
-      textMarket: "Tokopedia",
-      url: "https://www.tokopedia.com/armadacomputer",
-    },
-    {
-      iconMarket: SipLah,
-      textMarket: "SIPLah",
-      url: "#",
-    },
-  ];
+  const marketplace = data_setting?.LAPAK_WEBSITE;
+
   return (
     <Container id="footer" className="footer" fluid>
       <Row
@@ -153,7 +109,7 @@ const Footer = () => {
           </Col>
           <Row className="flex-column py-md-2">
             <Col className="text-center text-md-start">
-              {sos.map((sos, index2) => (
+              {sos?.map((sos, index2) => (
                 <Button
                   key={index2}
                   variant="link"
@@ -162,14 +118,14 @@ const Footer = () => {
                   target="_blank"
                 >
                   <img
-                    src={sos.iconSos}
+                    src={`${API_URL}/uploads/icon/sosmed/${sos.icon}`}
                     alt="sosial-icon"
                     style={{
                       width: "25px",
                       marginRight: "0.5rem",
                     }}
                   />
-                  <span className="tm">{sos.textSos}</span>
+                  <span className="tm">{sos.name}</span>
                 </Button>
               ))}
             </Col>
@@ -196,7 +152,7 @@ const Footer = () => {
           </Col>
           <Row className="flex-column py-md-2">
             <Col className="text-center text-md-start">
-              {marketplace.map((marketplace, index2) => (
+              {marketplace?.map((marketplace, index2) => (
                 <Button
                   key={index2}
                   variant="link"
@@ -205,14 +161,14 @@ const Footer = () => {
                   target="_blank"
                 >
                   <img
-                    src={marketplace.iconMarket}
+                    src={`${API_URL}/uploads/icon/marketplace/${marketplace.icon}`}
                     alt="market-icon"
                     style={{
                       width: "25px",
                       marginRight: "0.5rem",
                     }}
                   />
-                  <span className="tm">{marketplace.textMarket}</span>
+                  <span className="tm">{marketplace.name}</span>
                 </Button>
               ))}
             </Col>

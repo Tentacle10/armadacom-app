@@ -1,7 +1,10 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { Shop, Tools, Terminal, Headset } from "react-bootstrap-icons";
+import { useSelector } from "react-redux";
 
 const AboutContent = () => {
+  const { data_setting } = useSelector((state) => state.setting);
+
   const aboutcard = [
     {
       icon: <Shop size={30} />,
@@ -44,14 +47,7 @@ const AboutContent = () => {
                 Melayani segala kebutuhan IT Anda
               </h2>
             </div>
-            <div className="body-text">
-              Armada Computer hadir sebagai toko komputer terlengkap di
-              Wonosobo, menawarkan berbagai peralatan komputer dan perangkat
-              jaringan. Dari komponen utama seperti CPU, motherboard, hingga
-              aksesori seperti keyboard dan mouse, dan juga perangkat Jaringan
-              seperti Router, Switch Hub dan Kabel Jaringan. Kami juga
-              menyediakan solusi lengkap untuk kebutuhan teknologi informasi.
-            </div>
+            <div className="body-text">{data_setting?.TENTANG_WEBSITE}</div>
           </Col>
           <Col
             md={6}

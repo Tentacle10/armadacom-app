@@ -7,38 +7,37 @@ import tiga from "../../assets/img/banner/3.jpg";
 import empat from "../../assets/img/banner/4.jpg";
 import lima from "../../assets/img/banner/5.jpg";
 
+import { API_URL } from "../utils/const";
+import { useEffect, useState } from "react";
+
 const HeroContent = () => {
-  const hero = [
-    {
-      img: satu,
-      tag: "Udah muter muter ujungnya ke Armada",
-      desc: "Armadacom adalah Toko komputer terlengkap di Wonosobo, menyediakan berbagai perangkat komputer dan perangkat jaringan",
-    },
-    {
-      img: dua,
-      tag: "Ngapain Berhari hari Kalo Sehari Jadi",
-      desc: "Armadacom.id melayani service komputer, Laptop, Printer maupun Jaringan dan CCTV di wonosobo dengan kualitas pelayanan terbaik",
-    },
-    {
-      img: lima,
-      tag: "DAMKAR! Solusi Praktis Tanpa Ribet",
-      desc: "Damkar hadir sebagai solusi penuh kenyamanan untuk kebutuhan jualan, servis, dan antar jemput. Nikmati kemudahan servis dan beli tanpa perlu keluar rumah",
-    },
-    {
-      img: empat,
-      tag: "Bikin Aplikasi Juga Bisa Tentunya",
-      desc: "Bikin aplikasi berbasis web ataupun Android di Wonosobo ya ke Armadacom.id Sebagai penunjang aktifitas bisnis kalian",
-    },
-    {
-      img: tiga,
-      tag: "Laptop Anda Mati? Serahkan pada Ahlinya!",
-      desc: "Kami adalah solusi terpercaya untuk laptop mati Anda. Percayakan pada ahli kami untuk menghidupkan kembali gadget Anda dengan keahlian dan layanan yang cepat.",
-    },
-  ];
+  const [banner, setBanner] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchBanners = async () => {
+      try {
+        const response = await fetch(`${API_URL}/banner/active`);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        setBanner(data);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchBanners();
+  }, []);
+
   return (
     <>
       <Carousel className="hero" controls={true} indicators={true} fade>
-        {hero.map((hero, index) => (
+        {banner.data?.map((hero, index) => (
           <Carousel.Item key={index}>
             <Container className="slideshow" fluid>
               <div className="gradient-overlay"></div>
@@ -50,7 +49,11 @@ const HeroContent = () => {
                     padding: "0",
                   }}
                 >
-                  <img src={hero.img} alt="laptop" className="banner" />
+                  <img
+                    src={`${API_URL}/uploads/promo/${hero.t_banner_image}`}
+                    alt={hero.t_banner_image}
+                    className="banner"
+                  />
                 </Col>
               </Row>
               <Row className="textBanner">
@@ -59,10 +62,10 @@ const HeroContent = () => {
                   className="ls fs-1 fw-bold text-uppercase"
                   style={{ textShadow: "2px 2px 5px #555" }}
                 >
-                  {hero.tag}
+                  {hero.t_banner_header}
                 </Col>
                 <Col md={9} className="mt-2 fs-5 body-text-light">
-                  {hero.desc}
+                  {hero.t_banner_desc}
                 </Col>
                 <Col md={4} className="mt-3">
                   <Button variant="light" href="#about" className="btn-a">
