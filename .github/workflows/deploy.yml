@@ -3,7 +3,7 @@ name: Deploy WEB ARMADA APP
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   build:
