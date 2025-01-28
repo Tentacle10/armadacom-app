@@ -1,5 +1,5 @@
 # Use Node 18 alpine as parent image
-FROM node:18-alpine
+FROM node:18-alpine AS build
 
 # Change the working directory on the Docker image to /app
 WORKDIR /app
@@ -16,8 +16,6 @@ COPY . .
 # Generate Prisma client
 RUN npm run build
 
-# Expose application port
-EXPOSE 3001
+FROM nginx
 
-# Start the application with nodemon for development
-CMD [ "npm", "run", "preview" ]
+COPY --from=build /app/dist /usr/share/nginx/html
