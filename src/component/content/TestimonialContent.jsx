@@ -84,6 +84,8 @@ const TestimonialContent = () => {
             autoPlay={true}
             autoPlaySpeed={5000}
             arrows={false}
+            keyBoardControl={true}
+            containerClass="carousel-container"
           >
             {testimonials.map((testimonial, index) => (
               <div key={index}>
