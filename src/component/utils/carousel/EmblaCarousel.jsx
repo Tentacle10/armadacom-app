@@ -36,7 +36,7 @@ const EmblaCarousel = (props) => {
               <Card.Img
                 variant="top"
                 className="card-img"
-                src={`https://crmapi.armadacom.id/uploads/products/${data.productimages[0].image}`}
+                src={`https://crmapi.armadacom.id/uploads/products/${data.productimages[0]?.image}`}
                 style={{ pointerEvents: "none" }}
               />
               <Stack className="card-body text-start" gap={2}>
