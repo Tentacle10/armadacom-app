@@ -2,11 +2,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Container, Row, Col } from "react-bootstrap";
 import { StarFill, StarHalf, Star, Quote } from "react-bootstrap-icons";
-import Dani from "../../assets/img/testimonials/DaniFahim.png";
-import Tri from "../../assets/img/testimonials/TriAjiPurnomo.png";
-import Odhian from "../../assets/img/testimonials/OdhianWisnuP.png";
-import Aldina from "../../assets/img/testimonials/AldinaRahma.png";
-import Yuliati from "../../assets/img/testimonials/YuliatiGonosantoso.png";
+import { API_URL } from "../utils/const";
 
 const TestimonialContent = () => {
   const responsive = {
@@ -34,7 +30,7 @@ const TestimonialContent = () => {
       quote:
         "best place in town for computer and peripheral needs. friendly service, highly recommended...",
       rating: 5,
-      image: Dani,
+      image: `${API_URL}/uploads/testimonial/DaniFahim.png`,
     },
     {
       name: "Tri Aji Purnomo",
@@ -42,7 +38,7 @@ const TestimonialContent = () => {
       quote:
         "karyawannya ramah ramah.. sering ada diskon🤭 recomend pokoknya bagi yang mau beli laptop maupun accesoris✨.",
       rating: 5,
-      image: Tri,
+      image: `${API_URL}/uploads/testimonial/TriAjiPurnomo.png`,
     },
     {
       name: "Odhian wisnu P",
@@ -50,7 +46,7 @@ const TestimonialContent = () => {
       quote:
         "Tempat terbaik dalam hal mencari dan memperbaiki peralatan elektronik seperti laptop, dll.",
       rating: 5,
-      image: Odhian,
+      image: `${API_URL}/uploads/testimonial/OdhianWisnuP.png`,
     },
     {
       name: "Aldina Rahma",
@@ -58,14 +54,14 @@ const TestimonialContent = () => {
       quote:
         "Mas dan Mbaknya ramah, biaya perbaikan terjangkau. Pernah bersihin printer dan benerin keyboard laptop di sini..",
       rating: 4,
-      image: Aldina,
+      image: `${API_URL}/uploads/testimonial/AldinaRahma.png`,
     },
     {
       name: "Yuliati Gonosantoso",
       role: "Local Guide",
       quote: "t4 strategis, pelayanan ramah, harga terjangkau.",
       rating: 4,
-      image: Yuliati,
+      image: `${API_URL}/uploads/testimonial/YuliatiGonosantoso.png`,
     },
     // Tambahkan testimonial lainnya di sini
   ];
