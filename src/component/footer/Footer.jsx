@@ -7,7 +7,6 @@ import {
 } from "react-bootstrap-icons";
 import bar from "./../../assets/icon/bar.png";
 
-import "./footer.css";
 import { useSelector } from "react-redux";
 import { API_URL } from "../utils/const";
 
