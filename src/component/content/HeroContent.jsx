@@ -1,11 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import Carousel from "react-bootstrap/Carousel";
 import Button from "react-bootstrap/Button";
-import satu from "../../assets/img/banner/1.jpg";
-import dua from "../../assets/img/banner/2.jpg";
-import tiga from "../../assets/img/banner/3.jpg";
-import empat from "../../assets/img/banner/4.jpg";
-import lima from "../../assets/img/banner/5.jpg";
 
 import { API_URL } from "../utils/const";
 import { useEffect, useState } from "react";
