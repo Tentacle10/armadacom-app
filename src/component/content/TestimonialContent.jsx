@@ -2,6 +2,12 @@ import { useState, useEffect } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import { Container, Row, Col } from "react-bootstrap";
 import { StarFill, StarHalf, Star, Quote } from "react-bootstrap-icons";
+import Dani from "../../assets/img/testimonials/DaniFahim.png";
+import Tri from "../../assets/img/testimonials/TriAjiPurnomo.png";
+import Odhian from "../../assets/img/testimonials/OdhianWisnuP.png";
+import Aldina from "../../assets/img/testimonials/AldinaRahma.png";
+import Yuliati from "../../assets/img/testimonials/YuliatiGonosantoso.png";
+
 import { API_URL } from "../utils/const";
 
 const TestimonialContent = () => {
@@ -35,56 +41,42 @@ const TestimonialContent = () => {
       name: "Dani Fahim",
       role: "Local Guide",
       quote:
-        "Best place in town for computer and peripheral needs. Friendly service, highly recommended...",
+        "best place in town for computer and peripheral needs. friendly service, highly recommended...",
       rating: 5,
-      image: `${API_URL}/uploads/testimonial/DaniFahim.png`,
+      image: Dani,
     },
     {
       name: "Tri Aji Purnomo",
       role: "Local Guide",
       quote:
-        "Karyawannya ramah ramah.. sering ada diskon🤭 rekomendasi pokoknya bagi yang mau beli laptop maupun aksesoris✨.",
+        "karyawannya ramah ramah.. sering ada diskon🤭 recomend pokoknya bagi yang mau beli laptop maupun accesoris✨.",
       rating: 5,
-      image: `${API_URL}/uploads/testimonial/TriAjiPurnomo.png`,
+      image: Tri,
     },
     {
-      name: "Odhian Wisnu P",
+      name: "Odhian wisnu P",
       role: "Photographer",
       quote:
         "Tempat terbaik dalam hal mencari dan memperbaiki peralatan elektronik seperti laptop, dll.",
       rating: 5,
-      image: `${API_URL}/uploads/testimonial/OdhianWisnuP.png`,
+      image: Odhian,
     },
     {
       name: "Aldina Rahma",
       role: "Local Guide",
       quote:
-        "Mas dan Mbaknya ramah, biaya perbaikan terjangkau. Pernah bersihin printer dan benerin keyboard laptop di sini.",
+        "Mas dan Mbaknya ramah, biaya perbaikan terjangkau. Pernah bersihin printer dan benerin keyboard laptop di sini..",
       rating: 4,
-      image: `${API_URL}/uploads/testimonial/AldinaRahma.png`,
+      image: Aldina,
     },
     {
       name: "Yuliati Gonosantoso",
       role: "Local Guide",
-      quote: "Tempat strategis, pelayanan ramah, harga terjangkau.",
+      quote: "t4 strategis, pelayanan ramah, harga terjangkau.",
       rating: 4,
-      image: `${API_URL}/uploads/testimonial/YuliatiGonosantoso.png`,
+      image: Yuliati,
     },
-    {
-      name: "Budi Santoso",
-      role: "Tech Enthusiast",
-      quote: "Pelayanan cepat dan harga bersaing. Sangat recommended!",
-      rating: 5,
-      image: `${API_URL}/uploads/testimonial/BudiSantoso.png`,
-    },
-    {
-      name: "Siti Aminah",
-      role: "Blogger",
-      quote:
-        "Puas dengan pelayanan di sini, laptop saya jadi lebih cepat setelah diservis.",
-      rating: 4,
-      image: `${API_URL}/uploads/testimonial/SitiAminah.png`,
-    },
+    // Tambahkan testimonial lainnya di sini
   ];
 
   // Fungsi untuk membagi testimonial menjadi kelompok sesuai jumlah yang ditampilkan per slide
