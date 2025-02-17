@@ -43,7 +43,7 @@ const Footer = () => {
   return (
     <Container id="footer" className="footer" fluid>
       <Row
-        className="align-items-start justify-content-center text-light"
+        className="align-items-start justify-content-left text-light"
         style={{ paddingTop: "2.3rem", paddingBottom: "1rem" }}
       >
         <Col xs={10} md={3} className="d-flex maps">
@@ -107,7 +107,7 @@ const Footer = () => {
             CONTACT US
           </Col>
           <Row className="flex-column py-md-2">
-            <Col className="text-center text-md-start">
+            <Col className="text-left text-md-start">
               {sos?.map((sos, index2) => (
                 <Button
                   key={index2}
@@ -150,7 +150,7 @@ const Footer = () => {
             WE READY ON
           </Col>
           <Row className="flex-column py-md-2">
-            <Col className="text-center text-md-start">
+            <Col className="text-left text-md-start">
               {marketplace?.map((marketplace, index2) => (
                 <Button
                   key={index2}
